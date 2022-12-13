@@ -1,0 +1,42 @@
+<div class="ui basic segment">
+  <div class="ui fluid card">
+    <div class="content">
+      <img class="right floated mini ui image" 
+           v-bind:src="authorImageURL">
+      <h2 class="header" id="Author">
+        {{ $t('布丁布丁吃什麼？') }}
+      </h2>
+      <div class="description">
+        {{ $t('這個布丁是在無聊的世界中找尋樂趣的一種不能吃的食物，喜愛動漫畫、遊戲、程式，以及跟世間脫節的生活步調。') }}
+      </div>
+    </div>
+    <div class="extra content">
+      <div class="ui four buttons">
+        <a class="ui basic button"
+           :href="config.urlGithub"
+           target="_blank">
+          <i class="github icon"></i>
+          {{ $t('GitHub') }}
+        </a>
+        <a class="ui basic warning button"
+           :href="config.urlGithub + '/issues/new'"
+           target="_blank">
+          <i class="bug icon"></i>
+          {{ $t('Issue') }}
+        </a>
+        <a class="ui basic button"
+           href="https://blog.pulipuli.info/"
+           target="_blank">
+          <i class="blogger icon"></i>
+          {{ $t('Blog') }}
+        </a>
+        <a class="ui basic button"
+           href="https://blog.pulipuli.info/p/donation.html"
+           target="_blank">
+          <i class="money bill alternate outline icon"></i>
+          {{ $t('Donate') }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

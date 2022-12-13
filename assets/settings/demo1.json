@@ -1,0 +1,22 @@
+{
+  "title": "demo1",
+  "favicon": "https://cdn-icons-png.flaticon.com/512/6821/6821002.png",
+  "theme-color": "#E1F7F7",
+  "navigation-position": "top",
+  "dashboard-type": "dropdown",
+  "buttons": {
+    "網頁1": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"
+  },
+  "tabs": [
+    {
+      "title": "期末報告清單",
+      "type": "1vi",
+      "url": "https://docs.google.com/spreadsheets/d/13HguEIlHRZz_o7QaeMEUYkizHb5N104iQR5D2jkn9is/edit#gid=1533440603"
+    },
+    {
+      "title": "測試",
+      "type": "1vi",
+      "url": "https://pulipulichen.github.io/PWA-iClass-Discuss-Analysis/index.html"
+    }
+  ]
+}
