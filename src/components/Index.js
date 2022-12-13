@@ -1,6 +1,8 @@
 /* global Node */
 //import $ from 'jquery'
-import axios from 'axios'
+import NavigationBar from './NavigationBar/NavigationBar.vue'
+import ConfigurationPanel from './ConfigurationPanel/ConfigurationPanel.vue'
+import Dashboard from './Dashboard/Dashboard.vue'
 
 let Index = {
   props: ['config', 'localConfig', 'utils', 'routingID'],
@@ -10,6 +12,9 @@ let Index = {
     }
   },
   components: {
+    NavigationBar,
+    Dashboard,
+    ConfigurationPanel
   },
   computed: {
   },
@@ -33,6 +38,7 @@ let Index = {
       this.config.dashboardConfig = await this.utils.AxiosUtils.get(dashboardConfigURL)
 
       this.setDocument()
+      this.setTab()
     },
     setDocument () {
       if (this.config.dashboardConfig.title) {
@@ -42,8 +48,21 @@ let Index = {
         document.querySelector('link[rel="icon"]').href = this.config.dashboardConfig.favicon
       }
       if (this.config.dashboardConfig['theme-color']) {
-        document.querySelector('meta[name="themen-color"]').content = this.config.dashboardConfig['theme-color']
+        document.querySelector('meta[name="theme-color"]').content = this.config.dashboardConfig['theme-color']
       }
+    },
+    setTab: function() {
+      if (!this.config.dashboardConfig.tabs) {
+        return false
+      }
+
+      let tabs = this.config.dashboardConfig.tabs.map(t => t.title)
+
+      if (tabs.indexOf(this.localConfig.tab) > -1) {
+        return true
+      }
+
+      this.localConfig.tab = tabs[0]
     }
   }
 }

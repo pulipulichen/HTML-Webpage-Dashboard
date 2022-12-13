@@ -1,3 +1,23 @@
-<div class="NavigationBar">
-  Hello World
+<div class="NavigationBar ui menu">
+  <div class="item">
+    <select v-model="localConfig.tab">
+      <option v-for="tab in config.dashboardConfig.tabs"
+        :value="tab.title">{{ tab.title }}</option>
+    </select>
+  </div>
+  <div class="item"
+    v-if="config.dashboardConfig && config.dashboardConfig.buttons">
+    
+      <button type="button"
+      class="ui button"
+        v-for="button in buttons"
+        @click="popupWindow(button.url)"
+        >{{ button.title }}</button>
+  </div>
+
+  <div class="right menu">
+    <div class="item" @click="config.view = 'configuration'">
+      <i class="cog icon"></i>
+    </div>
+  </div>
 </div>

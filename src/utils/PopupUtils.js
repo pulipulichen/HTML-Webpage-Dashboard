@@ -100,4 +100,15 @@ export default {
   sleep: function (ms = 50) {
     return new Promise(resolve => setTimeout(resolve, ms));
   },
+  openURLFullscreen (url) {
+    // https://stackoverflow.com/a/189931
+
+    var popup = window.open(url, '_blank', "width="+screen.availWidth+",height="+screen.availHeight);
+    if (popup == null)
+       alert('Please change your popup settings');
+    else  {
+      popup.moveTo(0, 0);
+      // popup.resizeTo(screen.availWidth, screen.availHeight);
+    }
+  }
 }

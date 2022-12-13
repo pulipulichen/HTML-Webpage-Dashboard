@@ -1,5 +1,38 @@
 <div class="Index">
-  <template v-if="dashboardConfig !== null">
-    
+  <template v-if="config.dashboardConfig !== null && config.view === 'dashboard'">
+    <NavigationBar 
+      v-if="config.dashboardConfig['navigation-position'] === 'top'"
+      ref="NavigationBar"
+      v-bind:config="config"
+      v-bind:localConfig="localConfig"
+      v-bind:utils="utils"
+      v-bind:routingID="routingID">
+    </NavigationBar>
+
+    <Dashboard 
+      ref="Dashboard"
+      v-bind:config="config"
+      v-bind:localConfig="localConfig"
+      v-bind:utils="utils"
+      v-bind:routingID="routingID">
+    </Dashboard>
+
+    <NavigationBar 
+      ref="NavigationBar"
+      v-if="config.dashboardConfig['navigation-position'] === 'bottom'"
+      v-bind:config="config"
+      v-bind:localConfig="localConfig"
+      v-bind:utils="utils"
+      v-bind:routingID="routingID">
+    </NavigationBar>
   </template>
+  
+  <ConfigurationPanel 
+    v-if="config.view === 'configuration'"
+    ref="ConfigurationPanel"
+    v-bind:config="config"
+    v-bind:localConfig="localConfig"
+    v-bind:utils="utils"
+    v-bind:routingID="routingID">
+  </ConfigurationPanel>
 </div>

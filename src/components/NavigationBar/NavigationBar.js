@@ -1,3 +1,4 @@
+
 let app = {
   props: ['config', 'localConfig', 'utils', 'routingID'],
   data () {    
@@ -11,13 +12,27 @@ let app = {
     },
   },
   computed: {
-    
+    buttons () {
+      if (!this.config.dashboardConfig || !this.config.dashboardConfig.buttons) {
+        return []
+      }
+      let buttonsMap = this.config.dashboardConfig.buttons
+      console.log(buttonsMap)
+      return Object.keys(buttonsMap).map(title => {
+        return {
+          title,
+          url: buttonsMap[title]
+        }
+      })
+    }
   },
   mounted() {
     
   },
   methods: {
-    
+    popupWindow (url) {
+      this.utils.PopupUtils.openURLFullscreen(url)
+    }
   }
 }
 

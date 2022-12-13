@@ -11,6 +11,7 @@ let config = {
   urlGithub: 'https://github.com/pulipulichen/HTML-Webpage-Dashboard',
   // urlIssue: 'https://github.com/pulipulichen/HTML-Webpage-Dashboard/issues/new',
   
+  view: 'dashboard',
   dashboardConfig: null
 }
 

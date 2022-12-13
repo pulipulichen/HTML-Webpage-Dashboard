@@ -1,0 +1,22 @@
+<div class="ConfigurationPanel ui form">
+  <div class="ui segment">
+    <div class="field">
+      <label for="dashboardConfigURL">
+        {{ $t('Dashbaord Config URL') }}
+      </label>
+      <input type="text" v-model="dashboardConfigURL" id="dashboardConfigURL" />
+    </div>
+    <div class="field">
+      <button type="button"
+        class="ui fluid button"
+        @click="config.view='dashboard'">{{ $t('SAVE') }}</button>
+    </div>
+  </div>
+
+  <Author 
+    ref="Author"
+    v-bind:config="config"
+    v-bind:localConfig="localConfig"
+    v-bind:utils="utils">
+  </Author>
+</div>
