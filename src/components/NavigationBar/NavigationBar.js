@@ -21,13 +21,16 @@ let app = {
         return []
       }
       let buttonsMap = this.config.dashboardConfig.buttons
-      console.log(buttonsMap)
+      // console.log(buttonsMap)
       return Object.keys(buttonsMap).map(title => {
         return {
           title,
           url: buttonsMap[title]
         }
       })
+    },
+    openableURLList () {
+      return this.$parent.urlList.filter(u => (typeof(u) === 'string'))
     }
   },
   mounted() {

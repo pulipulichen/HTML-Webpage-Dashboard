@@ -58,7 +58,7 @@ let Index = {
       dashboardConfigURL = './assets/settings/demo1.json'
 
       // for test 20221214-0547 
-      // dashboardConfigURL = 'https://script.google.com/macros/s/AKfycbyuMi8uYJVqh1VbWue8bi3rVHgAbq61MYDiCz1Sirra_IXYIxxZG0TNhIBDQLYkj6lFpw/exec'
+      dashboardConfigURL = 'https://script.google.com/macros/s/AKfycbwR2MONo0nxfcyF70QpPGEgN2Xhoo096xOHMoVExv4vbNcKp3P07-eAoudGTpr_BvwcmA/exec'
 
       // console.log(dashboardConfigURL)
       this.config.dashboardConfig = await this.utils.AxiosUtils.get(dashboardConfigURL)

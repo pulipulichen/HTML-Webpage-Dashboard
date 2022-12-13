@@ -11,14 +11,14 @@ let app = {
       this.$i18n.locale = this.localConfig.locale;
     },
     searchButtons (search) {
-      console.log(search)
+      // console.log(search)
       if (!this.localConfig.searchButtons[this.routingID]) {
         this.localConfig.searchButtons[this.routingID] = {}
       }
 
       this.localConfig.searchButtons[this.routingID][this.localConfig.tab] = search
 
-      console.log(this.localConfig.searchButtons)
+      // console.log(this.localConfig.searchButtons)
       this.$parent.$parent.saveToLocalStorage()
     }
   },
@@ -36,17 +36,18 @@ let app = {
   methods: {
     loadSearchKeywords () {
       let searchButtons = this.localConfig.searchButtons[this.routingID]
-
+      // console.log(searchButtons)
       if (!searchButtons) {
         return []
       }
 
       let search = searchButtons[this.localConfig.tab]
+      // console.log(search)
       if (!search) {
         return []
       }
 
-      return search
+      this.searchButtons = this.searchButtons.concat(search)
     },
     parsePos (pos) {
       let y = 0
@@ -94,8 +95,13 @@ let app = {
       // console.log(type, this.parsePos(type[1]), this.parsePos(type[0]))
       return (1 + this.parsePos(type[1]).y - this.parsePos(type[0]).y)
     },
+    clearSearch (i) {
+      let current = this.searchButtons
+      current[i] = ''
+      this.searchButtons = this.searchButtons.splice(0,0).concat(current[i])
+    },
     filterButtons (buttons, search) {
-      let output = []
+      // let output = []
 
       let titles = Object.keys(buttons)
       
@@ -110,6 +116,10 @@ let app = {
           }
           return false
         })
+
+        if (titles.length === 0) {
+          titles = Object.keys(buttons)
+        }
       }
 
       return titles.map(t => {

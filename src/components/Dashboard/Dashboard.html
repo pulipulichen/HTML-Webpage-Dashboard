@@ -20,9 +20,12 @@
         :data-col="parseCol($parent.tabTypes[i])"
         :data-width="parseWidth($parent.tabTypes[i])"
         :data-height="parseHeight($parent.tabTypes[i])">
-        <div class="ui input fluid field">
+        <div class="ui input fluid field"
+          :class="{'icon': (searchButtons[i] && searchButtons[i].trim() !== '')}">
           <input type="text" :placeholder="$t('Search...')"
             v-model="searchButtons[i]" />
+          <i class="x link icon" v-if="(searchButtons[i] && searchButtons[i].trim() !== '')"
+            @click="clearSearch(i)" />
         </div>
         <div class="ui field"
           v-for="button in filterButtons(url, searchButtons[i])">
@@ -30,7 +33,7 @@
             :href="button.url"
             target="_blank"
             @click.prevent.stop="utils.PopupUtils.openURLFullscreen(button.url)">
-            {{ button.title}}
+            {{ button.title }}
           </a>
         </div>
       </div>
