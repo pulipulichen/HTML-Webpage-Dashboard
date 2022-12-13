@@ -4,12 +4,16 @@ let app = {
   data () {    
     this.$i18n.locale = this.localConfig.locale
     return {
+      focusTab: 0
     }
   },
   watch: {
     'localConfig.locale'() {
       this.$i18n.locale = this.localConfig.locale;
     },
+    '$parent.tab' () {
+      this.focusTab = 0
+    }
   },
   computed: {
     buttons () {

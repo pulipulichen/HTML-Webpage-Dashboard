@@ -1,4 +1,39 @@
 <div class="Dashboard">
-  {{ routingID }}
-  {{ tab }}
+  <div :class="'type_' + tab.type">
+    <template v-for="(url, i) in urlList">
+      <iframe
+        v-if="typeof(url) === 'string'"
+        :class="'panel num' + i + ' panel_' + $parent.tabTypes[i]" 
+        :src="url" 
+        :data-start="$parent.tabTypes[i][0]"
+        :data-end="$parent.tabTypes[i][1]"
+        :data-row="parseRow($parent.tabTypes[i])"
+        :data-col="parseCol($parent.tabTypes[i])"
+        :data-width="parseWidth($parent.tabTypes[i])"
+        :data-height="parseHeight($parent.tabTypes[i])"
+        frameBorder="0"></iframe>
+      <div v-if="typeof(url) === 'object'"
+        :class="'panel ui segment num' + i + ' panel_' + $parent.tabTypes[i]"
+        :data-start="$parent.tabTypes[i][0]"
+        :data-end="$parent.tabTypes[i][1]"
+        :data-row="parseRow($parent.tabTypes[i])"
+        :data-col="parseCol($parent.tabTypes[i])"
+        :data-width="parseWidth($parent.tabTypes[i])"
+        :data-height="parseHeight($parent.tabTypes[i])">
+        <div class="ui input fluid field">
+          <input type="text" :placeholder="$t('Search...')"
+            v-model="searchButtons[i]" />
+        </div>
+        <div class="ui field"
+          v-for="button in filterButtons(url, searchButtons[i])">
+          <a class="ui fluid button"
+            :href="button.url"
+            target="_blank"
+            @click.prevent.stop="utils.PopupUtils.openURLFullscreen(button.url)">
+            {{ button.title}}
+          </a>
+        </div>
+      </div>
+    </template>
+  </div>
 </div>

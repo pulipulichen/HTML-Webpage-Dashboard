@@ -2,7 +2,8 @@ let localConfig = {
   locale: 'zh-TW',
   
   view: 'data',
-  tab: ''
+  tab: '',
+  searchButtons: {}
 }
 
 export default localConfig

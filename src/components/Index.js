@@ -17,6 +17,22 @@ let Index = {
     ConfigurationPanel
   },
   computed: {
+    tab () {
+      if (this.localConfig.tab === '' || !this.config.dashboardConfig.tabs) {
+        return false
+      }
+      return this.config.dashboardConfig.tabs.filter(t => (t.title === this.localConfig.tab))[0]
+    },
+    urlList () {
+      let urlList = this.tab.url
+      if (Array.isArray(urlList) === false) {
+        urlList = [urlList]
+      }
+      return urlList
+    },
+    tabTypes () {
+      return this.tab.type.split('_')
+    }
   },
   watch: {
     'config.inited'() {
@@ -33,7 +49,17 @@ let Index = {
     loadDashboardConfig: async function () {
 
       let dashboardConfigURL = this.routingID
+
+      if (dashboardConfigURL === '') {
+        dashboardConfigURL = './assets/settings/demo1.json'
+      }
+
+      // for test 20221214-0546 
       dashboardConfigURL = './assets/settings/demo1.json'
+
+      // for test 20221214-0547 
+      // dashboardConfigURL = 'https://script.google.com/macros/s/AKfycbyuMi8uYJVqh1VbWue8bi3rVHgAbq61MYDiCz1Sirra_IXYIxxZG0TNhIBDQLYkj6lFpw/exec'
+
       // console.log(dashboardConfigURL)
       this.config.dashboardConfig = await this.utils.AxiosUtils.get(dashboardConfigURL)
 

@@ -6,11 +6,25 @@
       </label>
       <input type="text" v-model="dashboardConfigURL" id="dashboardConfigURL" />
     </div>
-    <div class="field">
+
+    <div class="equal wide fields" v-if="config.dashboardConfig.configuration">
+      <div class="eight wide field">
+        <button type="button"
+          class="ui fluid button"
+          @click="utils.PopupUtils.openURLFullscreen(config.dashboardConfig.configuration)">{{ $t('CONFIGURATION') }}</button>
+      </div>
+      <div class="eight wide field">
+        <button type="button"
+          class="ui fluid button"
+          @click="config.view='dashboard'">{{ $t('SAVE') }}</button>
+      </div>
+    </div>
+    <div class="field" v-else>
       <button type="button"
         class="ui fluid button"
         @click="config.view='dashboard'">{{ $t('SAVE') }}</button>
     </div>
+      
   </div>
 
   <Author 

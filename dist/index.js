@@ -2172,7 +2172,7 @@ exports.push([module.i, "", "",{"version":3,"sources":[],"names":[],"mappings":"
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, "", "",{"version":3,"sources":[],"names":[],"mappings":"","file":"Dashboard.less?vue&type=style&index=0&id=4dfee239&lang=less&scoped=true&"}]);
+exports.push([module.i, ".panel[data-v-4dfee239] {\n  width: 100vw;\n  height: calc(100vh - 50px);\n  max-height: calc(100vh - 50px);\n  position: fixed !important;\n  /*\n  &[data-start=\"2\"] {\n    left: calc(25vw + 1px); \n    top: @navigationBarHeight;\n  }\n\n  &.panel_3r,\n  &.panel_3v {\n    left: calc(50vw + 1px); \n    top: @navigationBarHeight;\n  }\n\n  &.panel_4v {\n    left: calc(75vw + 1px); \n    top: @navigationBarHeight;\n  }\n\n  &.panel_1x,\n  &.panel_3v{\n    width: calc(50vw - 2px);\n  }\n\n  &.panel_1r,\n  &.panel_av{\n    height: calc(50vh - (@navigationBarHeight / 2));\n  }\n\n  &.panel_1z,\n  &.panel_2x,\n  &.panel_3c,\n  &.panel_4v{\n    width: calc(25vw - 2px);\n  }\n\n  &.panel_1c,\n  &.panel_2v{\n    width: calc(75vw - 2px);\n  }\n\n  &.panel_14,\n  &.panel_qr,\n  &.panel_af,\n  &.panel_zv{\n    height: calc(25vh - (@navigationBarHeight / 4));\n  }\n\n  &.panel_1f,\n  &.panel_qv{\n    height: calc(75vh - (@navigationBarHeight / 4 * 3));\n  }\n  */\n}\n.panel.segment[data-v-4dfee239] {\n  border-radius: 0 !important;\n  border-top-width: 0 !important;\n  border-bottom-width: 0 !important;\n  border-left-width: 0 !important;\n}\n.panel[data-row=\"0\"][data-v-4dfee239] {\n  top: 50px;\n}\n.panel[data-row=\"1\"][data-v-4dfee239] {\n  top: calc(25vh - 50px + 1px);\n}\n.panel[data-row=\"2\"][data-v-4dfee239] {\n  top: calc(50vh - 50px + 1px);\n}\n.panel[data-row=\"3\"][data-v-4dfee239] {\n  top: calc(75vh - 50px + 1px);\n}\n.panel[data-col=\"0\"][data-v-4dfee239] {\n  left: 0;\n}\n.panel[data-col=\"1\"][data-v-4dfee239] {\n  left: calc(25vw + 1px);\n}\n.panel[data-col=\"2\"][data-v-4dfee239] {\n  left: calc(50vw + 1px);\n}\n.panel[data-col=\"3\"][data-v-4dfee239] {\n  left: calc(75vw + 1px);\n}\n.panel[data-width=\"1\"][data-v-4dfee239] {\n  width: 25vw;\n}\n.panel[data-width=\"2\"][data-v-4dfee239] {\n  width: 50vw;\n}\n.panel[data-width=\"3\"][data-v-4dfee239] {\n  width: 75vw;\n}\n.panel[data-height=\"1\"][data-v-4dfee239] {\n  height: 25vh;\n}\n.panel[data-height=\"2\"][data-v-4dfee239] {\n  height: 50vh;\n}\n.panel[data-height=\"3\"][data-v-4dfee239] {\n  height: 75vh;\n}\n.panel[data-row=\"0\"][data-height=\"1\"][data-v-4dfee239] {\n  width: calc(25vh - 50px);\n}\n.panel[data-row=\"0\"][data-height=\"2\"][data-v-4dfee239] {\n  width: calc(50vh - 50px);\n}\n.panel[data-row=\"0\"][data-height=\"3\"][data-v-4dfee239] {\n  width: calc(75vh - 50px);\n}\n.panel.segment[data-v-4dfee239] {\n  overflow-x: hidden;\n  overflow-y: auto !important;\n}\n.panel .ui.button[data-v-4dfee239] {\n  margin-top: 1rem !important;\n}\n", "",{"version":3,"sources":["/app/src/components/Dashboard/Dashboard.less?vue&type=style&index=0&id=4dfee239&lang=less&scoped=true&","Dashboard.less"],"names":[],"mappings":"AAEA;EAEE,YAAA;EACA,0BAAA;EACA,8BAAA;EACA,0BAAA;ECFA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;GAkDC;AACH;AD/CE;EACE,2BAAA;EACA,8BAAA;EACA,iCAAA;EACA,+BAAA;ACiDJ;AD9CE;EACE,SAAA;ACgDJ;AD7CE;EACE,4BAAA;AC+CJ;AD5CE;EACE,4BAAA;AC8CJ;AD3CE;EACE,4BAAA;AC6CJ;AD1CE;EACE,OAAA;AC4CJ;ADzCE;EACE,sBAAA;AC2CJ;ADxCE;EACE,sBAAA;AC0CJ;ADvCE;EACE,sBAAA;ACyCJ;ADtCE;EACE,WAAA;ACwCJ;ADrCE;EACE,WAAA;ACuCJ;ADpCE;EACE,WAAA;ACsCJ;ADnCE;EACE,YAAA;ACqCJ;ADlCE;EACE,YAAA;ACoCJ;ADjCE;EACE,YAAA;ACmCJ;AD9BI;EACE,wBAAA;ACgCN;AD7BI;EACE,wBAAA;AC+BN;AD5BI;EACE,wBAAA;AC8BN;AD0BE;EACE,kBAAA;EACA,2BAAA;ACxBJ;ADnHA;EA+II,2BAAA;ACzBJ","file":"Dashboard.less?vue&type=style&index=0&id=4dfee239&lang=less&scoped=true&","sourcesContent":["@navigationBarHeight: 50px;\n\n.panel {\n  \n  width: 100vw;\n  height: calc(100vh - @navigationBarHeight);\n  max-height: calc(100vh - @navigationBarHeight);\n  position: fixed !important;\n  \n  &.segment {\n    border-radius: 0 !important;\n    border-top-width: 0 !important;\n    border-bottom-width: 0 !important;\n    border-left-width: 0 !important;\n  }\n\n  &[data-row=\"0\"] {\n    top: @navigationBarHeight;\n  }\n\n  &[data-row=\"1\"] {\n    top: calc(25vh - @navigationBarHeight + 1px);\n  }\n\n  &[data-row=\"2\"] {\n    top: calc(50vh - @navigationBarHeight + 1px);\n  }\n\n  &[data-row=\"3\"] {\n    top: calc(75vh - @navigationBarHeight + 1px);\n  }\n\n  &[data-col=\"0\"] {\n    left: 0;\n  }\n\n  &[data-col=\"1\"] {\n    left: calc(25vw + 1px);\n  }\n\n  &[data-col=\"2\"] {\n    left: calc(50vw + 1px);\n  }\n\n  &[data-col=\"3\"] {\n    left: calc(75vw + 1px);\n  }\n\n  &[data-width=\"1\"] {\n    width: 25vw;\n  }\n\n  &[data-width=\"2\"] {\n    width: 50vw;\n  }\n\n  &[data-width=\"3\"] {\n    width: 75vw;\n  }\n\n  &[data-height=\"1\"] {\n    height: 25vh;\n  }\n\n  &[data-height=\"2\"] {\n    height: 50vh;\n  }\n\n  &[data-height=\"3\"] {\n    height: 75vh;\n  }\n\n  \n  &[data-row=\"0\"] {\n    &[data-height=\"1\"] {\n      width: calc(25vh - @navigationBarHeight);\n    }\n  \n    &[data-height=\"2\"] {\n      width: calc(50vh - @navigationBarHeight);\n    }\n  \n    &[data-height=\"3\"] {\n      width: calc(75vh - @navigationBarHeight);\n    }\n  }\n\n  /*\n  &[data-start=\"2\"] {\n    left: calc(25vw + 1px); \n    top: @navigationBarHeight;\n  }\n\n  &.panel_3r,\n  &.panel_3v {\n    left: calc(50vw + 1px); \n    top: @navigationBarHeight;\n  }\n\n  &.panel_4v {\n    left: calc(75vw + 1px); \n    top: @navigationBarHeight;\n  }\n\n  &.panel_1x,\n  &.panel_3v{\n    width: calc(50vw - 2px);\n  }\n\n  &.panel_1r,\n  &.panel_av{\n    height: calc(50vh - (@navigationBarHeight / 2));\n  }\n\n  &.panel_1z,\n  &.panel_2x,\n  &.panel_3c,\n  &.panel_4v{\n    width: calc(25vw - 2px);\n  }\n\n  &.panel_1c,\n  &.panel_2v{\n    width: calc(75vw - 2px);\n  }\n\n  &.panel_14,\n  &.panel_qr,\n  &.panel_af,\n  &.panel_zv{\n    height: calc(25vh - (@navigationBarHeight / 4));\n  }\n\n  &.panel_1f,\n  &.panel_qv{\n    height: calc(75vh - (@navigationBarHeight / 4 * 3));\n  }\n  */\n\n  &.segment {\n    overflow-x: hidden;\n    overflow-y: auto !important;\n  }\n    \n  .ui.button {\n    margin-top: 1rem !important;\n  }\n}\n",".panel {\n  width: 100vw;\n  height: calc(100vh - 50px);\n  max-height: calc(100vh - 50px);\n  position: fixed !important;\n  /*\n  &[data-start=\"2\"] {\n    left: calc(25vw + 1px); \n    top: @navigationBarHeight;\n  }\n\n  &.panel_3r,\n  &.panel_3v {\n    left: calc(50vw + 1px); \n    top: @navigationBarHeight;\n  }\n\n  &.panel_4v {\n    left: calc(75vw + 1px); \n    top: @navigationBarHeight;\n  }\n\n  &.panel_1x,\n  &.panel_3v{\n    width: calc(50vw - 2px);\n  }\n\n  &.panel_1r,\n  &.panel_av{\n    height: calc(50vh - (@navigationBarHeight / 2));\n  }\n\n  &.panel_1z,\n  &.panel_2x,\n  &.panel_3c,\n  &.panel_4v{\n    width: calc(25vw - 2px);\n  }\n\n  &.panel_1c,\n  &.panel_2v{\n    width: calc(75vw - 2px);\n  }\n\n  &.panel_14,\n  &.panel_qr,\n  &.panel_af,\n  &.panel_zv{\n    height: calc(25vh - (@navigationBarHeight / 4));\n  }\n\n  &.panel_1f,\n  &.panel_qv{\n    height: calc(75vh - (@navigationBarHeight / 4 * 3));\n  }\n  */\n}\n.panel.segment {\n  border-radius: 0 !important;\n  border-top-width: 0 !important;\n  border-bottom-width: 0 !important;\n  border-left-width: 0 !important;\n}\n.panel[data-row=\"0\"] {\n  top: 50px;\n}\n.panel[data-row=\"1\"] {\n  top: calc(25vh - 50px + 1px);\n}\n.panel[data-row=\"2\"] {\n  top: calc(50vh - 50px + 1px);\n}\n.panel[data-row=\"3\"] {\n  top: calc(75vh - 50px + 1px);\n}\n.panel[data-col=\"0\"] {\n  left: 0;\n}\n.panel[data-col=\"1\"] {\n  left: calc(25vw + 1px);\n}\n.panel[data-col=\"2\"] {\n  left: calc(50vw + 1px);\n}\n.panel[data-col=\"3\"] {\n  left: calc(75vw + 1px);\n}\n.panel[data-width=\"1\"] {\n  width: 25vw;\n}\n.panel[data-width=\"2\"] {\n  width: 50vw;\n}\n.panel[data-width=\"3\"] {\n  width: 75vw;\n}\n.panel[data-height=\"1\"] {\n  height: 25vh;\n}\n.panel[data-height=\"2\"] {\n  height: 50vh;\n}\n.panel[data-height=\"3\"] {\n  height: 75vh;\n}\n.panel[data-row=\"0\"][data-height=\"1\"] {\n  width: calc(25vh - 50px);\n}\n.panel[data-row=\"0\"][data-height=\"2\"] {\n  width: calc(50vh - 50px);\n}\n.panel[data-row=\"0\"][data-height=\"3\"] {\n  width: calc(75vh - 50px);\n}\n.panel.segment {\n  overflow-x: hidden;\n  overflow-y: auto !important;\n}\n.panel .ui.button {\n  margin-top: 1rem !important;\n}\n"]}]);
 
 
 /***/ }),
@@ -2214,7 +2214,7 @@ exports.push([module.i, "body {\n  overflow: hidden;\n}\n", "",{"version":3,"sou
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, "", "",{"version":3,"sources":[],"names":[],"mappings":"","file":"NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&"}]);
+exports.push([module.i, ".NavigationBar[data-v-1d5bd9e2] {\n  height: 50px;\n  margin-bottom: 0 !important;\n  border-radius: 0 !important;\n}\nh1.item.header[data-v-1d5bd9e2] {\n  font-size: 1rem !important;\n}\nh1.item.header img[data-v-1d5bd9e2] {\n  max-height: 1.5rem !important;\n  width: auto !important;\n  margin-right: 0.5rem !important;\n}\n", "",{"version":3,"sources":["/app/src/components/NavigationBar/NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&","NavigationBar.less"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,2BAAA;EACA,2BAAA;ACCF;ADEA;EACE,0BAAA;ACAF;ADDA;EAII,6BAAA;EACA,sBAAA;EACA,+BAAA;ACAJ","file":"NavigationBar.less?vue&type=style&index=0&id=1d5bd9e2&lang=less&scoped=true&","sourcesContent":[".NavigationBar {\n  height: 50px;\n  margin-bottom: 0 !important;\n  border-radius: 0 !important;\n}\n\nh1.item.header {\n  font-size: 1rem !important;\n\n  img {\n    max-height: 1.5rem !important;\n    width: auto !important;\n    margin-right: 0.5rem !important;\n  }\n}\n\n",".NavigationBar {\n  height: 50px;\n  margin-bottom: 0 !important;\n  border-radius: 0 !important;\n}\nh1.item.header {\n  font-size: 1rem !important;\n}\nh1.item.header img {\n  max-height: 1.5rem !important;\n  width: auto !important;\n  margin-right: 0.5rem !important;\n}\n"]}]);
 
 
 /***/ }),
@@ -15779,21 +15779,57 @@ var render = function() {
           })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c(
-            "button",
-            {
-              staticClass: "ui fluid button",
-              attrs: { type: "button" },
-              on: {
-                click: function($event) {
-                  _vm.config.view = "dashboard"
-                }
-              }
-            },
-            [_vm._v(_vm._s(_vm.$t("SAVE")))]
-          )
-        ])
+        _vm.config.dashboardConfig.configuration
+          ? _c("div", { staticClass: "equal wide fields" }, [
+              _c("div", { staticClass: "eight wide field" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "ui fluid button",
+                    attrs: { type: "button" },
+                    on: {
+                      click: function($event) {
+                        return _vm.utils.PopupUtils.openURLFullscreen(
+                          _vm.config.dashboardConfig.configuration
+                        )
+                      }
+                    }
+                  },
+                  [_vm._v(_vm._s(_vm.$t("CONFIGURATION")))]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "eight wide field" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "ui fluid button",
+                    attrs: { type: "button" },
+                    on: {
+                      click: function($event) {
+                        _vm.config.view = "dashboard"
+                      }
+                    }
+                  },
+                  [_vm._v(_vm._s(_vm.$t("SAVE")))]
+                )
+              ])
+            ])
+          : _c("div", { staticClass: "field" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "ui fluid button",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      _vm.config.view = "dashboard"
+                    }
+                  }
+                },
+                [_vm._v(_vm._s(_vm.$t("SAVE")))]
+              )
+            ])
       ]),
       _vm._v(" "),
       _c("Author", {
@@ -15831,7 +15867,112 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "Dashboard" }, [
-    _vm._v("\n  " + _vm._s(_vm.routingID) + "\n  " + _vm._s(_vm.tab) + "\n")
+    _c(
+      "div",
+      { class: "type_" + _vm.tab.type },
+      [
+        _vm._l(_vm.urlList, function(url, i) {
+          return [
+            typeof url === "string"
+              ? _c("iframe", {
+                  class: "panel num" + i + " panel_" + _vm.$parent.tabTypes[i],
+                  attrs: {
+                    src: url,
+                    "data-start": _vm.$parent.tabTypes[i][0],
+                    "data-end": _vm.$parent.tabTypes[i][1],
+                    "data-row": _vm.parseRow(_vm.$parent.tabTypes[i]),
+                    "data-col": _vm.parseCol(_vm.$parent.tabTypes[i]),
+                    "data-width": _vm.parseWidth(_vm.$parent.tabTypes[i]),
+                    "data-height": _vm.parseHeight(_vm.$parent.tabTypes[i]),
+                    frameBorder: "0"
+                  }
+                })
+              : _vm._e(),
+            _vm._v(" "),
+            typeof url === "object"
+              ? _c(
+                  "div",
+                  {
+                    class:
+                      "panel ui segment num" +
+                      i +
+                      " panel_" +
+                      _vm.$parent.tabTypes[i],
+                    attrs: {
+                      "data-start": _vm.$parent.tabTypes[i][0],
+                      "data-end": _vm.$parent.tabTypes[i][1],
+                      "data-row": _vm.parseRow(_vm.$parent.tabTypes[i]),
+                      "data-col": _vm.parseCol(_vm.$parent.tabTypes[i]),
+                      "data-width": _vm.parseWidth(_vm.$parent.tabTypes[i]),
+                      "data-height": _vm.parseHeight(_vm.$parent.tabTypes[i])
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "ui input fluid field" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.searchButtons[i],
+                            expression: "searchButtons[i]"
+                          }
+                        ],
+                        attrs: {
+                          type: "text",
+                          placeholder: _vm.$t("Search...")
+                        },
+                        domProps: { value: _vm.searchButtons[i] },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.searchButtons, i, $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _vm._l(
+                      _vm.filterButtons(url, _vm.searchButtons[i]),
+                      function(button) {
+                        return _c("div", { staticClass: "ui field" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "ui fluid button",
+                              attrs: { href: button.url, target: "_blank" },
+                              on: {
+                                click: function($event) {
+                                  $event.preventDefault()
+                                  $event.stopPropagation()
+                                  return _vm.utils.PopupUtils.openURLFullscreen(
+                                    button.url
+                                  )
+                                }
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\n            " +
+                                  _vm._s(button.title) +
+                                  "\n          "
+                              )
+                            ]
+                          )
+                        ])
+                      }
+                    )
+                  ],
+                  2
+                )
+              : _vm._e()
+          ]
+        })
+      ],
+      2
+    )
   ])
 }
 var staticRenderFns = []
@@ -15935,84 +16076,154 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "NavigationBar ui menu" }, [
-    _c("div", { staticClass: "item" }, [
-      _c(
-        "select",
-        {
-          directives: [
+  return _c(
+    "div",
+    {
+      staticClass: "NavigationBar ui menu form",
+      style: { "background-color": _vm.config.dashboardConfig["theme-color"] }
+    },
+    [
+      _c("h1", { staticClass: "item header" }, [
+        _c("img", { attrs: { src: _vm.config.dashboardConfig.favicon } }),
+        _vm._v("\n    " + _vm._s(_vm.config.dashboardConfig.title) + "\n  ")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "item" }, [
+        _c("div", { staticClass: "field" }, [
+          _c(
+            "select",
             {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.localConfig.tab,
-              expression: "localConfig.tab"
-            }
-          ],
-          on: {
-            change: function($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function(o) {
-                  return o.selected
-                })
-                .map(function(o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.$set(
-                _vm.localConfig,
-                "tab",
-                $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-              )
-            }
-          }
-        },
-        _vm._l(_vm.config.dashboardConfig.tabs, function(tab) {
-          return _c("option", { domProps: { value: tab.title } }, [
-            _vm._v(_vm._s(tab.title))
-          ])
-        }),
-        0
-      )
-    ]),
-    _vm._v(" "),
-    _vm.config.dashboardConfig && _vm.config.dashboardConfig.buttons
-      ? _c(
-          "div",
-          { staticClass: "item" },
-          _vm._l(_vm.buttons, function(button) {
-            return _c(
-              "button",
-              {
-                staticClass: "ui button",
-                attrs: { type: "button" },
-                on: {
-                  click: function($event) {
-                    return _vm.popupWindow(button.url)
-                  }
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.localConfig.tab,
+                  expression: "localConfig.tab"
                 }
-              },
-              [_vm._v(_vm._s(button.title))]
-            )
-          }),
-          0
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    _c("div", { staticClass: "right menu" }, [
-      _c(
-        "div",
-        {
-          staticClass: "item",
-          on: {
-            click: function($event) {
-              _vm.config.view = "configuration"
+              ],
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.$set(
+                    _vm.localConfig,
+                    "tab",
+                    $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                  )
+                }
+              }
+            },
+            _vm._l(_vm.config.dashboardConfig.tabs, function(tab) {
+              return _c("option", { domProps: { value: tab.title } }, [
+                _vm._v(_vm._s(tab.title))
+              ])
+            }),
+            0
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _vm.config.dashboardConfig && _vm.config.dashboardConfig.buttons
+        ? _c(
+            "div",
+            { staticClass: "item" },
+            _vm._l(_vm.buttons, function(button) {
+              return _c(
+                "button",
+                {
+                  staticClass: "ui button",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.popupWindow(button.url)
+                    }
+                  }
+                },
+                [_vm._v(_vm._s(button.title))]
+              )
+            }),
+            0
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _c("div", { staticClass: "right menu" }, [
+        _vm.$parent.urlList.length > 1
+          ? _c("div", { staticClass: "item" }, [
+              _c("div", { staticClass: "field" }, [
+                _c(
+                  "select",
+                  {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.focusTab,
+                        expression: "focusTab"
+                      }
+                    ],
+                    on: {
+                      change: function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.focusTab = $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      }
+                    }
+                  },
+                  _vm._l(_vm.$parent.urlList, function(url, i) {
+                    return _c("option", { domProps: { value: i } }, [
+                      _vm._v(_vm._s(i + 1))
+                    ])
+                  }),
+                  0
+                )
+              ])
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "item",
+            on: {
+              click: function($event) {
+                return _vm.utils.PopupUtils.openURLFullscreen(
+                  _vm.$parent.urlList[_vm.focusTab]
+                )
+              }
             }
-          }
-        },
-        [_c("i", { staticClass: "cog icon" })]
-      )
-    ])
-  ])
+          },
+          [_c("i", { staticClass: "external alternate icon" })]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "item",
+            on: {
+              click: function($event) {
+                _vm.config.view = "configuration"
+              }
+            }
+          },
+          [_c("i", { staticClass: "cog icon" })]
+        )
+      ])
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -31787,26 +31998,122 @@ let app = {
   data () {    
     this.$i18n.locale = this.localConfig.locale
     return {
+      searchButtons: []
     }
   },
   watch: {
     'localConfig.locale'() {
       this.$i18n.locale = this.localConfig.locale;
     },
+    searchButtons (search) {
+      console.log(search)
+      if (!this.localConfig.searchButtons[this.routingID]) {
+        this.localConfig.searchButtons[this.routingID] = {}
+      }
+
+      this.localConfig.searchButtons[this.routingID][this.localConfig.tab] = search
+
+      console.log(this.localConfig.searchButtons)
+      this.$parent.$parent.saveToLocalStorage()
+    }
   },
   computed: {
     tab () {
-      if (this.localConfig.tab === '' || !this.config.dashboardConfig.tabs) {
-        return false
-      }
-      return this.config.dashboardConfig.tabs.filter(t => (t.title === this.localConfig.tab))[0]
+      return this.$parent.tab
+    },
+    urlList () {
+      return this.$parent.urlList
     }
   },
   mounted() {
-    
+    this.loadSearchKeywords()
   },
   methods: {
-    
+    loadSearchKeywords () {
+      let searchButtons = this.localConfig.searchButtons[this.routingID]
+
+      if (!searchButtons) {
+        return []
+      }
+
+      let search = searchButtons[this.localConfig.tab]
+      if (!search) {
+        return []
+      }
+
+      return search
+    },
+    parsePos (pos) {
+      let y = 0
+      if (['1', '2', '3', '4'].indexOf(pos) > -1) {
+        y = 0
+      }
+      else if (['q', 'w', 'e', 'r'].indexOf(pos) > -1) {
+        y = 1
+      }
+      else if (['a', 's', 'd', 'f'].indexOf(pos) > -1) {
+        y = 2
+      }
+      else if (['z', 'x', 'c', 'v'].indexOf(pos) > -1) {
+        y = 3
+      }
+
+      let x = 0
+      if (['1', 'q', 'a', 'z'].indexOf(pos) > -1) {
+        x = 0
+      }
+      else if (['2', 'w', 's', 'x'].indexOf(pos) > -1) {
+        x = 1
+      }
+      else if (['3', 'e', 'd', 'c'].indexOf(pos) > -1) {
+        x = 2
+      }
+      else if (['4', 'r', 'f', 'v'].indexOf(pos) > -1) {
+        x = 3
+      }
+
+      return {
+        x, y
+      }
+    },
+    parseRow (type) {
+      return this.parsePos(type[0]).y
+    },
+    parseCol (type) {
+      return this.parsePos(type[0]).x
+    },
+    parseWidth (type) {
+      return (1 + this.parsePos(type[1]).x - this.parsePos(type[0]).x)
+    },
+    parseHeight (type) {
+      // console.log(type, this.parsePos(type[1]), this.parsePos(type[0]))
+      return (1 + this.parsePos(type[1]).y - this.parsePos(type[0]).y)
+    },
+    filterButtons (buttons, search) {
+      let output = []
+
+      let titles = Object.keys(buttons)
+      
+      if (search && search.trim() !== '') {
+        titles = titles.filter(t => {
+          let parts = search.split(' ')
+
+          for (let i = 0; i < parts.length; i++) {
+            if (t.indexOf(parts[i]) !== -1) {
+              return true
+            }
+          }
+          return false
+        })
+      }
+
+      return titles.map(t => {
+        return {
+          title: t,
+          url: buttons[t]
+        }
+      })
+    }
   }
 }
 
@@ -31939,6 +32246,22 @@ let Index = {
     ConfigurationPanel: _ConfigurationPanel_ConfigurationPanel_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   computed: {
+    tab () {
+      if (this.localConfig.tab === '' || !this.config.dashboardConfig.tabs) {
+        return false
+      }
+      return this.config.dashboardConfig.tabs.filter(t => (t.title === this.localConfig.tab))[0]
+    },
+    urlList () {
+      let urlList = this.tab.url
+      if (Array.isArray(urlList) === false) {
+        urlList = [urlList]
+      }
+      return urlList
+    },
+    tabTypes () {
+      return this.tab.type.split('_')
+    }
   },
   watch: {
     'config.inited'() {
@@ -31955,7 +32278,17 @@ let Index = {
     loadDashboardConfig: async function () {
 
       let dashboardConfigURL = this.routingID
+
+      if (dashboardConfigURL === '') {
+        dashboardConfigURL = './assets/settings/demo1.json'
+      }
+
+      // for test 20221214-0546 
       dashboardConfigURL = './assets/settings/demo1.json'
+
+      // for test 20221214-0547 
+      // dashboardConfigURL = 'https://script.google.com/macros/s/AKfycbyuMi8uYJVqh1VbWue8bi3rVHgAbq61MYDiCz1Sirra_IXYIxxZG0TNhIBDQLYkj6lFpw/exec'
+
       // console.log(dashboardConfigURL)
       this.config.dashboardConfig = await this.utils.AxiosUtils.get(dashboardConfigURL)
 
@@ -32153,12 +32486,16 @@ let app = {
   data () {    
     this.$i18n.locale = this.localConfig.locale
     return {
+      focusTab: 0
     }
   },
   watch: {
     'localConfig.locale'() {
       this.$i18n.locale = this.localConfig.locale;
     },
+    '$parent.tab' () {
+      this.focusTab = 0
+    }
   },
   computed: {
     buttons () {
@@ -32729,7 +33066,8 @@ let localConfig = {
   locale: 'zh-TW',
   
   view: 'data',
-  tab: ''
+  tab: '',
+  searchButtons: {}
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (localConfig);

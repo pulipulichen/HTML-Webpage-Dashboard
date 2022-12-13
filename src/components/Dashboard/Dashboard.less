@@ -1,0 +1,148 @@
+@navigationBarHeight: 50px;
+
+.panel {
+  
+  width: 100vw;
+  height: calc(100vh - @navigationBarHeight);
+  max-height: calc(100vh - @navigationBarHeight);
+  position: fixed !important;
+  
+  &.segment {
+    border-radius: 0 !important;
+    border-top-width: 0 !important;
+    border-bottom-width: 0 !important;
+    border-left-width: 0 !important;
+  }
+
+  &[data-row="0"] {
+    top: @navigationBarHeight;
+  }
+
+  &[data-row="1"] {
+    top: calc(25vh - @navigationBarHeight + 1px);
+  }
+
+  &[data-row="2"] {
+    top: calc(50vh - @navigationBarHeight + 1px);
+  }
+
+  &[data-row="3"] {
+    top: calc(75vh - @navigationBarHeight + 1px);
+  }
+
+  &[data-col="0"] {
+    left: 0;
+  }
+
+  &[data-col="1"] {
+    left: calc(25vw + 1px);
+  }
+
+  &[data-col="2"] {
+    left: calc(50vw + 1px);
+  }
+
+  &[data-col="3"] {
+    left: calc(75vw + 1px);
+  }
+
+  &[data-width="1"] {
+    width: 25vw;
+  }
+
+  &[data-width="2"] {
+    width: 50vw;
+  }
+
+  &[data-width="3"] {
+    width: 75vw;
+  }
+
+  &[data-height="1"] {
+    height: 25vh;
+  }
+
+  &[data-height="2"] {
+    height: 50vh;
+  }
+
+  &[data-height="3"] {
+    height: 75vh;
+  }
+
+  
+  &[data-row="0"] {
+    &[data-height="1"] {
+      width: calc(25vh - @navigationBarHeight);
+    }
+  
+    &[data-height="2"] {
+      width: calc(50vh - @navigationBarHeight);
+    }
+  
+    &[data-height="3"] {
+      width: calc(75vh - @navigationBarHeight);
+    }
+  }
+
+  /*
+  &[data-start="2"] {
+    left: calc(25vw + 1px); 
+    top: @navigationBarHeight;
+  }
+
+  &.panel_3r,
+  &.panel_3v {
+    left: calc(50vw + 1px); 
+    top: @navigationBarHeight;
+  }
+
+  &.panel_4v {
+    left: calc(75vw + 1px); 
+    top: @navigationBarHeight;
+  }
+
+  &.panel_1x,
+  &.panel_3v{
+    width: calc(50vw - 2px);
+  }
+
+  &.panel_1r,
+  &.panel_av{
+    height: calc(50vh - (@navigationBarHeight / 2));
+  }
+
+  &.panel_1z,
+  &.panel_2x,
+  &.panel_3c,
+  &.panel_4v{
+    width: calc(25vw - 2px);
+  }
+
+  &.panel_1c,
+  &.panel_2v{
+    width: calc(75vw - 2px);
+  }
+
+  &.panel_14,
+  &.panel_qr,
+  &.panel_af,
+  &.panel_zv{
+    height: calc(25vh - (@navigationBarHeight / 4));
+  }
+
+  &.panel_1f,
+  &.panel_qv{
+    height: calc(75vh - (@navigationBarHeight / 4 * 3));
+  }
+  */
+
+  &.segment {
+    overflow-x: hidden;
+    overflow-y: auto !important;
+  }
+    
+  .ui.button {
+    margin-top: 1rem !important;
+  }
+}

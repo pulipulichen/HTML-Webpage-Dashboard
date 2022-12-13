@@ -1,9 +1,16 @@
-<div class="NavigationBar ui menu">
+<div class="NavigationBar ui menu form"
+  :style="{'background-color': config.dashboardConfig['theme-color']}">
+  <h1 class="item header">
+    <img :src="config.dashboardConfig.favicon" />
+    {{ config.dashboardConfig.title }}
+  </h1>
   <div class="item">
-    <select v-model="localConfig.tab">
-      <option v-for="tab in config.dashboardConfig.tabs"
-        :value="tab.title">{{ tab.title }}</option>
-    </select>
+    <div class="field">
+      <select v-model="localConfig.tab">
+        <option v-for="tab in config.dashboardConfig.tabs"
+          :value="tab.title">{{ tab.title }}</option>
+      </select>
+    </div>
   </div>
   <div class="item"
     v-if="config.dashboardConfig && config.dashboardConfig.buttons">
@@ -16,8 +23,19 @@
   </div>
 
   <div class="right menu">
-    <div class="item" @click="config.view = 'configuration'">
-      <i class="cog icon"></i>
+    <div class="item" v-if="$parent.urlList.length > 1">
+      <div class="field">
+        <select v-model="focusTab">
+          <option v-for="(url, i) in $parent.urlList"
+            :value="i">{{ (i+1) }}</option>
+        </select>
+      </div>
     </div>
+    <a class="item" @click="utils.PopupUtils.openURLFullscreen($parent.urlList[focusTab])">
+      <i class="external alternate icon"></i>
+    </a>
+    <a class="item" @click="config.view = 'configuration'">
+      <i class="cog icon"></i>
+    </a>
   </div>
 </div>
