@@ -40,6 +40,10 @@ let Index = {
         return false
       }
     },
+    'routingID' () {
+      // console.log('aaa')
+      this.loadDashboardConfig()
+    }
   },
   mounted() {
     // console.log(this.routingID)
@@ -50,17 +54,22 @@ let Index = {
 
       let dashboardConfigURL = this.routingID
 
-      if (dashboardConfigURL === '') {
+      if (!dashboardConfigURL ||
+          dashboardConfigURL === '' || 
+          dashboardConfigURL === '/') {
         dashboardConfigURL = './assets/settings/demo1.json'
+      }
+      else {
+        dashboardConfigURL = decodeURIComponent(dashboardConfigURL)
       }
 
       // for test 20221214-0546 
-      dashboardConfigURL = './assets/settings/demo1.json'
+      // dashboardConfigURL = './assets/settings/demo1.json'
 
       // for test 20221214-0547 
-      dashboardConfigURL = 'https://script.google.com/macros/s/AKfycbwR2MONo0nxfcyF70QpPGEgN2Xhoo096xOHMoVExv4vbNcKp3P07-eAoudGTpr_BvwcmA/exec'
+      // dashboardConfigURL = 'https://script.google.com/macros/s/AKfycbwR2MONo0nxfcyF70QpPGEgN2Xhoo096xOHMoVExv4vbNcKp3P07-eAoudGTpr_BvwcmA/exec'
 
-      // console.log(dashboardConfigURL)
+      console.log(dashboardConfigURL)
       this.config.dashboardConfig = await this.utils.AxiosUtils.get(dashboardConfigURL)
 
       this.setDocument()

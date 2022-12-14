@@ -12,18 +12,15 @@
       </select>
     </div>
   </div>
-  <div class="item"
+  <template
     v-if="config.dashboardConfig && config.dashboardConfig.buttons">
-    
-      <button type="button"
-      class="ui button"
-        v-for="button in buttons"
-        @click="popupWindow(button.url)"
-        >{{ button.title }}</button>
-  </div>
+    <a class="item" v-for="button in buttons"
+      @click="popupWindow(button.url)"
+      >{{ button.title }}</a>
+  </template>
 
   <div class="right menu">
-    <div class="item" v-if="$parent.urlList.length > 1">
+    <div class="item" v-if="openableURLList.length > 1">
       <div class="field">
         <select v-model="focusTab">
           <option v-for="(url, i) in openableURLList"

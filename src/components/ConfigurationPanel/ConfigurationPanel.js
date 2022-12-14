@@ -23,7 +23,7 @@ let app = {
     this.dashboardConfigURL = this.routingID
   },
   beforeDestroy () {
-    this.$router.push('/' + this.dashboardConfigURL)
+    this.$router.push('/' + encodeURIComponent(this.dashboardConfigURL))
   },
   methods: {
     
