@@ -1,4 +1,5 @@
-<div class="Dashboard">
+<div class="Dashboard"
+  :data-navigation-position="config.dashboardConfig['navigation-position']">
   <div :class="'type_' + tab.type">
     <template v-for="(url, i) in urlList">
       <iframe

@@ -1,5 +1,29 @@
 @navigationBarHeight: 50px;
 
+.Dashboard {
+  height: calc(100vh - @navigationBarHeight);
+
+  &[data-navigation-position="bottom"] {
+    .panel {
+      &[data-row="0"] {
+        top: 0;
+      }
+    
+      &[data-row="1"] {
+        top: calc(25vh + 1px);
+      }
+    
+      &[data-row="2"] {
+        top: calc(50vh + 1px);
+      }
+    
+      &[data-row="3"] {
+        top: calc(75vh + 1px);
+      }
+    }
+  }
+}
+
 .panel {
   
   width: 100vw;
@@ -73,15 +97,15 @@
   
   &[data-row="0"] {
     &[data-height="1"] {
-      width: calc(25vh - @navigationBarHeight);
+      height: calc(25vh - @navigationBarHeight);
     }
   
     &[data-height="2"] {
-      width: calc(50vh - @navigationBarHeight);
+      height: calc(50vh - @navigationBarHeight);
     }
   
     &[data-height="3"] {
-      width: calc(75vh - @navigationBarHeight);
+      height: calc(75vh - @navigationBarHeight);
     }
   }
 

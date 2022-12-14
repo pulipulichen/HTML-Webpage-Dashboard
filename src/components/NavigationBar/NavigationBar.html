@@ -1,5 +1,6 @@
 <div class="NavigationBar ui menu form"
-  :style="{'background-color': config.dashboardConfig['theme-color']}">
+  :style="{'background-color': config.dashboardConfig['theme-color']}"
+  :class="{inverted: (config.dashboardConfig['theme-inverted'] === true)}">
   <h1 class="item header">
     <img :src="config.dashboardConfig.favicon" />
     {{ config.dashboardConfig.title }}
