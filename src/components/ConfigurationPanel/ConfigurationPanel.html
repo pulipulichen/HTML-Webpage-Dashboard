@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <div class="field">
+    <div class="field" v-if="config.dashboardConfig.tabs.length > 1">
       <select v-model="localConfig.tab"
         @change="back">
         <option v-for="tab in config.dashboardConfig.tabs"
@@ -50,7 +50,7 @@
       <div class="column">
         <button type="button" class="ui fluid button" @click="save">{{ $t('SAVE') }}</button>
       </div>
-      <div class="column" v-if="location.href.startsWith('http://127.0.0.1')">
+      <div class="column" v-if="isLocalhost">
         <a :href="gitHubURL" target="_blank" class="ui fluid button">{{ $t('GITHUB SAVE') }}</a>
       </div>
       <div class="column">

@@ -12,6 +12,7 @@ let app = {
         demo3: "./assets/settings/demo3.json",
         demo4: "./assets/settings/demo4.json",
         weather: "./assets/settings/weather.json",
+        blogfans: "./assets/settings/blogfans.json",
       }
     }
   },
@@ -41,6 +42,9 @@ let app = {
     },
     buttons () {
       return this.$parent.buttons
+    },
+    isLocalhost () {
+      return (location.href.startsWith('http://127.0.0.1'))
     },
     gitHubURL () {
       return 'https://pulipulichen.github.io/HTML-Webpage-Dashboard/#/' + encodeURIComponent(this.dashboardConfigURL)

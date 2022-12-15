@@ -6,7 +6,7 @@
       <img :src="config.dashboardConfig.favicon" />
       {{ config.dashboardConfig.title }}
     </h1>
-    <div class="item select" v-if="config.dashboardConfig['dashboard-type'] === 'dropdown'">
+    <div class="item select" v-if="config.dashboardConfig['dashboard-type'] === 'dropdown' && config.dashboardConfig.tabs.length > 1">
       <div class="field">
         <select v-model="localConfig.tab">
           <option v-for="tab in config.dashboardConfig.tabs"
