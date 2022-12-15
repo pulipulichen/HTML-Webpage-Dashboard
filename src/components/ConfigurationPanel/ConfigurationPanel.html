@@ -51,6 +51,9 @@
         <button type="button" class="ui fluid button" @click="save">{{ $t('SAVE') }}</button>
       </div>
       <div class="column">
+        <a :href="gitHubURL" target="_blank" class="ui fluid button">{{ $t('GITHUB SAVE') }}</a>
+      </div>
+      <div class="column">
         <button type="button" class="ui fluid button" @click="back">{{ $t('CANCEL') }}</button>
       </div>
       <div class="column">

@@ -42,6 +42,9 @@ let app = {
     buttons () {
       return this.$parent.buttons
     },
+    gitHubURL () {
+      return 'https://pulipulichen.github.io/HTML-Webpage-Dashboard/#/' + encodeURIComponent(this.dashboardConfigURL)
+    }
   },
   mounted() {
     this.dashboardConfigURL = this.routingID
@@ -62,6 +65,9 @@ let app = {
     },
     popupWindow (url) {
       this.utils.PopupUtils.openURLFullscreen(url)
+    },
+    openGithub () {
+      window.open(this.gitHubURL, '_blank')
     }
   }
 }
