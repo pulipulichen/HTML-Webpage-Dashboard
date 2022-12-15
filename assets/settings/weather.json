@@ -4,7 +4,7 @@
   "theme-color": "#81ecec",
   "navigation-position": "bottom",
   "dashboard-type": "simple",
-  "configuration": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=0",
+  "configuration": "https://github.com/pulipulichen/HTML-Webpage-Dashboard/edit/main/assets/settings/weather.json",
   "tabs": [
     {
       "title": "Weather",

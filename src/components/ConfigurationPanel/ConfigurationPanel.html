@@ -50,7 +50,7 @@
       <div class="column">
         <button type="button" class="ui fluid button" @click="save">{{ $t('SAVE') }}</button>
       </div>
-      <div class="column">
+      <div class="column" v-if="location.href.startsWith('http://127.0.0.1')">
         <a :href="gitHubURL" target="_blank" class="ui fluid button">{{ $t('GITHUB SAVE') }}</a>
       </div>
       <div class="column">
