@@ -13,7 +13,8 @@
         :data-col="parseCol($parent.tabTypes[i])"
         :data-width="parseWidth($parent.tabTypes[i])"
         :data-height="parseHeight($parent.tabTypes[i])"
-        frameBorder="0"></iframe>
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <div v-else-if="Array.isArray(url)"
         :class="'panel ui segment num' + i + ' panel_' + $parent.tabTypes[i]"
         :data-start="$parent.tabTypes[i][0]"

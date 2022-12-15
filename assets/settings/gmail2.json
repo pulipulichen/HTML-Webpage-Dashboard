@@ -1,0 +1,18 @@
+{
+  "title": "Gmail Double",
+  "favicon": "https://i.ibb.co/94ZX6gN/image.png",
+  "theme-color": "#F23838",
+  "navigation-position": "bottom",
+  "dashboard-type": "simple",
+  "configuration": "https://github.com/pulipulichen/HTML-Webpage-Dashboard/edit/main/assets/settings/gmail2.json",
+  "tabs": [
+    {
+      "title": "main",
+      "type": "1x_3v",
+      "url": [
+        "https://mail.google.com/mail/u/0/#inbox",
+        "https://mail.google.com/mail/u/0/#inbox"
+      ]
+    }
+  ]
+}

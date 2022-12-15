@@ -10,6 +10,11 @@
   },
   "tabs": [
     {
+      "title": "for test",
+      "type": "1v",
+      "url": "https://blog.pulipuli.info"
+    },
+    {
       "title": "四框",
       "type": "1q_2w_3r_av",
       "url": [
@@ -18,11 +23,6 @@
         "https://blog.pulipuli.info/",
         "https://blog.pulipuli.info/"
       ]
-    },
-    {
-      "title": "期末報告清單",
-      "type": "1v",
-      "url": "https://blog.pulipuli.info/"
     },
     {
       "title": "測試",

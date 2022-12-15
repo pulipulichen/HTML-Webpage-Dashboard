@@ -3,8 +3,8 @@
     <h1>{{ config.dashboardConfig.title }}</h1>
 
     <div class="field ui equal width grid" v-if="config.dashboardConfig && config.dashboardConfig.buttons">
-      <div class="column">
-        <a class="ui fluid button" v-for="button in buttons" 
+      <div class="column" v-for="button in buttons">
+        <a class="ui fluid button" 
           @click.prevent.stop="popupWindow(button.url)" 
           :href="button.url"
           target="_blank">{{ button.title }}</a>

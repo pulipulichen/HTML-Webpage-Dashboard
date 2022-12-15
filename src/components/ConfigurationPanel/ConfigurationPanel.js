@@ -13,6 +13,7 @@ let app = {
         demo4: "./assets/settings/demo4.json",
         weather: "./assets/settings/weather.json",
         blogfans: "./assets/settings/blogfans.json",
+        gmail2: "./assets/settings/gmail2.json",
       }
     }
   },
