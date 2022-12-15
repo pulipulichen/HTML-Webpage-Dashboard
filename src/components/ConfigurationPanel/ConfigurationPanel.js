@@ -14,6 +14,7 @@ let app = {
         weather: "./assets/settings/weather.json",
         blogfans: "./assets/settings/blogfans.json",
         gmail2: "./assets/settings/gmail2.json",
+        lit: "./assets/settings/lit.json",
       }
     }
   },

@@ -33,7 +33,11 @@ let Index = {
       return urlList
     },
     tabTypes () {
-      return this.tab.type.split('_')
+      let splitor = '_'
+      if (this.tab.type.indexOf(',') > -1) {
+        splitor = ','
+      }
+      return this.tab.type.split(splitor)
     },
     buttons () {
       if (!this.config.dashboardConfig || !this.config.dashboardConfig.buttons) {
