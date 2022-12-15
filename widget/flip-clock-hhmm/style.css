@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+html, body { width:100%; height:100%; margin:0; padding:0; background:#141414; }
+
+#clock {
+  position: absolute;
+  top:0; bottom:0; left:50%; right:0;
+  /*margin:auto;*/
+  margin-left:-465px;
+  width:930px;
+  height:200px;
+  text-align:center;
+}
+
+.num {
+  position:relative;
+  display:inline-block;
+  width:140px;
+  height:200px;
+  font: 140px 'Roboto Slab', sans-serif;
+  color:#404040;
+  background:rgba(90,90,90,1);
+  border:solid 3px #404040;
+  box-sizing:border-box;
+  border-radius:18px;
+}
+
+.colon {
+  position:relative;
+  display:inline-block;
+  font: 140px 'Roboto Slab', sans-serif;
+  top:-60px;
+  left:-2px;
+  color:#404040;
+}
+
+.base span {
+  position:absolute;
+  display:block;
+  width:100%;
+}
+
+.upper {
+  position:absolute;  
+  width:100%;
+  height:50%;
+  background:linear-gradient(0deg, rgba(200,200,200,1), rgba(255,255,255,1) 15%);
+  border-radius:15px 15px 0 0;  
+  box-shadow: inset 0 1px 8px rgba(0,0,0,.1);
+  overflow:hidden;
+  border-bottom:solid 1px rgba(0,0,0,.5);
+  box-sizing:border-box;
+}
+
+.lower {
+  position:absolute;
+  top:50%;
+  width:100%;
+  height:50%;
+  background:linear-gradient(180deg, rgba(200,200,200,1), rgba(255,255,255,1) 15%);
+  border-radius:0 0 15px 15px;  
+  box-shadow: inset 0 -3px 5px rgba(0,0,0,.2);
+  overflow:hidden;
+  border-top:solid 1px #ddd;
+  box-sizing:border-box;
+}
+
+.lower span {
+  position:relative;
+  top:-100%;
+}
