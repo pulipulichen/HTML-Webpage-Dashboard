@@ -34,7 +34,7 @@ let app = {
       this.back()
     },
     back () {
-      this.config.view = 'dashbaord'
+      this.config.view = 'dashboard'
     }
   }
 }

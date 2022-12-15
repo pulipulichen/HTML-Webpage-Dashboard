@@ -9,6 +9,8 @@ let Index = {
   data() {
     this.$i18n.locale = this.config.localConfig
     return {
+      example: './assets/settings/demo1.json',
+      lastRouteID: ``
     }
   },
   components: {
@@ -41,7 +43,7 @@ let Index = {
       }
     },
     'routingID' () {
-      // console.log('aaa')
+      // console.log(before, after)
       this.loadDashboardConfig()
     }
   },
@@ -57,11 +59,17 @@ let Index = {
       if (!dashboardConfigURL ||
           dashboardConfigURL === '' || 
           dashboardConfigURL === '/') {
-        dashboardConfigURL = './assets/settings/demo1.json'
+        dashboardConfigURL = this.example
       }
       else {
         dashboardConfigURL = decodeURIComponent(dashboardConfigURL)
       }
+
+      if (this.lastRouteID === dashboardConfigURL &&
+        dashboardConfigURL !== this.example) {
+        return false  
+      }
+
 
       // for test 20221214-0546 
       // dashboardConfigURL = './assets/settings/demo1.json'
@@ -69,11 +77,19 @@ let Index = {
       // for test 20221214-0547 
       // dashboardConfigURL = 'https://script.google.com/macros/s/AKfycbwR2MONo0nxfcyF70QpPGEgN2Xhoo096xOHMoVExv4vbNcKp3P07-eAoudGTpr_BvwcmA/exec'
 
-      console.log(dashboardConfigURL)
-      this.config.dashboardConfig = await this.utils.AxiosUtils.get(dashboardConfigURL)
+      // console.log(dashboardConfigURL)
+      try {
+        this.config.dashboardConfig = await this.utils.AxiosUtils.get(dashboardConfigURL)
+      }
+      catch (e) {
+        this.$router.push('/' + encodeURIComponent(this.lastRouteID))
+        return false
+      }
 
       this.setDocument()
       this.setTab()
+
+      this.lastRouteID = dashboardConfigURL
     },
     setDocument () {
       if (this.config.dashboardConfig.title) {

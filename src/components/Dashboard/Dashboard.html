@@ -13,7 +13,7 @@
         :data-width="parseWidth($parent.tabTypes[i])"
         :data-height="parseHeight($parent.tabTypes[i])"
         frameBorder="0"></iframe>
-      <div v-if="Array.isArray(url)"
+      <div v-else-if="Array.isArray(url)"
         :class="'panel ui segment num' + i + ' panel_' + $parent.tabTypes[i]"
         :data-start="$parent.tabTypes[i][0]"
         :data-end="$parent.tabTypes[i][1]"
@@ -21,6 +21,7 @@
         :data-col="parseCol($parent.tabTypes[i])"
         :data-width="parseWidth($parent.tabTypes[i])"
         :data-height="parseHeight($parent.tabTypes[i])">
+        Array
         <div class="ui input fluid field search-buttons"
           :class="{'icon': (searchButtons[i] && searchButtons[i].trim() !== '')}">
           <input type="text" :placeholder="$t('Search...')"
@@ -41,7 +42,7 @@
           </div>
         </div>
       </div>
-      <div v-if="typeof(url) === 'object'"
+      <div v-else-if="typeof(url) === 'object'"
         :class="'panel ui segment num' + i + ' panel_' + $parent.tabTypes[i]"
         :data-start="$parent.tabTypes[i][0]"
         :data-end="$parent.tabTypes[i][1]"
@@ -49,6 +50,7 @@
         :data-col="parseCol($parent.tabTypes[i])"
         :data-width="parseWidth($parent.tabTypes[i])"
         :data-height="parseHeight($parent.tabTypes[i])">
+        JSON
         <div class="ui input fluid field"
           :class="{'icon': (searchButtons[i] && searchButtons[i].trim() !== '')}">
           <input type="text" :placeholder="$t('Search...')"
