@@ -31,7 +31,9 @@
         </select>
       </div>
     </div>
-    <a class="item" @click="utils.PopupUtils.openURLFullscreen(openableURLList[focusTab])">
+    <a class="item" @click.prevent.stop="utils.PopupUtils.openURLFullscreen(openableURLList[focusTab])"
+      :href="openableURLList[focusTab]"
+      target="_blank">
       <i class="external alternate icon"></i>
     </a>
     <a class="item" @click="config.view = 'configuration'">
