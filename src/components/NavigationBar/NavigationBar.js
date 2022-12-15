@@ -16,21 +16,26 @@ let app = {
     }
   },
   computed: {
-    buttons () {
-      if (!this.config.dashboardConfig || !this.config.dashboardConfig.buttons) {
-        return []
+    computedClasses () {
+      console.log(this.config.dashboardConfig['dashboard-type'])
+      return {
+        inverted: (this.config.dashboardConfig['theme-inverted'] === true), 
+        bottom: (this.config.dashboardConfig['navigation-position'] === 'bottom'),
+        'mini compact': (this.config.dashboardConfig['dashboard-type'] === 'simple')
       }
-      let buttonsMap = this.config.dashboardConfig.buttons
-      // console.log(buttonsMap)
-      return Object.keys(buttonsMap).map(title => {
-        return {
-          title,
-          url: buttonsMap[title]
-        }
-      })
+    },
+    buttons () {
+      return this.$parent.buttons
     },
     openableURLList () {
       return this.$parent.urlList.filter(u => (typeof(u) === 'string'))
+    },
+    type () {
+      if (!this.config.dashboardConfig || 
+        !this.config.dashboardConfig['dashboard-type']) {
+        return 'dropdown'
+      }
+      return this.config.dashboardConfig['dashboard-type']
     }
   },
   mounted() {

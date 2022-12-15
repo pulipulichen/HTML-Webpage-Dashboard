@@ -3,7 +3,7 @@
   "favicon": "https://cdn-icons-png.flaticon.com/512/6821/6821002.png",
   "theme-color": "#E1F7F7",
   "navigation-position": "top",
-  "dashboard-type": "dropdown",
+  "dashboard-type": "simple",
   "configuration": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=0",
   "buttons": {
     "網頁1": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"

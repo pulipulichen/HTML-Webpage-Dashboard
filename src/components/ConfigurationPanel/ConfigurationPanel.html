@@ -1,57 +1,66 @@
 <div class="ConfigurationPanel ui form">
   <div class="ui segment">
+    <h1>{{ config.dashboardConfig.title }}</h1>
+
+    <div class="field ui equal width grid" v-if="config.dashboardConfig && config.dashboardConfig.buttons">
+      <div class="column">
+        <a class="ui fluid button" v-for="button in buttons" 
+          @click.prevent.stop="popupWindow(button.url)" 
+          :href="button.url"
+          target="_blank">{{ button.title }}</a>
+      </div>
+    </div>
+
+    <div class="field">
+      <select v-model="localConfig.tab"
+        @change="back">
+        <option v-for="tab in config.dashboardConfig.tabs"
+          :value="tab.title">{{ tab.title }}</option>
+      </select>
+    </div>
+
+
     <div class="field">
       <label for="dashboardInformation">
         {{ $t('Dashboard Information') }}
       </label>
       <div class="ui action input">
         <input type="text" :value="dashboardInformation" onfocus="this.select();" />
-        <button @click="utils.ClipboardUtils.copyPlainString(dashboardInformation)" class="ui button"><i class="copy icon" /></button>
+        <button @click="utils.ClipboardUtils.copyPlainString(dashboardInformation)" class="ui button"><i
+            class="copy icon" /></button>
       </div>
-        
-      
+
+
     </div>
     <div class="field">
       <label for="dashboardConfigURL">
         {{ $t('Dashbaord Config URL') }}
-        (<a href="https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit?usp=sharing" 
-          target="_blank">example</a>)
+        (<a href="https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit?usp=sharing"
+          target="_blank">example</a><template v-for="item in demoList">,
+          <a :href="item.value" @click.prevent.stop="save(item.value)" target="_blank">{{ item.name }}</a></template>)
       </label>
       <input type="text" v-model="dashboardConfigURL" id="dashboardConfigURL" />
     </div>
 
     <div class="ui equal width grid">
       <div class="column" v-if="config.dashboardConfig.configuration">
-          <a 
-            :href="config.dashboardConfig.configuration"
-            target="_blank"
-            class="ui fluid button"
-            @click.prevent.stop="utils.PopupUtils.openURLFullscreen(config.dashboardConfig.configuration)">{{ $t('OPEN CONFIGURATION') }}</a>
+        <a :href="config.dashboardConfig.configuration" target="_blank" class="ui fluid button"
+          @click.prevent.stop="utils.PopupUtils.openURLFullscreen(config.dashboardConfig.configuration)">{{ $t('OPEN CONFIGURATION') }}</a>
       </div>
       <div class="column">
-        <button type="button"
-          class="ui fluid button"
-          @click="save">{{ $t('SAVE') }}</button>
+        <button type="button" class="ui fluid button" @click="save">{{ $t('SAVE') }}</button>
       </div>
       <div class="column">
-        <button type="button"
-          class="ui fluid button"
-          @click="back">{{ $t('CANCEL') }}</button>
+        <button type="button" class="ui fluid button" @click="back">{{ $t('CANCEL') }}</button>
       </div>
       <div class="column">
-        <button type="button"
-          class="ui fluid button"
-          @click="location.reload()">{{ $t('RELOAD') }}</button>
+        <button type="button" class="ui fluid button" @click="reload">{{ $t('RELOAD') }}</button>
       </div>
     </div>
-    
-      
+
+
   </div>
 
-  <Author 
-    ref="Author"
-    v-bind:config="config"
-    v-bind:localConfig="localConfig"
-    v-bind:utils="utils">
+  <Author ref="Author" v-bind:config="config" v-bind:localConfig="localConfig" v-bind:utils="utils">
   </Author>
 </div>

@@ -1,0 +1,19 @@
+{
+  "title": "Weather Tamsui",
+  "favicon": "https://blogger.googleusercontent.com/img/a/AVvXsEhhSLi-WEbs7dva5w9depW8_E7Xck-dEgdqtsWTV4BddEL0nPy5FO7MGPTwatMUxONtv_OwSlXb3BZGQQWXOLiiWlOQYUu6MEzKhs2ieqbY9XW0CsQx2gWcg1NDiCFd6IHRHoX7sKXuOgXuPbG4uj9ZAHfX42bi46Bo-WlkDy0MhAchC4VcBVk",
+  "theme-color": "#81ecec",
+  "navigation-position": "bottom",
+  "dashboard-type": "simple",
+  "configuration": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=0",
+  "tabs": [
+    {
+      "title": "Weather",
+      "type": "1s_3v_zx",
+      "url": [
+        "https://www.cwb.gov.tw/V8/C/W/Town/Town.html?TID=6501000#PC_week",
+        "https://icam.tw/cam/NWT-000030",
+        "./widget/flip-clock"
+      ]
+    }
+  ]
+}

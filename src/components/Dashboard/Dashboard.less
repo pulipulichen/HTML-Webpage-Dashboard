@@ -22,6 +22,29 @@
       }
     }
   }
+
+  &[data-dashboard-type="simple"] {
+    .panel {
+      height: calc(100vh);
+      max-height: calc(100vh);
+
+      &[data-row="0"] {
+        top: 0;
+
+        &[data-height="1"] {
+          height: 25vh;
+        }
+      
+        &[data-height="2"] {
+          height: 50vh;
+        }
+      
+        &[data-height="3"] {
+          height: 75vh;
+        }
+      }
+    }
+  }
 }
 
 .panel {
@@ -40,10 +63,22 @@
 
   &[data-row="0"] {
     top: @navigationBarHeight;
+
+    &[data-height="1"] {
+      height: calc(25vh - @navigationBarHeight);
+    }
+  
+    &[data-height="2"] {
+      height: calc(50vh - @navigationBarHeight);
+    }
+  
+    &[data-height="3"] {
+      height: calc(75vh - @navigationBarHeight);
+    }
   }
 
   &[data-row="1"] {
-    top: calc(25vh - @navigationBarHeight + 1px);
+    top: calc(25vh + 1px);
   }
 
   &[data-row="2"] {
@@ -96,72 +131,6 @@
     height: 75vh;
   }
 
-  
-  &[data-row="0"] {
-    &[data-height="1"] {
-      height: calc(25vh - @navigationBarHeight);
-    }
-  
-    &[data-height="2"] {
-      height: calc(50vh - @navigationBarHeight);
-    }
-  
-    &[data-height="3"] {
-      height: calc(75vh - @navigationBarHeight);
-    }
-  }
-
-  /*
-  &[data-start="2"] {
-    left: calc(25vw + 1px); 
-    top: @navigationBarHeight;
-  }
-
-  &.panel_3r,
-  &.panel_3v {
-    left: calc(50vw + 1px); 
-    top: @navigationBarHeight;
-  }
-
-  &.panel_4v {
-    left: calc(75vw + 1px); 
-    top: @navigationBarHeight;
-  }
-
-  &.panel_1x,
-  &.panel_3v{
-    width: calc(50vw - 2px);
-  }
-
-  &.panel_1r,
-  &.panel_av{
-    height: calc(50vh - (@navigationBarHeight / 2));
-  }
-
-  &.panel_1z,
-  &.panel_2x,
-  &.panel_3c,
-  &.panel_4v{
-    width: calc(25vw - 2px);
-  }
-
-  &.panel_1c,
-  &.panel_2v{
-    width: calc(75vw - 2px);
-  }
-
-  &.panel_14,
-  &.panel_qr,
-  &.panel_af,
-  &.panel_zv{
-    height: calc(25vh - (@navigationBarHeight / 4));
-  }
-
-  &.panel_1f,
-  &.panel_qv{
-    height: calc(75vh - (@navigationBarHeight / 4 * 3));
-  }
-  */
 
   &.segment {
     overflow-x: hidden;

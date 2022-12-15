@@ -34,7 +34,20 @@ let Index = {
     },
     tabTypes () {
       return this.tab.type.split('_')
-    }
+    },
+    buttons () {
+      if (!this.config.dashboardConfig || !this.config.dashboardConfig.buttons) {
+        return []
+      }
+      let buttonsMap = this.config.dashboardConfig.buttons
+      // console.log(buttonsMap)
+      return Object.keys(buttonsMap).map(title => {
+        return {
+          title,
+          url: buttonsMap[title]
+        }
+      })
+    },
   },
   watch: {
     'config.inited'() {
