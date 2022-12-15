@@ -1,6 +1,17 @@
 <div class="ConfigurationPanel ui form">
   <div class="ui segment">
     <div class="field">
+      <label for="dashboardInformation">
+        {{ $t('Dashboard Information') }}
+      </label>
+      <div class="ui action input">
+        <input type="text" :value="dashboardInformation" onfocus="this.select();" />
+        <button @click="utils.ClipboardUtils.copyPlainString(dashboardInformation)" class="ui button"><i class="copy icon" /></button>
+      </div>
+        
+      
+    </div>
+    <div class="field">
       <label for="dashboardConfigURL">
         {{ $t('Dashbaord Config URL') }}
         (<a href="https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit?usp=sharing" 
@@ -9,23 +20,26 @@
       <input type="text" v-model="dashboardConfigURL" id="dashboardConfigURL" />
     </div>
 
-    <div class="equal wide fields" v-if="config.dashboardConfig.configuration">
-      <div class="eight wide field">
+    <div class="ui equal width grid">
+      <div class="column" v-if="config.dashboardConfig.configuration">
+          <a 
+            :href="config.dashboardConfig.configuration"
+            target="_blank"
+            class="ui fluid button"
+            @click.prevent.stop="utils.PopupUtils.openURLFullscreen(config.dashboardConfig.configuration)">{{ $t('OPEN CONFIGURATION') }}</a>
+      </div>
+      <div class="column">
         <button type="button"
           class="ui fluid button"
-          @click="utils.PopupUtils.openURLFullscreen(config.dashboardConfig.configuration)">{{ $t('CONFIGURATION') }}</button>
+          @click="save">{{ $t('SAVE') }}</button>
       </div>
-      <div class="eight wide field">
+      <div class="column">
         <button type="button"
           class="ui fluid button"
-          @click="config.view='dashboard'">{{ $t('SAVE') }}</button>
+          @click="back">{{ $t('CANCEL') }}</button>
       </div>
     </div>
-    <div class="field" v-else>
-      <button type="button"
-        class="ui fluid button"
-        @click="config.view='dashboard'">{{ $t('SAVE') }}</button>
-    </div>
+    
       
   </div>
 

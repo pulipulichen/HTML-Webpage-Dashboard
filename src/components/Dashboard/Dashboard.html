@@ -13,6 +13,34 @@
         :data-width="parseWidth($parent.tabTypes[i])"
         :data-height="parseHeight($parent.tabTypes[i])"
         frameBorder="0"></iframe>
+      <div v-if="Array.isArray(url)"
+        :class="'panel ui segment num' + i + ' panel_' + $parent.tabTypes[i]"
+        :data-start="$parent.tabTypes[i][0]"
+        :data-end="$parent.tabTypes[i][1]"
+        :data-row="parseRow($parent.tabTypes[i])"
+        :data-col="parseCol($parent.tabTypes[i])"
+        :data-width="parseWidth($parent.tabTypes[i])"
+        :data-height="parseHeight($parent.tabTypes[i])">
+        <div class="ui input fluid field search-buttons"
+          :class="{'icon': (searchButtons[i] && searchButtons[i].trim() !== '')}">
+          <input type="text" :placeholder="$t('Search...')"
+            v-model="searchButtons[i]" />
+          <i class="x link icon" v-if="(searchButtons[i] && searchButtons[i].trim() !== '')"
+            @click="clearSearch(i)" />
+        </div>
+        <div class="ui equal width grid"
+           v-for="rowButtons in filterSearchButton(url, searchButtons[i])">
+          <div class="column"
+            v-for="button in rowButtons">
+            <a class="ui fluid button"
+              :href="button[1]"
+              target="_blank"
+              @click.prevent.stop="utils.PopupUtils.openURLFullscreen(button[1])">
+              {{ button[0] }}
+            </a>
+          </div>
+        </div>
+      </div>
       <div v-if="typeof(url) === 'object'"
         :class="'panel ui segment num' + i + ' panel_' + $parent.tabTypes[i]"
         :data-start="$parent.tabTypes[i][0]"

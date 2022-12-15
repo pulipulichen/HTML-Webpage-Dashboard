@@ -16,7 +16,9 @@
   <template
     v-if="config.dashboardConfig && config.dashboardConfig.buttons">
     <a class="item" v-for="button in buttons"
-      @click="popupWindow(button.url)"
+      @click.prevent.stop="popupWindow(button.url)"
+      :href="button.url"
+      target="_blank"
       >{{ button.title }}</a>
   </template>
 

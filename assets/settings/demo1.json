@@ -10,6 +10,16 @@
   },
   "tabs": [
     {
+      "title": "四框",
+      "type": "1q_2w_3r_av",
+      "url": [
+        "https://docs.google.com/spreadsheets/d/13HguEIlHRZz_o7QaeMEUYkizHb5N104iQR5D2jkn9is/edit#gid=1533440603",
+        "https://docs.google.com/spreadsheets/d/13HguEIlHRZz_o7QaeMEUYkizHb5N104iQR5D2jkn9is/edit#gid=1533440603",
+        "https://docs.google.com/spreadsheets/d/13HguEIlHRZz_o7QaeMEUYkizHb5N104iQR5D2jkn9is/edit#gid=1533440603",
+        "https://docs.google.com/spreadsheets/d/13HguEIlHRZz_o7QaeMEUYkizHb5N104iQR5D2jkn9is/edit#gid=1533440603"
+      ]
+    },
+    {
       "title": "期末報告清單",
       "type": "1v",
       "url": "https://docs.google.com/spreadsheets/d/13HguEIlHRZz_o7QaeMEUYkizHb5N104iQR5D2jkn9is/edit#gid=1533440603"
@@ -31,27 +41,27 @@
       "title": "按鈕列表",
       "type": "1z_2v",
       "url": [
-        {
-          "按鈕1": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345",
-          "按鈕2": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345",
-          "按鈕3": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345",
-          "按鈕31": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345",
-          "按鈕32": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345",
-          "按鈕33": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345",
-          "按鈕34": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345",
-          "按鈕35": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345",
-          "按鈕36": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345",
-          "按鈕376": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345",
-          "按鈕37": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345",
-          "按鈕388": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345",
-          "按鈕39": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345",
-          "按鈕30": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345",
-          "按鈕3q": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345",
-          "按鈕3q1": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345",
-          "按鈕3a": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345",
-          "按鈕3d": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"
+        [
+          [["按鈕1", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"],
+          ["按鈕2", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
+          [["按鈕3", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
+          [["按鈕31", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
+          [["按鈕32", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
+          [["按鈕33", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
+          [["按鈕34", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
+          [["按鈕35", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
+          [["按鈕36", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
+          [["按鈕376", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
+          [["按鈕37", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
+          [["按鈕388", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
+          [["按鈕39", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
+          [["按鈕30", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
+          [["按鈕3q", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
+          [["按鈕3q1", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
+          [["按鈕3a", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
+          [["按鈕3d", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]]
 
-        },
+        ],
         "https://pulipulichen.github.io/PWA-iClass-Discuss-Analysis/index.html"
         
       ]

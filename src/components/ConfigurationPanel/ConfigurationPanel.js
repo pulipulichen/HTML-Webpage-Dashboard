@@ -17,16 +17,25 @@ let app = {
     }
   },
   computed: {
-    
+    dashboardInformation () {
+      if (!this.routingID) {
+        return ''
+      }
+
+      return document.title + '\t' + location.href
+    }
   },
   mounted() {
     this.dashboardConfigURL = this.routingID
   },
-  beforeDestroy () {
-    this.$router.push('/' + encodeURIComponent(this.dashboardConfigURL))
-  },
   methods: {
-    
+    save () {
+      this.$router.push('/' + encodeURIComponent(this.dashboardConfigURL))
+      this.back()
+    },
+    back () {
+      this.config.view = 'dashbaord'
+    }
   }
 }
 

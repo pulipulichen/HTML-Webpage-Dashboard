@@ -128,6 +128,30 @@ let app = {
           url: buttons[t]
         }
       })
+    },
+    filterSearchButton (url, search) {
+      if (!search || search.trim() === '') {
+        return url
+      }
+
+      let output = []
+
+      url.forEach(row => {
+        let outputRow = []
+        row.forEach((button) => {
+          if (button[0].indexOf(search) === -1) {
+            return false
+          }
+
+          outputRow.push(button)
+        })
+
+        if (outputRow.length > 0) {
+          output.push(outputRow)
+        }
+      })
+
+      return output
     }
   }
 }
