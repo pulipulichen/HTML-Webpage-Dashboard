@@ -107,7 +107,7 @@ let Index = {
       // for test 20221214-0547 
       // dashboardConfigURL = 'https://script.google.com/macros/s/AKfycbwR2MONo0nxfcyF70QpPGEgN2Xhoo096xOHMoVExv4vbNcKp3P07-eAoudGTpr_BvwcmA/exec'
 
-      // console.log(dashboardConfigURL)
+      console.log({dashboardConfigURL})
       try {
         this.config.dashboardConfig = await this.utils.AxiosUtils.get(dashboardConfigURL)
       }
