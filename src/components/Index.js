@@ -140,7 +140,7 @@ let Index = {
 
       let base = '/'
       if (location.href.startsWith('https://pulipulichen.github.io/HTML-Webpage-Dashboard/')) {
-        bash = '/HTML-Webpage-Dashboard/'
+        base = '/HTML-Webpage-Dashboard/'
       }
 
       this.$router.push(base + encodeURIComponent(id))
