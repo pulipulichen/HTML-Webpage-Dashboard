@@ -34,7 +34,17 @@ const routes = [
     path: '/:routingID', 
     component: Index,
     props: true
-  }]
+  },
+  { 
+    path: '/HTML-Webpage-Dashboard/', 
+    component: Index 
+  },
+  { 
+    path: '/HTML-Webpage-Dashboard/:routingID', 
+    component: Index,
+    props: true
+  },
+]
 
 const router = new VueRouter({
   mode: "history",
