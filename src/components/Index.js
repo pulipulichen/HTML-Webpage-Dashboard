@@ -133,7 +133,8 @@ let Index = {
     setDocument () {
 
       let manifestJSON = {
-        start_url: location.href
+        start_url: location.href,
+        scope: location.href
       }
       if (this.config.dashboardConfig.title) {
         document.title = this.config.dashboardConfig.title
