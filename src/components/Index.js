@@ -178,12 +178,12 @@ document.head
     `<link rel="manifest" href='data:application/manifest+json,{"start_url":"${startUrl}", "name": "OKK", "icons": [{"src": "https://pulipulichen.github.io/HTML-Webpage-Dashboard/assets/favicon/favicon.png","sizes": "512x512","type":"image/png"}]}' />`,
   );
       */
-      // let manifest = $('head > link[ref="manifest"]')
-      // if (manifest.length > 0) {
-      //   manifest.remove()
-      // }
+      let manifest = $('head > link[ref="manifest"]')
+      if (manifest.length > 0) {
+        manifest.remove()
+      }
 
-      // $('head').append(`<link rel="manifest" href='data:application/manifest+json,${JSON.stringify(manifestJSON)}' />`)
+      $('head').append(`<link rel="manifest" href='data:application/manifest+json,${JSON.stringify(manifestJSON)}' />`)
     },
     getImageSize (imgURL) {
       return new Promise((resolve, reject) => {
