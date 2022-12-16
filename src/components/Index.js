@@ -170,7 +170,7 @@ let Index = {
       }
       if (this.config.dashboardConfig['theme-color']) {
         document.querySelector('meta[name="theme-color"]').content = this.config.dashboardConfig['theme-color']
-        manifestJSON.background_color = this.config.dashboardConfig['theme-color'].trim()
+        // manifestJSON.background_color = this.config.dashboardConfig['theme-color'].trim()
       }
 
       /*
