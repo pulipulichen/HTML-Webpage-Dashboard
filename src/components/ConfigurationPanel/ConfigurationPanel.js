@@ -15,6 +15,7 @@ let app = {
         blogfans: "./assets/settings/blogfans.json",
         gmail2: "./assets/settings/gmail2.json",
         lit: "./assets/settings/lit.json",
+        filter: "./assets/settings/filter.json",
       }
     }
   },

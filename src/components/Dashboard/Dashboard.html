@@ -36,6 +36,7 @@
             v-for="button in rowButtons">
             <a class="ui fluid button"
               :href="button[1]"
+              :class="{disabled: !button[1]}"
               target="_blank"
               @click.prevent.stop="utils.PopupUtils.openURLFullscreen(button[1])">
               {{ button[0] }}
@@ -51,7 +52,6 @@
         :data-col="parseCol($parent.tabTypes[i])"
         :data-width="parseWidth($parent.tabTypes[i])"
         :data-height="parseHeight($parent.tabTypes[i])">
-        JSON
         <div class="ui input fluid field"
           :class="{'icon': (searchButtons[i] && searchButtons[i].trim() !== '')}">
           <input type="text" :placeholder="$t('Search...')"
@@ -64,11 +64,23 @@
           <a class="ui fluid button"
             :href="button.url"
             target="_blank"
+            :class="{disabled: !button.url}"
             @click.prevent.stop="utils.PopupUtils.openURLFullscreen(button.url)">
             {{ button.title }}
           </a>
         </div>
       </div>
+      <iframe v-else-if="url === false"
+        :class="'panel ui segment num' + i + ' panel_' + $parent.tabTypes[i]"
+        :data-start="$parent.tabTypes[i][0]"
+        :data-end="$parent.tabTypes[i][1]"
+        :data-row="parseRow($parent.tabTypes[i])"
+        :data-col="parseCol($parent.tabTypes[i])"
+        :data-width="parseWidth($parent.tabTypes[i])"
+        :data-height="parseHeight($parent.tabTypes[i])"
+        src="https://nicepage.com/landing-page/preview/our-website-is-under-construction-307500?device=desktop" 
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </template>
   </div>
 </div>

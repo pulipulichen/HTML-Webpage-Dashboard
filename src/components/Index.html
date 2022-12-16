@@ -28,6 +28,9 @@
       v-bind:routingID="routingID">
     </NavigationBar>
   </div>
+  <div v-if="!config.dashboardConfig">
+    讀取中
+  </div>
   
   <ConfigurationPanel 
     v-if="config.view === 'configuration'"
