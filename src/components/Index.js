@@ -79,7 +79,8 @@ let Index = {
     loadDashboardConfig: async function () {
       // return await this.utils.AsyncUtils.sleep(3000)
 
-      let dashboardConfigURL = this.getIDParameter()
+      // let dashboardConfigURL = this.getIDParameter()
+      let dashboardConfigURL
 
       if (!dashboardConfigURL) {
         dashboardConfigURL = this.routingID
@@ -143,10 +144,13 @@ let Index = {
         base = '/HTML-Webpage-Dashboard/'
       }
 
-      this.$router.push(base + encodeURIComponent(id))
+      console.log('before', base + encodeURIComponent(id) + '/index.html')
+      this.$router.push(base + encodeURIComponent(id) + '/index.html')
+      console.log('after')
     },
     setDocument () {
-
+      // console.log('沒有')
+      // return false
       let manifestJSON = {
         start_url: location.href,
         scope: location.href,
@@ -166,7 +170,7 @@ let Index = {
       }
       if (this.config.dashboardConfig['theme-color']) {
         document.querySelector('meta[name="theme-color"]').content = this.config.dashboardConfig['theme-color']
-        manifestJSON.background_color = this.config.dashboardConfig['theme-color']
+        manifestJSON.background_color = this.config.dashboardConfig['theme-color'].trim()
       }
 
       /*
@@ -182,7 +186,7 @@ document.head
       if (manifest.length > 0) {
         manifest.remove()
       }
-
+      console.log(manifestJSON);
       $('head').append(`<link rel="manifest" href='data:application/manifest+json,${JSON.stringify(manifestJSON)}' />`)
     },
     getImageSize (imgURL) {

@@ -27,20 +27,25 @@ Vue.use(VueRouter)
 
 const routes = [
   { 
-    path: '/', 
-    component: Index 
-  },
-  { 
-    path: '/:routingID', 
-    component: Index,
-    props: true
-  },
-  { 
     path: '/HTML-Webpage-Dashboard/', 
     component: Index 
   },
   { 
     path: '/HTML-Webpage-Dashboard/:routingID', 
+    component: Index,
+    props: true
+  },
+  { 
+    path: '/HTML-Webpage-Dashboard/:routingID/index.html', 
+    component: Index,
+    props: true
+  },
+  { 
+    path: '/', 
+    component: Index 
+  },
+  { 
+    path: '/:routingID', 
     component: Index,
     props: true
   },
