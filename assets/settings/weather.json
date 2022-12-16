@@ -5,6 +5,9 @@
   "navigation-position": "bottom",
   "dashboard-type": "simple",
   "configuration": "https://github.com/pulipulichen/HTML-Webpage-Dashboard/edit/main/assets/settings/weather.json",
+  "buttons": {
+    "Yahoo天氣": "https://tw.news.yahoo.com/weather"
+  },
   "tabs": [
     {
       "title": "Weather",
