@@ -135,7 +135,12 @@ let Index = {
       // url.searchParams.set('id', encodeURIComponent(id))
       // location.href = url.toString()
 
-      this.$router.push('/' + encodeURIComponent(id))
+      let base = '/'
+      if (location.href.startsWith('https://pulipulichen.github.io/HTML-Webpage-Dashboard/')) {
+        bash = '/HTML-Webpage-Dashboard/'
+      }
+
+      this.$router.push(base + encodeURIComponent(id))
     },
     setDocument () {
 
