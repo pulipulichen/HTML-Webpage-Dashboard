@@ -67,7 +67,7 @@ let Index = {
     }
   },
   mounted() {
-    // console.log(this.routingID)
+    console.log(this.routingID)
     this.loadDashboardConfig()
   },
   methods: {
