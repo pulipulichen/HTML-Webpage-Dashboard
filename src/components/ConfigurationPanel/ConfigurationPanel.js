@@ -61,7 +61,8 @@ let app = {
       if (url) {
         this.dashboardConfigURL = url
       }
-      this.$router.push('/' + encodeURIComponent(this.dashboardConfigURL))
+      // this.$router.push('/' + encodeURIComponent(this.dashboardConfigURL))
+      this.$parent.setID(this.dashboardConfigURL)
       this.back()
     },
     back () {

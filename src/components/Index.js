@@ -69,9 +69,17 @@ let Index = {
     this.loadDashboardConfig()
   },
   methods: {
+    getIDParameter () {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      return urlParams.get('id')
+    },
     loadDashboardConfig: async function () {
+      let dashboardConfigURL = this.getIDParameter()
 
-      let dashboardConfigURL = this.routingID
+      if (!dashboardConfigURL) {
+        dashboardConfigURL = this.routingID
+      }
 
       if (!dashboardConfigURL ||
           dashboardConfigURL === '' || 
@@ -99,7 +107,8 @@ let Index = {
         this.config.dashboardConfig = await this.utils.AxiosUtils.get(dashboardConfigURL)
       }
       catch (e) {
-        this.$router.push('/' + encodeURIComponent(this.lastRouteID))
+        // this.$router.push('/' + encodeURIComponent(this.lastRouteID))
+        this.setID(this.lastRouteID)
         return false
       }
 
@@ -107,6 +116,15 @@ let Index = {
       this.setTab()
 
       this.lastRouteID = dashboardConfigURL
+    },
+    setID(id) {
+      if (!id) {
+        return false
+      }
+
+      let url = new URL(location.href)
+      url.searchParams.set('id', encodeURIComponent(id))
+      location.href = url.toString()
     },
     setDocument () {
       if (this.config.dashboardConfig.title) {
