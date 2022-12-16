@@ -178,8 +178,9 @@ for (let key in localConfig) {
 
 if (typeof(baseURL) === 'string') {
   setTimeout(() => {
+    console.log('有嗎？')
     window.vueApp = new Vue(VueController)
-  }, 0)
+  }, 3000)
 }
 
 import './service-worker-loader.js'
