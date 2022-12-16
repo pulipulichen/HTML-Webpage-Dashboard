@@ -117,16 +117,16 @@ let VueController = {
   router,
   watch: {},
   mounted: async function () {
-    console.log('index.js mounted', 1)
+    // console.log('index.js mounted', 1)
     this.config.openFromAPI = (location.href.endsWith('api=1'))
     
     this.restoreFromLocalStorage()
     
-    console.log('index.js mounted', 2)
+    // console.log('index.js mounted', 2)
     
     await this.waitForSemanticUIReady()
     
-    console.log('index.js mounted', 3)
+    // console.log('index.js mounted', 3)
     
     this.config.inited = true
   },
@@ -188,9 +188,9 @@ for (let key in localConfig) {
 
 if (typeof(baseURL) === 'string') {
   setTimeout(() => {
-    console.log('有嗎？')
+    // console.log('有嗎？')
     window.vueApp = new Vue(VueController)
-  }, 3000)
+  }, 0)
 }
 
 import './service-worker-loader.js'
