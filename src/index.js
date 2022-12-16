@@ -37,6 +37,7 @@ const routes = [
   }]
 
 const router = new VueRouter({
+  mode: "history",
   routes, // `routes: routes` 的缩写
 })
 

@@ -84,6 +84,7 @@ let Index = {
       if (!dashboardConfigURL) {
         dashboardConfigURL = this.routingID
       }
+      // console.log(dashboardConfigURL)
 
       if (!dashboardConfigURL ||
           dashboardConfigURL === '' || 
@@ -126,9 +127,11 @@ let Index = {
         return false
       }
 
-      let url = new URL(location.href)
-      url.searchParams.set('id', encodeURIComponent(id))
-      location.href = url.toString()
+      // let url = new URL(location.href)
+      // url.searchParams.set('id', encodeURIComponent(id))
+      // location.href = url.toString()
+
+      this.$router.push('/' + encodeURIComponent(id))
     },
     setDocument () {
 
@@ -137,6 +140,7 @@ let Index = {
         scope: location.href,
         "display": "standalone",
       }
+
       if (this.config.dashboardConfig.title) {
         document.title = this.config.dashboardConfig.title
         manifestJSON.name = this.config.dashboardConfig.title
@@ -162,12 +166,12 @@ document.head
     `<link rel="manifest" href='data:application/manifest+json,{"start_url":"${startUrl}", "name": "OKK", "icons": [{"src": "https://pulipulichen.github.io/HTML-Webpage-Dashboard/assets/favicon/favicon.png","sizes": "512x512","type":"image/png"}]}' />`,
   );
       */
-      let manifest = $('head > link[ref="manifest"]')
-      if (manifest.length > 0) {
-        manifest.remove()
-      }
+      // let manifest = $('head > link[ref="manifest"]')
+      // if (manifest.length > 0) {
+      //   manifest.remove()
+      // }
 
-      $('head').append(`<link rel="manifest" href='data:application/manifest+json,${JSON.stringify(manifestJSON)}' />`)
+      // $('head').append(`<link rel="manifest" href='data:application/manifest+json,${JSON.stringify(manifestJSON)}' />`)
     },
     getImageSize (imgURL) {
       return new Promise((resolve, reject) => {
