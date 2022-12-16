@@ -134,7 +134,8 @@ let Index = {
 
       let manifestJSON = {
         start_url: location.href,
-        scope: location.href
+        scope: location.href,
+        "display": "standalone",
       }
       if (this.config.dashboardConfig.title) {
         document.title = this.config.dashboardConfig.title
