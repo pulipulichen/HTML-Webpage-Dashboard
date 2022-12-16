@@ -35,11 +35,11 @@ const routes = [
     component: Index,
     props: true
   },
-  { 
-    path: '/HTML-Webpage-Dashboard/:routingID/index.html', 
-    component: Index,
-    props: true
-  },
+  // { 
+  //   path: '/HTML-Webpage-Dashboard/:routingID/index.html', 
+  //   component: Index,
+  //   props: true
+  // },
   { 
     path: '/', 
     component: Index 

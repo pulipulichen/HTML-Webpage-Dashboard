@@ -144,9 +144,11 @@ let Index = {
         base = '/HTML-Webpage-Dashboard/'
       }
 
-      console.log('before', base + encodeURIComponent(id) + '/index.html')
-      this.$router.push(base + encodeURIComponent(id) + '/index.html')
-      console.log('after')
+      // console.log('before', base + encodeURIComponent(id) + '/index.html')
+      // this.$router.push(base + encodeURIComponent(id) + '/index.html')
+      // console.log('after')
+
+      this.$router.push(base + encodeURIComponent(id))
     },
     setDocument () {
       // console.log('沒有')
@@ -182,12 +184,12 @@ document.head
     `<link rel="manifest" href='data:application/manifest+json,{"start_url":"${startUrl}", "name": "OKK", "icons": [{"src": "https://pulipulichen.github.io/HTML-Webpage-Dashboard/assets/favicon/favicon.png","sizes": "512x512","type":"image/png"}]}' />`,
   );
       */
-      let manifest = $('head > link[ref="manifest"]')
-      if (manifest.length > 0) {
-        manifest.remove()
-      }
+      $('link[ref="manifest"]').remove()
+      // if (manifest.length > 0) {
+        
+      // }
       console.log(manifestJSON);
-      $('head').append(`<link rel="manifest" href='data:application/manifest+json,${JSON.stringify(manifestJSON)}' />`)
+      $('head').prepend(`<link rel="manifest" href='data:application/manifest+json,${JSON.stringify(manifestJSON)}' />`)
     },
     getImageSize (imgURL) {
       return new Promise((resolve, reject) => {
