@@ -29,7 +29,13 @@
     </NavigationBar>
   </div>
   <div v-if="!config.dashboardConfig">
-    讀取中
+    <LoadingPudding 
+      ref="LoadingPudding"
+      v-bind:config="config"
+      v-bind:localConfig="localConfig"
+      v-bind:utils="utils"
+      v-bind:routingID="routingID">
+    </LoadingPudding>
   </div>
   
   <ConfigurationPanel 

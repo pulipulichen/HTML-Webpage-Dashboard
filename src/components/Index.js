@@ -3,6 +3,7 @@
 import NavigationBar from './NavigationBar/NavigationBar.vue'
 import ConfigurationPanel from './ConfigurationPanel/ConfigurationPanel.vue'
 import Dashboard from './Dashboard/Dashboard.vue'
+import LoadingPudding from './LoadingPudding/LoadingPudding.vue'
 
 let Index = {
   props: ['config', 'localConfig', 'utils', 'routingID'],
@@ -16,7 +17,8 @@ let Index = {
   components: {
     NavigationBar,
     Dashboard,
-    ConfigurationPanel
+    ConfigurationPanel,
+    LoadingPudding
   },
   computed: {
     tab () {
@@ -75,6 +77,8 @@ let Index = {
       return urlParams.get('id')
     },
     loadDashboardConfig: async function () {
+      // return await this.utils.AsyncUtils.sleep(3000)
+
       let dashboardConfigURL = this.getIDParameter()
 
       if (!dashboardConfigURL) {
