@@ -83,8 +83,9 @@ let Index = {
 
       if (!dashboardConfigURL) {
         dashboardConfigURL = this.routingID
+        console.log({r: this.routingID})
       }
-      // console.log(dashboardConfigURL)
+      console.log(dashboardConfigURL)
 
       if (!dashboardConfigURL ||
           dashboardConfigURL === '' || 
