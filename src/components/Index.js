@@ -83,6 +83,9 @@ let Index = {
 
       if (!dashboardConfigURL) {
         dashboardConfigURL = this.routingID
+        if (dashboardConfigURL.startsWith('HTML-Webpage-Dashboard')) {
+          dashboardConfigURL = dashboardConfigURL.slice('HTML-Webpage-Dashboard'.length)
+        }
         console.log({r: this.routingID})
       }
       console.log(dashboardConfigURL)

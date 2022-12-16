@@ -42,6 +42,7 @@
       // the single page app to route accordingly.
       (function(l) {
         if (l.search[1] === '/' ) {
+          console.log('有嗎？')
           var decoded = l.search.slice(1).split('&').map(function(s) { 
             return s.replace(/~and~/g, '&')
           }).join('?');
