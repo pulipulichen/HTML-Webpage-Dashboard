@@ -1,5 +1,5 @@
 /* global Node */
-//import $ from 'jquery'
+import $ from 'jquery'
 import NavigationBar from './NavigationBar/NavigationBar.vue'
 import ConfigurationPanel from './ConfigurationPanel/ConfigurationPanel.vue'
 import Dashboard from './Dashboard/Dashboard.vue'
@@ -131,15 +131,55 @@ let Index = {
       location.href = url.toString()
     },
     setDocument () {
+
+      let manifestJSON = {
+        start_url: location.href
+      }
       if (this.config.dashboardConfig.title) {
         document.title = this.config.dashboardConfig.title
+        manifestJSON.name = this.config.dashboardConfig.title
       }
       if (this.config.dashboardConfig.favicon) {
         document.querySelector('link[rel="icon"]').href = this.config.dashboardConfig.favicon
+        // let size = this.getImageSize(this.config.dashboardConfig.favicon)
+        manifestJSON.icons = [
+          {"src": this.config.dashboardConfig.favicon}
+        ]
       }
       if (this.config.dashboardConfig['theme-color']) {
         document.querySelector('meta[name="theme-color"]').content = this.config.dashboardConfig['theme-color']
+        manifestJSON.background_color = this.config.dashboardConfig['theme-color']
       }
+
+      /*
+startUrl = 'https://stackoverflow.com/questions/57763393/localising-a-pwa-web-manifest';
+document.head
+  .querySelector(':first-child')
+  .insertAdjacentHTML(
+    'beforebegin',
+    `<link rel="manifest" href='data:application/manifest+json,{"start_url":"${startUrl}", "name": "OKK", "icons": [{"src": "https://pulipulichen.github.io/HTML-Webpage-Dashboard/assets/favicon/favicon.png","sizes": "512x512","type":"image/png"}]}' />`,
+  );
+      */
+      let manifest = $('head > link[ref="manifest"]')
+      if (manifest.length > 0) {
+        manifest.remove()
+      }
+
+      $('head').append(`<link rel="manifest" href='data:application/manifest+json,${JSON.stringify(manifestJSON)}' />`)
+    },
+    getImageSize (imgURL) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = function() {
+          // alert(this.width + 'x' + this.height);
+          return {
+            width: this.width,
+            height: this.height
+          }
+        }
+        img.src = imgURL;
+      })
+        
     },
     setTab: function() {
       if (!this.config.dashboardConfig.tabs) {
