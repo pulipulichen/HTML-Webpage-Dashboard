@@ -2,18 +2,13 @@
   "title": "demo1",
   "favicon": "https://cdn-icons-png.flaticon.com/512/6821/6821002.png",
   "theme-color": "#E1F7F7",
-  "navigation-position": "top",
-  "dashboard-type": "dropdown",
+  "navigation-position": "bottom",
+  "dashboard-type": "simple",
   "configuration": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=0",
   "buttons": {
     "網頁1": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"
   },
   "tabs": [
-    {
-      "title": "for test",
-      "type": "1v",
-      "url": "https://blog.pulipuli.info"
-    },
     {
       "title": "四框",
       "type": "1q_2w_3r_av",
@@ -24,6 +19,12 @@
         "https://blog.pulipuli.info/"
       ]
     },
+    {
+      "title": "for test",
+      "type": "1v",
+      "url": "https://blog.pulipuli.info"
+    },
+    
     {
       "title": "測試",
       "type": "1v",
