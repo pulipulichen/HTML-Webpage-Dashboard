@@ -125,6 +125,7 @@ let Index = {
       }
       catch (e) {
         // this.$router.push('/' + encodeURIComponent(this.lastRouteID))
+        console.log({last: this.lastRouteID})
         this.setID(this.lastRouteID)
         return false
       }
@@ -144,18 +145,20 @@ let Index = {
       // location.href = url.toString()
       // console.log({id})
 
-      let base = '/'
-      if (location.href.startsWith('https://pulipulichen.github.io/HTML-Webpage-Dashboard/')) {
-        base = '/HTML-Webpage-Dashboard/'
-      }
-      base = ''
+      // let base = '/'
+      // if (location.href.startsWith('https://pulipulichen.github.io/HTML-Webpage-Dashboard/')) {
+      //   base = '/HTML-Webpage-Dashboard/'
+      // }
+      // base = ''
 
       // console.log('before', base + encodeURIComponent(id) + '/index.html')
       // this.$router.push(base + encodeURIComponent(id) + '/index.html')
       // console.log('after')
 
       // this.$router.push(base + btoa(id) + '/')
+      console.log('before', id)
       location.href = '/' + btoa(id)  + '/'
+      console.log('after')
     },
     setDocument (dashboardConfigURL) {
       // console.log('沒有')
