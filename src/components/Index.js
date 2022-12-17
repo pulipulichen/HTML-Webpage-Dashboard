@@ -162,7 +162,7 @@ let Index = {
         // start_url: location.href,
         // scope: location.href,
         start_url: ".",
-        scope: `/${dashboardConfigURL}/`,
+        scope: `/${ encodeURIComponent(dashboardConfigURL) }/`,
         "display": "standalone",
       }
 
