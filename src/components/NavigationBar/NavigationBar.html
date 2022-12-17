@@ -4,7 +4,8 @@
   <template v-if="type === 'dropdown'">
     <a class="item header"
        target="_blank"
-       :href="config.dashboardConfig.configuration">
+       :href="config.dashboardConfig.configuration"
+       @click.prevent.stop="popupWindow(config.dashboardConfig.configuration)">
       <img :src="config.dashboardConfig.favicon" />
       {{ config.dashboardConfig.title }}
     </a>
