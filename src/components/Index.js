@@ -193,8 +193,8 @@ document.head
       // if (manifest.length > 0) {
         
       // }
-      console.log(manifestJSON);
-      $('head').prepend(`<link rel="manifest" href='data:application/manifest+json,${JSON.stringify(manifestJSON)}' />`)
+      // console.log(manifestJSON);
+      // $('head').prepend(`<link rel="manifest" href='data:application/manifest+json,${JSON.stringify(manifestJSON)}' />`)
     },
     getImageSize (imgURL) {
       return new Promise((resolve, reject) => {
