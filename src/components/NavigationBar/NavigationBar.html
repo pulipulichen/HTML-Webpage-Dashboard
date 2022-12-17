@@ -2,10 +2,12 @@
   :style="{'background-color': config.dashboardConfig['theme-color']}"
   :class="computedClasses" >
   <template v-if="type === 'dropdown'">
-    <h1 class="item header">
+    <a class="item header"
+       target="_blank"
+       :href="config.dashboardConfig.configuration">
       <img :src="config.dashboardConfig.favicon" />
       {{ config.dashboardConfig.title }}
-    </h1>
+    </a>
     <div class="item select" v-if="config.dashboardConfig['dashboard-type'] === 'dropdown' && config.dashboardConfig.tabs.length > 1">
       <div class="field">
         <select v-model="localConfig.tab">
