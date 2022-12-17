@@ -154,7 +154,8 @@ let Index = {
       // this.$router.push(base + encodeURIComponent(id) + '/index.html')
       // console.log('after')
 
-      this.$router.push(base + btoa(id) + '/')
+      // this.$router.push(base + btoa(id) + '/')
+      location.href = '/' + btoa(id)  + '/'
     },
     setDocument (dashboardConfigURL) {
       // console.log('沒有')
