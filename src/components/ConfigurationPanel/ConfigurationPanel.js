@@ -42,7 +42,7 @@ let app = {
         return ''
       }
 
-      return document.title + '\t' + location.href
+      return document.title + '\t' + location.href + '\t' + this.config.dashboardConfig.configuration
     },
     buttons () {
       return this.$parent.buttons
