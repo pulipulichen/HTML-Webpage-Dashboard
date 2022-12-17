@@ -170,7 +170,7 @@ let Index = {
 
       if (this.config.dashboardConfig.title) {
         document.title = this.config.dashboardConfig.title
-        manifestJSON.name = this.config.dashboardConfig.title
+        // manifestJSON.name = this.config.dashboardConfig.title
       }
       if (this.config.dashboardConfig.favicon) {
         document.querySelector('link[rel="icon"]').href = this.config.dashboardConfig.favicon
