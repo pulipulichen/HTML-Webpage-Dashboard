@@ -90,12 +90,12 @@ let Index = {
         else if (dashboardConfigURL && dashboardConfigURL.startsWith('HTML-Webpage-Dashboard')) {
           dashboardConfigURL = dashboardConfigURL.slice('HTML-Webpage-Dashboard'.length)
         }
-        if (typeof(this.routingID) === 'object') {
-          console.log(this.routingID)
-        }
-        console.log({r: this.routingID})
+        // if (typeof(this.routingID) === 'object') {
+        //   console.log(this.routingID)
+        // }
+        // console.log({r: this.routingID})
       }
-      console.log(dashboardConfigURL)
+      // console.log(dashboardConfigURL)
 
       if (!dashboardConfigURL ||
           dashboardConfigURL === '' || 
@@ -103,7 +103,8 @@ let Index = {
         dashboardConfigURL = this.example
       }
       else {
-        dashboardConfigURL = decodeURIComponent(unescape(dashboardConfigURL))
+        // dashboardConfigURL = decodeURIComponent(unescape(dashboardConfigURL))
+        dashboardConfigURL = atob(dashboardConfigURL)
       }
 
       if (this.lastRouteID === dashboardConfigURL &&
@@ -118,7 +119,7 @@ let Index = {
       // for test 20221214-0547 
       // dashboardConfigURL = 'https://script.google.com/macros/s/AKfycbwR2MONo0nxfcyF70QpPGEgN2Xhoo096xOHMoVExv4vbNcKp3P07-eAoudGTpr_BvwcmA/exec'
 
-      console.log({dashboardConfigURL})
+      // console.log({dashboardConfigURL})
       try {
         this.config.dashboardConfig = await this.utils.AxiosUtils.get(dashboardConfigURL)
       }
@@ -141,7 +142,7 @@ let Index = {
       // let url = new URL(location.href)
       // url.searchParams.set('id', encodeURIComponent(id))
       // location.href = url.toString()
-      console.log({id})
+      // console.log({id})
 
       let base = '/'
       if (location.href.startsWith('https://pulipulichen.github.io/HTML-Webpage-Dashboard/')) {
@@ -153,7 +154,7 @@ let Index = {
       // this.$router.push(base + encodeURIComponent(id) + '/index.html')
       // console.log('after')
 
-      this.$router.push(base + encode(encodeURIComponent(id)))
+      this.$router.push(base + btoa(id))
     },
     setDocument (dashboardConfigURL) {
       // console.log('沒有')
@@ -163,7 +164,7 @@ let Index = {
         // scope: location.href,
         // start_url: `https://${location.host}/${ escape(encodeURIComponent(dashboardConfigURL)) }/`,
         start_url: `.`,
-        scope: `/${ escape(encodeURIComponent(dashboardConfigURL)) }/`,
+        scope: `/${ btoa(dashboardConfigURL) }/`,
         "display": "standalone",
       }
 
