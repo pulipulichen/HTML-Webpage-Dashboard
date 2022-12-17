@@ -159,8 +159,10 @@ let Index = {
       // console.log('沒有')
       // return false
       let manifestJSON = {
-        start_url: location.href,
-        scope: location.href,
+        // start_url: location.href,
+        // scope: location.href,
+        start_url: ".",
+        scope: ".",
         "display": "standalone",
       }
 
@@ -194,7 +196,7 @@ document.head
         
       // }
       // console.log(manifestJSON);
-      // $('head').prepend(`<link rel="manifest" href='data:application/manifest+json,${JSON.stringify(manifestJSON)}' />`)
+      $('head').prepend(`<link rel="manifest" href='data:application/manifest+json,${JSON.stringify(manifestJSON)}' />`)
     },
     getImageSize (imgURL) {
       return new Promise((resolve, reject) => {
