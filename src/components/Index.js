@@ -128,7 +128,7 @@ let Index = {
         return false
       }
 
-      this.setDocument()
+      this.setDocument(dashboardConfigURL)
       this.setTab()
 
       this.lastRouteID = dashboardConfigURL
@@ -155,14 +155,14 @@ let Index = {
 
       this.$router.push(base + encodeURIComponent(id))
     },
-    setDocument () {
+    setDocument (dashboardConfigURL) {
       // console.log('沒有')
       // return false
       let manifestJSON = {
         // start_url: location.href,
         // scope: location.href,
         start_url: ".",
-        scope: ".",
+        scope: `/${dashboardConfigURL}/`,
         "display": "standalone",
       }
 
