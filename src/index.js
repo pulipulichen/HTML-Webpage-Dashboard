@@ -26,15 +26,15 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
-  { 
-    path: '/HTML-Webpage-Dashboard/', 
-    component: Index 
-  },
-  { 
-    path: '/HTML-Webpage-Dashboard/:routingID', 
-    component: Index,
-    props: true
-  },
+  // { 
+  //   path: '/HTML-Webpage-Dashboard/', 
+  //   component: Index 
+  // },
+  // { 
+  //   path: '/HTML-Webpage-Dashboard/:routingID', 
+  //   component: Index,
+  //   props: true
+  // },
   // { 
   //   path: '/HTML-Webpage-Dashboard/:routingID/index.html', 
   //   component: Index,

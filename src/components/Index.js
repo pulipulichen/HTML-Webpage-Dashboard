@@ -90,6 +90,9 @@ let Index = {
         else if (dashboardConfigURL && dashboardConfigURL.startsWith('HTML-Webpage-Dashboard')) {
           dashboardConfigURL = dashboardConfigURL.slice('HTML-Webpage-Dashboard'.length)
         }
+        if (typeof(this.routingID) === 'object') {
+          console.log(this.routingID)
+        }
         console.log({r: this.routingID})
       }
       console.log(dashboardConfigURL)
@@ -138,11 +141,13 @@ let Index = {
       // let url = new URL(location.href)
       // url.searchParams.set('id', encodeURIComponent(id))
       // location.href = url.toString()
+      console.log({id})
 
       let base = '/'
       if (location.href.startsWith('https://pulipulichen.github.io/HTML-Webpage-Dashboard/')) {
         base = '/HTML-Webpage-Dashboard/'
       }
+      base = ''
 
       // console.log('before', base + encodeURIComponent(id) + '/index.html')
       // this.$router.push(base + encodeURIComponent(id) + '/index.html')

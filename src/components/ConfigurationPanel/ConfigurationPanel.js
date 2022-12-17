@@ -7,6 +7,7 @@ let app = {
     return {
       dashboardConfigURL: ``,
       demoMap: {
+        googleSheet: 'https://script.google.com/macros/s/AKfycbxJ1fgUdQAkw_zwyncRYz1Bn4y_cRlY_48E-dCt0DMaVFjo0gXUwlkCWOYvqn8NZOPKgA/exec',
         demo1: "./assets/settings/demo1.json",
         demo2: "./assets/settings/demo2.json",
         demo3: "./assets/settings/demo3.json",
@@ -58,7 +59,7 @@ let app = {
   },
   methods: {
     save (url) {
-      if (url) {
+      if (typeof(url) === 'string') {
         this.dashboardConfigURL = url
       }
       // this.$router.push('/' + encodeURIComponent(this.dashboardConfigURL))
