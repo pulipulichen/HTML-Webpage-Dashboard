@@ -161,8 +161,8 @@ let Index = {
       let manifestJSON = {
         // start_url: location.href,
         // scope: location.href,
-        start_url: `https://${location.host}/${ encode(encodeURIComponent(dashboardConfigURL)) }/`,
-        scope: `https://${location.host}/${ encode(encodeURIComponent(dashboardConfigURL)) }/`,
+        start_url: `https://${location.host}/${ escape(encodeURIComponent(dashboardConfigURL)) }/`,
+        scope: `https://${location.host}/${ escape(encodeURIComponent(dashboardConfigURL)) }/`,
         "display": "standalone",
       }
 
