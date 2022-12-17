@@ -17,7 +17,7 @@ let app = {
   },
   computed: {
     computedClasses () {
-      console.log(this.config.dashboardConfig['dashboard-type'])
+      // console.log(this.config.dashboardConfig['dashboard-type'])
       return {
         inverted: (this.config.dashboardConfig['theme-inverted'] === true), 
         bottom: (this.config.dashboardConfig['navigation-position'] === 'bottom'),
