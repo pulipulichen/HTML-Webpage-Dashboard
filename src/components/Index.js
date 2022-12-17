@@ -103,7 +103,7 @@ let Index = {
         dashboardConfigURL = this.example
       }
       else {
-        dashboardConfigURL = decodeURIComponent(dashboardConfigURL)
+        dashboardConfigURL = decodeURIComponent(unescape(dashboardConfigURL))
       }
 
       if (this.lastRouteID === dashboardConfigURL &&
@@ -153,7 +153,7 @@ let Index = {
       // this.$router.push(base + encodeURIComponent(id) + '/index.html')
       // console.log('after')
 
-      this.$router.push(base + encodeURIComponent(id))
+      this.$router.push(base + encode(encodeURIComponent(id)))
     },
     setDocument (dashboardConfigURL) {
       // console.log('沒有')
@@ -161,8 +161,8 @@ let Index = {
       let manifestJSON = {
         // start_url: location.href,
         // scope: location.href,
-        start_url: `https://${location.host}/${ encodeURIComponent(dashboardConfigURL) }/`,
-        scope: `https://${location.host}/${ encodeURIComponent(dashboardConfigURL) }/`,
+        start_url: `https://${location.host}/${ encode(encodeURIComponent(dashboardConfigURL)) }/`,
+        scope: `https://${location.host}/${ encode(encodeURIComponent(dashboardConfigURL)) }/`,
         "display": "standalone",
       }
 
