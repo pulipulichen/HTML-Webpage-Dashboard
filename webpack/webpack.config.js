@@ -78,7 +78,7 @@ module.exports = (env, argv) => {
                 name: '[name].[ext]',
                 outputPath: 'asset',
                 //publicPath: baseURL + '/spa/asset'
-                publicPath: './dist/asset'
+                publicPath: '/dist/asset'
               }
             }
           ]

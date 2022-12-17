@@ -1,6 +1,8 @@
 # HTML-Iframe-Group
 Group Iframe in a HTML webpage.
 
+這個是有設CNAME，用頂層網址的版本喔。
+
 # Settings
 
 - dashboard-type: dropdown, simple
