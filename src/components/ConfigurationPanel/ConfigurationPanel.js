@@ -55,7 +55,7 @@ let app = {
     }
   },
   mounted() {
-    this.dashboardConfigURL = this.routingID
+    this.dashboardConfigURL = atob(this.routingID)
   },
   methods: {
     save (url) {

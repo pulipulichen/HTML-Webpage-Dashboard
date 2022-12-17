@@ -156,9 +156,9 @@ let Index = {
       // console.log('after')
 
       // this.$router.push(base + btoa(id) + '/')
-      console.log('before', id)
+      // console.log('before', id)
       location.href = '/' + btoa(id)  + '/'
-      console.log('after')
+      // console.log('after')
     },
     setDocument (dashboardConfigURL) {
       // console.log('沒有')
