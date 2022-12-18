@@ -224,12 +224,13 @@ document.head
       }
 
       let tabs = this.config.dashboardConfig.tabs.map(t => t.title)
-
+      // console.log(tabs, this.localConfig.tab, tabs.indexOf(this.localConfig.tab))
       if (tabs.indexOf(this.localConfig.tab) > -1) {
         return true
       }
-
+      // console.log(tabs[0])
       this.localConfig.tab = tabs[0]
+      // this.$forceUpdate();
     }
   }
 }

@@ -1,10 +1,15 @@
+import PanelUnderConstruction from './PanelUnderConstruction/PanelUnderConstruction.vue'
+
 let app = {
-  props: ['config', 'localConfig', 'utils', 'routingID'],
+  props: ['tab', 'config', 'localConfig', 'utils', 'routingID'],
   data () {    
     this.$i18n.locale = this.localConfig.locale
     return {
       searchButtons: []
     }
+  },
+  components: {
+    PanelUnderConstruction
   },
   watch: {
     'localConfig.locale'() {
@@ -16,19 +21,33 @@ let app = {
         this.localConfig.searchButtons[this.routingID] = {}
       }
 
-      this.localConfig.searchButtons[this.routingID][this.localConfig.tab] = search
+      this.localConfig.searchButtons[this.routingID][this.title] = search
 
       // console.log(this.localConfig.searchButtons)
       this.$parent.$parent.saveToLocalStorage()
     }
   },
   computed: {
-    tab () {
-      return this.$parent.tab
+    title () {
+      return this.tab.title
     },
+    // tab () {
+    //   return this.$parent.tab
+    // },
     urlList () {
-      return this.$parent.urlList
-    }
+      let urlList = this.tab.url
+      if (Array.isArray(urlList) === false) {
+        urlList = [urlList]
+      }
+      return urlList
+    },
+    tabTypes () {
+      let splitor = '_'
+      if (this.tab.type.indexOf(',') > -1) {
+        splitor = ','
+      }
+      return this.tab.type.split(splitor)
+    },
   },
   mounted() {
     this.loadSearchKeywords()
@@ -41,7 +60,7 @@ let app = {
         return []
       }
 
-      let search = searchButtons[this.localConfig.tab]
+      let search = searchButtons[this.title]
       // console.log(search)
       if (!search) {
         return []

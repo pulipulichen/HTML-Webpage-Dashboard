@@ -5,24 +5,24 @@
     <template v-for="(url, i) in urlList">
       <iframe
         v-if="typeof(url) === 'string'"
-        :class="'panel num' + i + ' panel_' + $parent.tabTypes[i]" 
+        :class="'panel num' + i + ' panel_' + tabTypes[i]" 
         :src="url" 
-        :data-start="$parent.tabTypes[i][0]"
-        :data-end="$parent.tabTypes[i][1]"
-        :data-row="parseRow($parent.tabTypes[i])"
-        :data-col="parseCol($parent.tabTypes[i])"
-        :data-width="parseWidth($parent.tabTypes[i])"
-        :data-height="parseHeight($parent.tabTypes[i])"
+        :data-start="tabTypes[i][0]"
+        :data-end="tabTypes[i][1]"
+        :data-row="parseRow(tabTypes[i])"
+        :data-col="parseCol(tabTypes[i])"
+        :data-width="parseWidth(tabTypes[i])"
+        :data-height="parseHeight(tabTypes[i])"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <div v-else-if="Array.isArray(url)"
-        :class="'panel ui segment num' + i + ' panel_' + $parent.tabTypes[i]"
-        :data-start="$parent.tabTypes[i][0]"
-        :data-end="$parent.tabTypes[i][1]"
-        :data-row="parseRow($parent.tabTypes[i])"
-        :data-col="parseCol($parent.tabTypes[i])"
-        :data-width="parseWidth($parent.tabTypes[i])"
-        :data-height="parseHeight($parent.tabTypes[i])">
+        :class="'panel ui segment num' + i + ' panel_' + tabTypes[i]"
+        :data-start="tabTypes[i][0]"
+        :data-end="tabTypes[i][1]"
+        :data-row="parseRow(tabTypes[i])"
+        :data-col="parseCol(tabTypes[i])"
+        :data-width="parseWidth(tabTypes[i])"
+        :data-height="parseHeight(tabTypes[i])">
         <div class="ui input fluid field search-buttons"
           :class="{'icon': (searchButtons[i] && searchButtons[i].trim() !== '')}">
           <input type="text" :placeholder="$t('Search...')"
@@ -45,13 +45,13 @@
         </div>
       </div>
       <div v-else-if="typeof(url) === 'object'"
-        :class="'panel ui segment num' + i + ' panel_' + $parent.tabTypes[i]"
-        :data-start="$parent.tabTypes[i][0]"
-        :data-end="$parent.tabTypes[i][1]"
-        :data-row="parseRow($parent.tabTypes[i])"
-        :data-col="parseCol($parent.tabTypes[i])"
-        :data-width="parseWidth($parent.tabTypes[i])"
-        :data-height="parseHeight($parent.tabTypes[i])">
+        :class="'panel ui segment num' + i + ' panel_' + tabTypes[i]"
+        :data-start="tabTypes[i][0]"
+        :data-end="tabTypes[i][1]"
+        :data-row="parseRow(tabTypes[i])"
+        :data-col="parseCol(tabTypes[i])"
+        :data-width="parseWidth(tabTypes[i])"
+        :data-height="parseHeight(tabTypes[i])">
         <div class="ui input fluid field"
           :class="{'icon': (searchButtons[i] && searchButtons[i].trim() !== '')}">
           <input type="text" :placeholder="$t('Search...')"
@@ -70,17 +70,21 @@
           </a>
         </div>
       </div>
-      <iframe v-else-if="url === false"
-        :class="'panel ui segment num' + i + ' panel_' + $parent.tabTypes[i]"
-        :data-start="$parent.tabTypes[i][0]"
-        :data-end="$parent.tabTypes[i][1]"
-        :data-row="parseRow($parent.tabTypes[i])"
-        :data-col="parseCol($parent.tabTypes[i])"
-        :data-width="parseWidth($parent.tabTypes[i])"
-        :data-height="parseHeight($parent.tabTypes[i])"
-        src="https://nicepage.com/landing-page/preview/our-website-is-under-construction-307500?device=desktop" 
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <PanelUnderConstruction 
+        v-else-if="url === false"
+        :class="'panel ui segment num' + i + ' panel_' + tabTypes[i]"
+        :data-start="tabTypes[i][0]"
+        :data-end="tabTypes[i][1]"
+        :data-row="parseRow(tabTypes[i])"
+        :data-col="parseCol(tabTypes[i])"
+        :data-width="parseWidth(tabTypes[i])"
+        :data-height="parseHeight(tabTypes[i])"
+        ref="PanelUnderConstruction"
+        v-bind:config="config"
+        v-bind:localConfig="localConfig"
+        v-bind:utils="utils"
+        v-bind:routingID="routingID">
+      </PanelUnderConstruction>
     </template>
   </div>
 </div>

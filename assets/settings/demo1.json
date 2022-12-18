@@ -2,8 +2,8 @@
   "title": "demo1",
   "favicon": "https://cdn-icons-png.flaticon.com/512/6821/6821002.png",
   "theme-color": "#E1F7F7",
-  "navigation-position": "bottom",
-  "dashboard-type": "simple",
+  "navigation-position": "top",
+  "dashboard-type": "dropdown",
   "configuration": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=0",
   "buttons": {
     "網頁1": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"
@@ -14,9 +14,9 @@
       "type": "1q_2w_3r_av",
       "url": [
         "https://blog.pulipuli.info/",
-        "https://blog.pulipuli.info/",
-        "https://blog.pulipuli.info/",
-        "https://blog.pulipuli.info/"
+        false,
+        "https://tasks.google.com/embed/?origin=https://calendar.google.com&fullWidth=1",
+        "https://getplan.co/4-days/"
       ]
     },
     {

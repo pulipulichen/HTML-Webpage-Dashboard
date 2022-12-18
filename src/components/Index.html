@@ -9,14 +9,20 @@
       v-bind:routingID="routingID">
     </NavigationBar>
 
-    <Dashboard 
-      ref="Dashboard"
-      v-if="config.dashboardConfig"
-      v-bind:config="config"
-      v-bind:localConfig="localConfig"
-      v-bind:utils="utils"
-      v-bind:routingID="routingID">
-    </Dashboard>
+    <template v-if="config.dashboardConfig">
+      <Dashboard 
+        v-for="tab in config.dashboardConfig.tabs"
+        :key="tab.title"
+        v-show="tab.title === localConfig.tab"
+        ref="Dashboard"
+        :data-tab-title="tab.title"
+        v-bind:tab="tab"
+        v-bind:config="config"
+        v-bind:localConfig="localConfig"
+        v-bind:utils="utils"
+        v-bind:routingID="routingID">
+      </Dashboard>
+    </template>
 
     <NavigationBar 
       ref="NavigationBar"
