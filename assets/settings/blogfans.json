@@ -5,7 +5,7 @@
   "navigation-position": "top",
   "dashboard-type": "dropdown",
   "theme-inverted": true,
-  "configuration": "https://github.com/pulipulichen/HTML-Webpage-Dashboard/edit/main/assets/settings/weather.json",
+  "configuration": "https://github.com/pulipulichen/HTML-Webpage-Dashboard/edit/main/assets/settings/blogfans.json",
   "buttons": {
     "AppSheet": "https://www.appsheet.com/start/8f411bcb-e61b-497d-8c62-f92249eb3185#appName=BlogFanpage-1274676&group=%5B%5D&sort=%5B%7B%22Column%22%3A%22%E9%A0%90%E8%A8%82%E7%99%BC%E4%BD%88%E6%97%A5%E6%9C%9F+%28%E8%AB%8B%E6%8E%92%E9%99%A4%E5%81%87%E6%97%A5%29+%E6%99%82%E9%96%93%E8%A8%AD%E7%82%BA12%3A00+PM%22%2C%22Order%22%3A%22Descending%22%7D%5D&table=post&view=post",
     "Facebook": "https://business.facebook.com/latest/content_calendar?asset_id=131200250238772&business_id=857418918390986&nav_ref=page_publishing_tools&calendar_type=MONTH"
@@ -13,10 +13,11 @@
   "tabs": [
     {
       "title": "main",
-      "type": "1x_3v",
+      "type": "1x_3r_dv",
       "url": [
         "https://pulipulichen.github.io/PWA-Plain-Text-Editor/",
-        "https://calendar.google.com/calendar/u/0/embed?src=74o78pr1tsnpao8ncbjk7jhf8g9orf48@import.calendar.google.com&ctz=Asia/Taipei"
+        "https://calendar.google.com/calendar/u/0/embed?src=74o78pr1tsnpao8ncbjk7jhf8g9orf48@import.calendar.google.com&ctz=Asia/Taipei",
+        "https://trello.com/b/MswgI8Av/blog-fans"
       ]
     }
   ]
