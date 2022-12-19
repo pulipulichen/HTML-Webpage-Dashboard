@@ -15,10 +15,19 @@ let app = {
       if (this.url === 'https://pulipulichen.github.io/HTML-Note-Fullscreen/') {
         return this.noteURL
       }
+      else if (this.url === 'https://pulipulichen.github.io/PWA-Countdown-Timer/') {
+        return this.noteURL
+      }
       return this.url
     },
+    appID () {
+      return encodeURIComponent(this.panelIndex + '_' + this.tab + '_' + this.routingID)
+    },
     noteURL () {
-      return this.url + '?id=' + encodeURIComponent(this.panelIndex + '_' + this.tab + '_' + this.routingID) + '&fontSize=2rem'
+      return this.url + '?id=' + this.addID + '&fontSize=2rem'
+    },
+    countdownTimerURL () {
+      return this.url + '?id=' + this.addID
     }
   },
   mounted() {
