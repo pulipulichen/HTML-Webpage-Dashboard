@@ -119,6 +119,15 @@ let VueController = {
   components: {
     'index': Index
   },
+  computed: {
+    appName () {
+      let appName = this.config.appName
+
+      appName = appName + '_' + location.pathname.slice(1)
+
+      return appName
+    }
+  },
   router,
   watch: {},
   mounted: async function () {
@@ -149,7 +158,7 @@ let VueController = {
         return false
       } 
 
-      let data = localStorage.getItem(this.config.appName)
+      let data = localStorage.getItem(this.appName)
       //console.log(data)
       if (data === null || data.startsWith('{') === false || data.endsWith('}') === false) {
         return false
@@ -175,7 +184,7 @@ let VueController = {
       //console.log(data)
       data = JSON.stringify(data)
       //console.log(data)
-      localStorage.setItem(this.config.appName, data)
+      localStorage.setItem(this.appName, data)
     }
   }
 }
