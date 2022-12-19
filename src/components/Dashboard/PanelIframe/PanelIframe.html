@@ -1,0 +1,11 @@
+<iframe
+  :class="'panel num' + panelIndex + ' panel_' + tabType" 
+  :src="computedURL" 
+  :data-start="tabType[0]"
+  :data-end="tabType[1]"
+  :data-row="$parent.parseRow(tabType)"
+  :data-col="$parent.parseCol(tabType)"
+  :data-width="$parent.parseWidth(tabType)"
+  :data-height="$parent.parseHeight(tabType)"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

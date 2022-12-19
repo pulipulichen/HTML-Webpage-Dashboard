@@ -20,6 +20,24 @@
       ]
     },
     {
+      "title": "memo1",
+      "type": "1x_3r_dv",
+      "url": [
+          "https://blog.pulipuli.info",
+          "https://pulipulichen.github.io/HTML-Note-Fullscreen/",
+          "https://pulipulichen.github.io/HTML-Note-Fullscreen/"
+      ]
+    },
+    {
+      "title": "memo2",
+      "type": "1q_az_2v",
+      "url": [
+          "https://pulipulichen.github.io/HTML-Note-Fullscreen/",
+          "https://pulipulichen.github.io/HTML-Note-Fullscreen/",
+          "https://blog.pulipuli.info"
+      ]
+    },
+    {
       "title": "for test",
       "type": "1v",
       "url": "https://blog.pulipuli.info"

@@ -1,4 +1,5 @@
 import PanelUnderConstruction from './PanelUnderConstruction/PanelUnderConstruction.vue'
+import PanelIframe from './PanelIframe/PanelIframe.vue'
 
 let app = {
   props: ['tab', 'config', 'localConfig', 'utils', 'routingID'],
@@ -9,7 +10,8 @@ let app = {
     }
   },
   components: {
-    PanelUnderConstruction
+    PanelUnderConstruction,
+    PanelIframe
   },
   watch: {
     'localConfig.locale'() {

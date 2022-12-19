@@ -3,18 +3,16 @@
   :data-dashboard-type="config.dashboardConfig['dashboard-type']">
   <div :class="'type_' + tab.type">
     <template v-for="(url, i) in urlList">
-      <iframe
+      <PanelIframe
         v-if="typeof(url) === 'string'"
-        :class="'panel num' + i + ' panel_' + tabTypes[i]" 
-        :src="url" 
-        :data-start="tabTypes[i][0]"
-        :data-end="tabTypes[i][1]"
-        :data-row="parseRow(tabTypes[i])"
-        :data-col="parseCol(tabTypes[i])"
-        :data-width="parseWidth(tabTypes[i])"
-        :data-height="parseHeight(tabTypes[i])"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        :url="url"
+        :tab="tab.title"
+        :tabType="tabTypes[i]"
+        :panelIndex="i"
+        :config="config"
+        :localConfig="localConfig"
+        :utils="utils"
+        :routingID="routingID"></PanelIframe>
       <div v-else-if="Array.isArray(url)"
         :class="'panel ui segment num' + i + ' panel_' + tabTypes[i]"
         :data-start="tabTypes[i][0]"

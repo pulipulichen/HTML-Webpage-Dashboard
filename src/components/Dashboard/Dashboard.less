@@ -4,7 +4,7 @@
   height: calc(100vh - @navigationBarHeight);
 
   &[data-navigation-position="bottom"] {
-    .panel {
+    &::v-deep .panel {
       &[data-row="0"] {
         top: 0;
       }
@@ -26,7 +26,7 @@
     }
 
     &[data-dashboard-type="dropdown"] {
-      .panel {
+      &::v-deep .panel {
         &[data-end="z"],
         &[data-end="x"],
         &[data-end="c"],
@@ -50,7 +50,7 @@
 
   &[data-navigation-position="top"] {
     &[data-dashboard-type="dropdown"] {
-      .panel {
+      &::v-deep .panel {
         &[data-start="1"],
         &[data-start="2"],
         &[data-start="3"],
@@ -73,7 +73,7 @@
   }
 
   &[data-dashboard-type="simple"] {
-    .panel {
+    &::v-deep .panel {
       height: calc(100vh);
       max-height: calc(100vh);
 
@@ -97,7 +97,7 @@
 
 }
 
-.panel {
+&::v-deep .panel {
   
   width: 100vw;
   height: calc(100vh - @navigationBarHeight);
