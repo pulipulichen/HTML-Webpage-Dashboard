@@ -124,6 +124,9 @@ export default {
     else if (link.startsWith('https://wd.pulipuli.info/')) {
       return `/assets/favicon/favicon.png`
     }
+    else if (link.startsWith('https://pulipulichen.github.io/')) {
+      return `https://i.ibb.co/vBZJHx8/image.png`
+    }
     // else if (link.startsWith('')) {
     //   return ``
     // }
