@@ -7,6 +7,7 @@
   :data-col="$parent.parseCol(tabType)"
   :data-width="$parent.parseWidth(tabType)"
   :data-height="$parent.parseHeight(tabType)">
+    
     <div class="ui input fluid field search-buttons"
       :class="{'icon': (searchButton && searchButton.trim() !== '')}">
       <input type="text" :placeholder="$t('Search...')"
