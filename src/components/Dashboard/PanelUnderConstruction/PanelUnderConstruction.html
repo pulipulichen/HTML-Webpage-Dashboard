@@ -1,4 +1,12 @@
-<div class="PanelUnderConstruction">
+<div class="PanelUnderConstruction"
+  v-if="typeof(tabType) === 'string'"
+  :class="'panel ui segment num' + i + ' panel_' + tabType"
+  :data-start="tabType[0]"
+  :data-end="tabType[1]"
+  :data-row="parseRow(tabType)"
+  :data-col="parseCol(tabType)"
+  :data-width="parseWidth(tabType)"
+  :data-height="parseHeight(tabType)">
   <div class="block">
     <img src="./icon128.png" />
     <div>

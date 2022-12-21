@@ -1,5 +1,5 @@
 let app = {
-  props: ['config', 'localConfig', 'utils', 'routingID'],
+  props: ['config', 'localConfig', 'utils', 'routingID', 'tabType'],
   data () {    
     this.$i18n.locale = this.localConfig.locale
     return {

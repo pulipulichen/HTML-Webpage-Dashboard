@@ -1,3 +1,4 @@
+import NavigationBarButton from './NavigationBarButton/NavigationBarButton.vue'
 
 let app = {
   props: ['config', 'localConfig', 'utils', 'routingID'],
@@ -6,6 +7,9 @@ let app = {
     return {
       focusTab: 0
     }
+  },
+  components: {
+    NavigationBarButton
   },
   watch: {
     'localConfig.locale'() {

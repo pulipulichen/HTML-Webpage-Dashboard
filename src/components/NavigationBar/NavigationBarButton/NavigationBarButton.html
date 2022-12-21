@@ -1,0 +1,14 @@
+<a class="item"
+  @click.prevent.stop="$parent.popupWindow(url)"
+  :href="url"
+  :title="title"
+  :class="computedClasses"
+  target="_blank">
+  <template v-if="favicon">
+    <img :src="favicon" />
+    <div class="title">{{ title }}</div>
+  </template>
+  <template v-else>
+    {{ title }}
+  </template>
+</a>

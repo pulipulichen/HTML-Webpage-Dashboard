@@ -6,7 +6,8 @@
   "dashboard-type": "dropdown",
   "configuration": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=0",
   "buttons": {
-    "網頁1": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"
+    "網頁1": "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345",
+    "布丁布丁吃什麼？布丁布丁吃什麼？布丁布丁吃什麼？布丁布丁吃什麼？": "https://blog.pulipuli.info/"
   },
   "tabs": [
     {
@@ -61,9 +62,9 @@
       "type": "1z_2v",
       "url": [
         [
-          [["按鈕1", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"],
+          [["按鈕1", "https://blog.pulipuli.info/"],
           ["按鈕2", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
-          [["按鈕3", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
+          [["按鈕3", "https://www.youtube.com/watch?v=AcXpKT-z4-A&t=1064s"]],
           [["按鈕31", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
           [["按鈕32", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],
           [["按鈕33", "https://docs.google.com/spreadsheets/d/1TmXDFSoRJXilVXo5rmGLoX5XkLYjaSCGIgOYs94a7_Q/edit#gid=1023071345"]],

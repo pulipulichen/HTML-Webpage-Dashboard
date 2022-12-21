@@ -1,17 +1,20 @@
 import PanelUnderConstruction from './PanelUnderConstruction/PanelUnderConstruction.vue'
 import PanelIframe from './PanelIframe/PanelIframe.vue'
+import PanelButtonList from './PanelButtonList/PanelButtonList.vue'
 
 let app = {
-  props: ['tab', 'config', 'localConfig', 'utils', 'routingID'],
+  props: ['tab', 'config', 'localConfig', 'utils', 'routingID', 'visible'],
   data () {    
     this.$i18n.locale = this.localConfig.locale
     return {
-      searchButtons: []
+      searchButtons: [],
+      inited: false
     }
   },
   components: {
     PanelUnderConstruction,
-    PanelIframe
+    PanelIframe,
+    PanelButtonList
   },
   watch: {
     'localConfig.locale'() {
@@ -27,6 +30,12 @@ let app = {
 
       // console.log(this.localConfig.searchButtons)
       this.$parent.$parent.saveToLocalStorage()
+    },
+    visible (visible) {
+      // console.log(visible)
+      if (this.inited === false && visible === true) {
+        this.inited = true
+      }
     }
   },
   computed: {
@@ -50,8 +59,22 @@ let app = {
       }
       return this.tab.type.split(splitor)
     },
+    computedClasses () {
+      let classes = [
+        'type_' + this.tab.type
+      ]
+
+      if (this.visible === false) {
+        classes.push('hide')
+      }
+
+      return classes
+    }
   },
   mounted() {
+    if (this.visible === true) {
+      this.inited = true
+    }
     this.loadSearchKeywords()
   },
   methods: {
@@ -123,6 +146,9 @@ let app = {
     },
     filterButtons (buttons, search) {
       // let output = []
+      if (!buttons) {
+        return []
+      }
 
       let titles = Object.keys(buttons)
       

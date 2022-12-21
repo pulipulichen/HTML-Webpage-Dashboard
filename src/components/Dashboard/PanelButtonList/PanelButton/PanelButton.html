@@ -1,0 +1,16 @@
+<a class="ui fluid button"
+  :href="url"
+  target="_blank"
+  :title="title"
+  :class="computedClasses"
+  @click.prevent.stop="utils.PopupUtils.openURLFullscreen(url)">
+
+  <template v-if="favicon">
+    <img :src="favicon" />
+    <div class="title">{{ title }}</div>
+  </template>
+  <template v-else>
+    {{ title }}
+  </template>
+    
+</a>

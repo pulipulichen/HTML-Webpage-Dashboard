@@ -1,4 +1,5 @@
-<div class="Index">
+<div class="Index"
+  v-show="config.inited">
   <div v-show="config.dashboardConfig !== null && config.view === 'dashboard'">
     <NavigationBar 
       v-if="config.dashboardConfig && config.dashboardConfig['navigation-position'] === 'top'"
@@ -13,9 +14,9 @@
       <Dashboard 
         v-for="tab in config.dashboardConfig.tabs"
         :key="tab.title"
-        v-show="tab.title === localConfig.tab"
         ref="Dashboard"
         :data-tab-title="tab.title"
+        :visible="(tab.title === localConfig.tab)"
         v-bind:tab="tab"
         v-bind:config="config"
         v-bind:localConfig="localConfig"

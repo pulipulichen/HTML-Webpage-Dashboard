@@ -1,0 +1,47 @@
+<div 
+  v-if="typeof(tabType) === 'string'"
+  :class="'panel ui segment num' + i + ' panel_' + tabType"
+  :data-start="tabType[0]"
+  :data-end="tabType[1]"
+  :data-row="$parent.parseRow(tabType)"
+  :data-col="$parent.parseCol(tabType)"
+  :data-width="$parent.parseWidth(tabType)"
+  :data-height="$parent.parseHeight(tabType)">
+    <div class="ui input fluid field search-buttons"
+      :class="{'icon': (searchButton && searchButton.trim() !== '')}">
+      <input type="text" :placeholder="$t('Search...')"
+        v-model="searchButton" />
+      <i class="x link icon" v-if="(searchButton && searchButton.trim() !== '')"
+        @click="clearSearch(i)" />
+    </div>
+
+    <div class="ui equal width grid"
+       v-if="Array.isArray(url)"
+       v-for="rowButtons in $parent.filterSearchButton(url, searchButton)">
+      <div class="column"
+        v-for="button in rowButtons">
+        <PanelButton 
+          ref="PanelButton"
+          :url="button[1]"
+          :title="button[0]"
+          v-bind:config="config"
+          v-bind:localConfig="localConfig"
+          v-bind:utils="utils"
+          v-bind:routingID="routingID">
+        </PanelButton>
+      </div>
+    </div>
+    <div class="ui field"
+      v-else
+      v-for="button in $parent.filterButtons(url, searchButton)">
+      <PanelButton 
+        ref="PanelButton"
+        :url="button.url"
+        :title="button.title"
+        v-bind:config="config"
+        v-bind:localConfig="localConfig"
+        v-bind:utils="utils"
+        v-bind:routingID="routingID">
+      </PanelButton>
+    </div>
+</div>

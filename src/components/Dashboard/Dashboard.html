@@ -1,7 +1,8 @@
 <div class="Dashboard"
   :data-navigation-position="config.dashboardConfig['navigation-position']"
-  :data-dashboard-type="config.dashboardConfig['dashboard-type']">
-  <div :class="'type_' + tab.type">
+  :data-dashboard-type="config.dashboardConfig['dashboard-type']"
+  :class="computedClasses">
+  <template v-if="inited">
     <template v-for="(url, i) in urlList">
       <PanelIframe
         v-if="typeof(url) === 'string'"
@@ -13,70 +14,20 @@
         :localConfig="localConfig"
         :utils="utils"
         :routingID="routingID"></PanelIframe>
-      <div v-else-if="Array.isArray(url)"
-        :class="'panel ui segment num' + i + ' panel_' + tabTypes[i]"
-        :data-start="tabTypes[i][0]"
-        :data-end="tabTypes[i][1]"
-        :data-row="parseRow(tabTypes[i])"
-        :data-col="parseCol(tabTypes[i])"
-        :data-width="parseWidth(tabTypes[i])"
-        :data-height="parseHeight(tabTypes[i])">
-        <div class="ui input fluid field search-buttons"
-          :class="{'icon': (searchButtons[i] && searchButtons[i].trim() !== '')}">
-          <input type="text" :placeholder="$t('Search...')"
-            v-model="searchButtons[i]" />
-          <i class="x link icon" v-if="(searchButtons[i] && searchButtons[i].trim() !== '')"
-            @click="clearSearch(i)" />
-        </div>
-        <div class="ui equal width grid"
-           v-for="rowButtons in filterSearchButton(url, searchButtons[i])">
-          <div class="column"
-            v-for="button in rowButtons">
-            <a class="ui fluid button"
-              :href="button[1]"
-              :class="{disabled: !button[1]}"
-              target="_blank"
-              @click.prevent.stop="utils.PopupUtils.openURLFullscreen(button[1])">
-              {{ button[0] }}
-            </a>
-          </div>
-        </div>
-      </div>
-      <div v-else-if="typeof(url) === 'object'"
-        :class="'panel ui segment num' + i + ' panel_' + tabTypes[i]"
-        :data-start="tabTypes[i][0]"
-        :data-end="tabTypes[i][1]"
-        :data-row="parseRow(tabTypes[i])"
-        :data-col="parseCol(tabTypes[i])"
-        :data-width="parseWidth(tabTypes[i])"
-        :data-height="parseHeight(tabTypes[i])">
-        <div class="ui input fluid field"
-          :class="{'icon': (searchButtons[i] && searchButtons[i].trim() !== '')}">
-          <input type="text" :placeholder="$t('Search...')"
-            v-model="searchButtons[i]" />
-          <i class="x link icon" v-if="(searchButtons[i] && searchButtons[i].trim() !== '')"
-            @click="clearSearch(i)" />
-        </div>
-        <div class="ui field"
-          v-for="button in filterButtons(url, searchButtons[i])">
-          <a class="ui fluid button"
-            :href="button.url"
-            target="_blank"
-            :class="{disabled: !button.url}"
-            @click.prevent.stop="utils.PopupUtils.openURLFullscreen(button.url)">
-            {{ button.title }}
-          </a>
-        </div>
-      </div>
+      <PanelButtonList 
+        v-else-if="typeof(url) === 'object'"
+        ref="PanelButtonList"
+        :url="url"
+        :searchButton="searchButtons[i]"
+        :tabType="tabTypes[i]"
+        v-bind:config="config"
+        v-bind:localConfig="localConfig"
+        v-bind:utils="utils"
+        v-bind:routingID="routingID">
+      </PanelButtonList>
       <PanelUnderConstruction 
         v-else-if="url === false"
-        :class="'panel ui segment num' + i + ' panel_' + tabTypes[i]"
-        :data-start="tabTypes[i][0]"
-        :data-end="tabTypes[i][1]"
-        :data-row="parseRow(tabTypes[i])"
-        :data-col="parseCol(tabTypes[i])"
-        :data-width="parseWidth(tabTypes[i])"
-        :data-height="parseHeight(tabTypes[i])"
+        :tabType="tabTypes[i]"
         ref="PanelUnderConstruction"
         v-bind:config="config"
         v-bind:localConfig="localConfig"
@@ -84,5 +35,5 @@
         v-bind:routingID="routingID">
       </PanelUnderConstruction>
     </template>
-  </div>
+  </template>
 </div>

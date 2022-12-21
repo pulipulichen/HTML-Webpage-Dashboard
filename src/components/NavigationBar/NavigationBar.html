@@ -5,6 +5,7 @@
     <a class="item header"
        target="_blank"
        :href="config.dashboardConfig.configuration"
+       :title="config.dashboardConfig.title"
        @click.prevent.stop="popupWindow(config.dashboardConfig.configuration)">
       <img :src="config.dashboardConfig.favicon" />
       {{ config.dashboardConfig.title }}
@@ -17,14 +18,17 @@
         </select>
       </div>
     </div>
-    <template
-      v-if="config.dashboardConfig && config.dashboardConfig.buttons">
-      <a class="item" v-for="button in buttons"
-        @click.prevent.stop="popupWindow(button.url)"
-        :href="button.url"
-        target="_blank"
-        >{{ button.title }}</a>
-    </template>
+    <NavigationBarButton 
+      v-if="config.dashboardConfig && config.dashboardConfig.buttons"
+      v-for="button in buttons"
+      ref="NavigationBarButton"
+      :url="button.url"
+      :title="button.title"
+      v-bind:config="config"
+      v-bind:localConfig="localConfig"
+      v-bind:utils="utils"
+      v-bind:routingID="routingID">
+    </NavigationBarButton>
   
     <div class="right menu">
       <div class="item" v-if="openableURLList.length > 1">
