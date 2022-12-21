@@ -121,6 +121,9 @@ export default {
     else if (link.startsWith('https://iclass.tku.edu.tw/')) {
       return `https://blogger.googleusercontent.com/img/a/AVvXsEisUKzrY3KAhRpz03nYwrAQ3qGqffbfHz56SYLG1YbfjY4TveSNHmMCptFWfKwp9fd2zqwbKHBFWIJWzcEjIVAMnYcpaPtOqZh4pO5UOwISUaG4pqQz4U0voJZLZHySc2qELftiPJEilh3IqnPYCFWekY9Wj3Tq7YN-Tf27m776Q-qt1i-G-TQ`
     }
+    else if (link.startsWith('https://wd.pulipuli.info/')) {
+      return `/assets/favicon/favicon.png`
+    }
     // else if (link.startsWith('')) {
     //   return ``
     // }
