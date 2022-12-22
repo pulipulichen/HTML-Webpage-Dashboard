@@ -127,6 +127,9 @@ export default {
     else if (link.startsWith('https://pulipulichen.github.io/')) {
       return `https://i.ibb.co/vBZJHx8/image.png`
     }
+    else if (link.startsWith('mailto:')) {
+      return `https://i.ibb.co/vLL9S3k/image.png`
+    }
     // else if (link.startsWith('')) {
     //   return ``
     // }
