@@ -1,9 +1,9 @@
 /* global Node */
 import $ from 'jquery'
-import NavigationBar from './NavigationBar/NavigationBar.vue'
-import ConfigurationPanel from './ConfigurationPanel/ConfigurationPanel.vue'
-import Dashboard from './Dashboard/Dashboard.vue'
-import LoadingPudding from './LoadingPudding/LoadingPudding.vue'
+// import NavigationBar from './NavigationBar/NavigationBar.vue'
+// import ConfigurationPanel from './ConfigurationPanel/ConfigurationPanel.vue'
+// import Dashboard from './Dashboard/Dashboard.vue'
+// import LoadingPudding from './LoadingPudding/LoadingPudding.vue'
 
 let Index = {
   props: ['config', 'localConfig', 'utils', 'routingID'],
@@ -15,10 +15,11 @@ let Index = {
     }
   },
   components: {
-    NavigationBar,
-    Dashboard,
-    ConfigurationPanel,
-    LoadingPudding
+    // NavigationBar: () => import(/* webpackChunkName: "components/NavigationBar" */ './NavigationBar/NavigationBar.vue'),
+    NavigationBar: () => import(/* webpackChunkName: "components/NavigationBar" */ './NavigationBar/NavigationBar.vue'),
+    Dashboard: () => import(/* webpackChunkName: "components/Dashboard" */ './Dashboard/Dashboard.vue'),
+    ConfigurationPanel: () => import(/* webpackChunkName: "components/ConfigurationPanel" */ './ConfigurationPanel/ConfigurationPanel.vue'),
+    LoadingPudding: () => import(/* webpackChunkName: "components/LoadingPudding" */ './LoadingPudding/LoadingPudding.vue')
   },
   computed: {
     tab () {

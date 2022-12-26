@@ -6,7 +6,8 @@
   @click.prevent.stop="utils.PopupUtils.openURLFullscreen(url)">
 
   <template v-if="favicon">
-    <img :src="favicon" />
+    <div class="favicon"
+      :style="{'background-image': `url(${favicon})`}"></div>
     <div class="title">{{ title }}</div>
   </template>
   <template v-else>

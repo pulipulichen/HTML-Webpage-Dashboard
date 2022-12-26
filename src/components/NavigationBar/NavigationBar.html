@@ -1,6 +1,7 @@
 <div class="NavigationBar ui menu form"
   :style="{'background-color': config.dashboardConfig['theme-color']}"
   :class="computedClasses" >
+
   <template v-if="type === 'dropdown'">
     <a class="item header"
        target="_blank"
@@ -18,17 +19,19 @@
         </select>
       </div>
     </div>
-    <NavigationBarButton 
-      v-if="config.dashboardConfig && config.dashboardConfig.buttons"
-      v-for="button in buttons"
-      ref="NavigationBarButton"
-      :url="button.url"
-      :title="button.title"
-      v-bind:config="config"
-      v-bind:localConfig="localConfig"
-      v-bind:utils="utils"
-      v-bind:routingID="routingID">
-    </NavigationBarButton>
+    <div class="bar-buttons">
+      <NavigationBarButton 
+        v-if="config.dashboardConfig && config.dashboardConfig.buttons"
+        v-for="button in buttons"
+        ref="NavigationBarButton"
+        :url="button.url"
+        :title="button.title"
+        v-bind:config="config"
+        v-bind:localConfig="localConfig"
+        v-bind:utils="utils"
+        v-bind:routingID="routingID">
+      </NavigationBarButton>
+    </div>
   
     <div class="right menu">
       <div class="item" v-if="openableURLList.length > 1">
@@ -49,6 +52,7 @@
       </a>
     </div>
   </template>
+
   <template v-if="type === 'simple'">
     <a class="item" @click="config.view = 'configuration'">
       <i class="cog icon"></i>

@@ -5,9 +5,24 @@
 
   padding: 0 !important;
 
+  /*
   img {
     max-height: calc(.78571429em * 2 + 1rem);
     width: auto;
+    @radius: .28571429rem;
+    border-top-left-radius: @radius;
+    border-bottom-left-radius: @radius;
+  }
+  */
+  .favicon {
+    // max-height: calc(.78571429em * 2 + 1rem);
+    // width: auto;
+    height: 2rem;
+    width: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     @radius: .28571429rem;
     border-top-left-radius: @radius;
     border-bottom-left-radius: @radius;
