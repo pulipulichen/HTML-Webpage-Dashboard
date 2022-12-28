@@ -17,7 +17,7 @@
       "title": "四框",
       "type": "1q_2w_3r_av",
       "url": [
-        "https://pulipulichen.github.io/PWA-Todo-List/",
+        "https://pulipulichen.github.io/PWA-Todo-List/?id=aa",
         false,
         "https://tasks.google.com/embed/?origin=https://calendar.google.com&fullWidth=1",
         "https://getplan.co/4-days/"
@@ -29,7 +29,7 @@
       "url": [
           "https://blog.pulipuli.info",
           "https://pulipulichen.github.io/HTML-Note-Fullscreen/",
-          "https://pulipulichen.github.io/PWA-Todo-List/"
+          "https://pulipulichen.github.io/PWA-Todo-List/?id=bb"
       ]
     },
     {
