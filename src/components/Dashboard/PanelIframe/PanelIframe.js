@@ -15,8 +15,9 @@ let app = {
       if (this.url === 'https://pulipulichen.github.io/HTML-Note-Fullscreen/') {
         return this.noteURL
       }
-      else if (this.url === 'https://pulipulichen.github.io/PWA-Countdown-Timer/') {
-        return this.noteURL
+      else if (this.url === 'https://pulipulichen.github.io/PWA-Countdown-Timer/' || 
+      this.url === 'https://pulipulichen.github.io/PWA-Todo-List/') {
+        return this.withIDURL
       }
       return this.url
     },
@@ -26,7 +27,7 @@ let app = {
     noteURL () {
       return this.url + '?id=' + this.addID + '&fontSize=2rem'
     },
-    countdownTimerURL () {
+    withIDURL () {
       return this.url + '?id=' + this.addID
     }
   },
