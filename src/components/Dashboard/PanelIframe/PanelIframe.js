@@ -25,10 +25,10 @@ let app = {
       return encodeURIComponent(this.panelIndex + '_' + this.tab + '_' + this.routingID)
     },
     noteURL () {
-      return this.url + '?id=' + this.addID + '&fontSize=2rem'
+      return this.url + '?id=' + this.appID + '&fontSize=2rem'
     },
     withIDURL () {
-      return this.url + '?id=' + this.addID
+      return this.url + '?id=' + this.appID
     }
   },
   mounted() {
