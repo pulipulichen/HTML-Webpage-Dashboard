@@ -130,6 +130,9 @@ export default {
     else if (link.startsWith('https://www.facebook.com/')) {
       return `https://i.ibb.co/KzSVDfk/2673646.png`
     }
+    else if (link.startsWith('https://www.cwb.gov.tw/V8/C/W/')) {
+      return `https://i.ibb.co/DgBr6CH/image.png`
+    }
     else if (link.startsWith('mailto:')) {
       return `https://i.ibb.co/vLL9S3k/image.png`
     }
