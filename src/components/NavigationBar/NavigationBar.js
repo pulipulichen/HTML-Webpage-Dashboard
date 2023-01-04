@@ -33,6 +33,7 @@ let app = {
     },
     openableURLList () {
       return this.$parent.urlList.filter(u => (typeof(u) === 'string'))
+				.map((url, i) => this.utils.url.filterURL(url, i, this.localConfig.tab))
     },
     type () {
       if (!this.config.dashboardConfig || 

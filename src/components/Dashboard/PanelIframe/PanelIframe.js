@@ -12,31 +12,32 @@ let app = {
   },
   computed: {
     computedURL () {
-      if (this.url === 'https://pulipulichen.github.io/HTML-Note-Fullscreen/') {
-        return this.noteURL
-      }
-      else if (this.url === 'https://pulipulichen.github.io/PWA-Countdown-Timer/' || 
-      this.url === 'https://pulipulichen.github.io/PWA-Todo-List/') {
-        return this.withIDURL
-      }
-      return this.url
+      // if (this.url === 'https://pulipulichen.github.io/HTML-Note-Fullscreen/') {
+      //   return this.noteURL
+      // }
+      // else if (this.url === 'https://pulipulichen.github.io/PWA-Countdown-Timer/' || 
+      // this.url === 'https://pulipulichen.github.io/PWA-Todo-List/') {
+      //   return this.withIDURL
+      // }
+      // return this.url
+			return this.utils.url.filterURL(this.url, this.panelIndex, this.tab)
     },
-    appID () {
-      return encodeURIComponent(this.panelIndex + '_' + this.tab + '_' + this.routingID)
-    },
-    noteURL () {
-      return this.url + '?id=' + this.appID + '&fontSize=2rem'
-    },
-    withIDURL () {
-      return this.url + '?id=' + this.appID
-    }
+    // appID () {
+    //   return encodeURIComponent(this.panelIndex + '_' + this.tab + '_' + this.routingID)
+    // },
+    // noteURL () {
+    //   return this.url + '?id=' + this.appID + '&fontSize=2rem'
+    // },
+    // withIDURL () {
+    //   return this.url + '?id=' + this.appID
+    // }
   },
-  mounted() {
+  // mounted() {
     
-  },
-  methods: {
+  // },
+  // methods: {
     
-  }
+  // }
 }
 
 export default app

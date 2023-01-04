@@ -3,10 +3,10 @@
   :class="'panel ui segment num' + i + ' panel_' + tabType"
   :data-start="tabType[0]"
   :data-end="tabType[1]"
-  :data-row="parseRow(tabType)"
-  :data-col="parseCol(tabType)"
-  :data-width="parseWidth(tabType)"
-  :data-height="parseHeight(tabType)">
+  :data-row="$parent.parseRow(tabType)"
+  :data-col="$parent.parseCol(tabType)"
+  :data-width="$parent.parseWidth(tabType)"
+  :data-height="$parent.parseHeight(tabType)">
   <div class="block">
     <img src="./icon128.png" />
     <div>

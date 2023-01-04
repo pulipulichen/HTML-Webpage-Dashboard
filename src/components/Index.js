@@ -70,6 +70,12 @@ let Index = {
   mounted() {
     // console.log(this.routingID)
     this.loadDashboardConfig()
+
+		this.utils.url = {
+			filterURL: (url, panelIndex, tab) => {
+				return this.filterURL(url, panelIndex, tab)
+			}
+		}
   },
   methods: {
     getIDParameter () {
@@ -232,7 +238,26 @@ document.head
       // console.log(tabs[0])
       this.localConfig.tab = tabs[0]
       // this.$forceUpdate();
-    }
+    },
+		filterURL (url, panelIndex, tab) {
+			if (url === 'https://pulipulichen.github.io/HTML-Note-Fullscreen/') {
+        return this.filterNoteURL(url, panelIndex, tab)
+      }
+      else if (url === 'https://pulipulichen.github.io/PWA-Countdown-Timer/' || 
+        url === 'https://pulipulichen.github.io/PWA-Todo-List/') {
+        return this.filterWithIDURL(url, panelIndex, tab)
+      }
+      return url
+		},
+		getAppID (panelIndex, tab) {
+			return encodeURIComponent(panelIndex + '_' + tab + '_' + this.routingID)
+		},
+		filterNoteURL (url, panelIndex, tab) {
+			return url + '?id=' + this.getAppID(panelIndex, tab) + '&fontSize=2rem'
+		},
+		filterWithIDURL (url, panelIndex, tab) {
+			return url + '?id=' + this.getAppID(panelIndex, tab)
+		}
   }
 }
 // import IndexMethodsPostMessage from './IndexMethodsPostMessage.js'
