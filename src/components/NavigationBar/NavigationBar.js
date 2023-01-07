@@ -35,6 +35,17 @@ let app = {
       return this.$parent.urlList.filter(u => (typeof(u) === 'string'))
 				.map((url, i) => this.utils.url.filterURL(url, i, this.localConfig.tab))
     },
+    openablePanelList () {
+      let tab = this.localConfig.tab
+      let types = this.$parent.tab.type.split('_')
+      return this.$parent.urlList.map((url, i) => { 
+        return {
+          // panel: 
+          type: types[i],
+          url: this.utils.url.filterURL(url, i, tab)
+        }
+      })
+    },
     type () {
       if (!this.config.dashboardConfig || 
         !this.config.dashboardConfig['dashboard-type']) {
