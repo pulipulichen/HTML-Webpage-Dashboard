@@ -244,7 +244,8 @@ document.head
         return this.filterNoteURL(url, panelIndex, tab)
       }
       else if (url === 'https://pulipulichen.github.io/PWA-Countdown-Timer/' || 
-        url === 'https://pulipulichen.github.io/PWA-Todo-List/') {
+        url === 'https://pulipulichen.github.io/PWA-Todo-List/' ||
+        url === 'https://pulipulichen.github.io/PWA-Plain-Text-Editor/') {
         return this.filterWithIDURL(url, panelIndex, tab)
       }
       return url
