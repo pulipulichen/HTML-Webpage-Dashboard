@@ -32,19 +32,29 @@ let app = {
       return this.$parent.buttons
     },
     openableURLList () {
-      return this.$parent.urlList.filter(u => (typeof(u) === 'string'))
-				.map((url, i) => this.utils.url.filterURL(url, i, this.localConfig.tab))
+      let list = this.$parent.urlList.filter(u => (typeof(u) === 'string'))
+      .map((url, i) => this.utils.url.filterURL(url, i, this.localConfig.tab))
+      // console.log(list)
+      return list
     },
     openablePanelList () {
       let tab = this.localConfig.tab
       let types = this.$parent.tab.type.split('_')
-      return this.$parent.urlList.map((url, i) => { 
-        return {
+
+      let list = []
+      this.$parent.urlList.map((url, i) => { 
+        if (typeof(url) !== 'string') {
+          return false
+        }
+
+        list.push({
           // panel: 
           type: types[i],
           url: this.utils.url.filterURL(url, i, tab)
-        }
+        })
       })
+
+      return list
     },
     type () {
       if (!this.config.dashboardConfig || 
