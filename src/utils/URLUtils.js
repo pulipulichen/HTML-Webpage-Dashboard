@@ -13,6 +13,14 @@ export default {
     return re.test(String(email).toLowerCase());
   },
   parseLinkFavicon: function (link) {
+    let URLObject = {}
+    try {
+      URLObject = new URL(link)
+    }
+    catch (e) {
+
+    }
+
     if (link.startsWith('https://blog.pulipuli.info')) {
       return 'https://lh3.googleusercontent.com/-vjf_alp-zjQ/VvtkKVpqCjI/AAAAAAACuMI/HPJXcEemwok/s0/pulipuli144x144.jpg'
     }
@@ -135,6 +143,10 @@ export default {
     }
     else if (link.startsWith('mailto:')) {
       return `https://i.ibb.co/vLL9S3k/image.png`
+    }
+    else if (URLObject.hostname && URLObject.hostname.endsWith('teacher.tku.edu.tw')) {
+      // https://teacher.tku.edu.tw/StaffSummary.aspx?s=&kwd=%u8CC7%u8A0A%u7D44%u7E54
+      return `https://blogger.googleusercontent.com/img/a/AVvXsEigZc3-j_wpeJCVwM9rIjwSiIu8GJnWFxR8fOCwzm391uFEPGBRRZ5twDfLrIqIc4CQQGXdqdSUW6Nydj7l4LRHBXxbXpY8VFkCi2zs18G5sN2qINyW1rYbWRse84yoMKUOYn6niuw2IGBzPZ-NdBHxUrOKs9V0TenwzQZR6h_ff1xXT9GGhco`
     }
     // else if (link.startsWith('')) {
     //   return ``
