@@ -43,6 +43,9 @@ export default {
       return `https://lh3.googleusercontent.com/-3VWx8YodNfU/YcrAMBrI0bI/AAAAAAAFEWA/xw13o-kGx5Mq2eh_XXNZZn85zPmCYcWoACNcBGAsYHQ/s1600/google-drive-docs-blue.png`
     }
     else if (link.startsWith('https://docs.google.com/spreadsheets/')) {
+      if (link.startsWith('https://docs.google.com/spreadsheets/d/1MtL5PnyWKDR8T8TjKpCScz5xSbqCUCU-9pbCHDbG2_Y/')) {
+        return `https://blogger.googleusercontent.com/img/a/AVvXsEjxP610PLQw2AZOXfD-AVw910-3sJxUAbdPu8UbHg18-CiZ_qKx7hgnz_HiHpjPksr4lHUPP6gPEPTfyLdNum9uTU8zTCpeG5jbb_5luBGgDuW7QesuB8wWIhfQttBe02pjmg1CtEt_hNhm0MHz9bXNxLPpZCfX4A6N21qMkOgyKdu3TrS2F8o`
+      }
       return `https://blogger.googleusercontent.com/img/a/AVvXsEjTPFZczYG4fmpoPDVISoxJZ_xNOLCDXm-pryNsS7igZ3mrZP9I654mf3hmqiuXBw6xW_G_m24RlsoddwnUM7XZ8YTEAGf_u0iM4RaXPr6LCk_r7iwF34LfDpbk3akuDLU-I1muTD-OtAlR0OdF9q1ppa-n8admztfrBsc2EPTjq8r5I0RATqI`
     }
     else if (link.startsWith('https://docs.google.com/presentation/')) {
