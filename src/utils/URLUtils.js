@@ -148,6 +148,11 @@ export default {
       // https://teacher.tku.edu.tw/StaffSummary.aspx?s=&kwd=%u8CC7%u8A0A%u7D44%u7E54
       return `https://blogger.googleusercontent.com/img/a/AVvXsEigZc3-j_wpeJCVwM9rIjwSiIu8GJnWFxR8fOCwzm391uFEPGBRRZ5twDfLrIqIc4CQQGXdqdSUW6Nydj7l4LRHBXxbXpY8VFkCi2zs18G5sN2qINyW1rYbWRse84yoMKUOYn6niuw2IGBzPZ-NdBHxUrOKs9V0TenwzQZR6h_ff1xXT9GGhco`
     }
+    else if (link.startsWith('https://www.myqnapcloud.com/smartshare/')) {
+      return `https://blogger.googleusercontent.com/img/a/AVvXsEh7G9oRs04QTU2WgQfFkZsfyre-wVEqw66Fu4gPrQXt8OWDsFduWOL8yD51XP2SeGfmuRcZsapuXg-qi39VkbCnCVVFYLYpGzSk9X9Jrv1SZAKDBRbxYAmM32XYx3lXmTk3Ul4sE2khAyKssqenFsmL5pFL1bHXPi_4iyllto31SK5sg3gVkk0`
+    }
+    // https://www.myqnapcloud.com/smartshare/72f773ikj1n32r78uv4uvb0b_7cf4g6ghlmmn2486qvw0542071fd0ghh
+
     // else if (link.startsWith('')) {
     //   return ``
     // }
