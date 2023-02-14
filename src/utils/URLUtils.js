@@ -42,6 +42,9 @@ export default {
     else if (link.startsWith('https://docs.google.com/document/')) {
       return `https://lh3.googleusercontent.com/-3VWx8YodNfU/YcrAMBrI0bI/AAAAAAAFEWA/xw13o-kGx5Mq2eh_XXNZZn85zPmCYcWoACNcBGAsYHQ/s1600/google-drive-docs-blue.png`
     }
+    else if (link.startsWith('https://gitmind.com/')) {
+      return `https://blogger.googleusercontent.com/img/a/AVvXsEiE2HNWMyHHADw8jsvmQJfnFqPNQL54DWPoEURywteyoZnZ4prqaTXsXhso20Yk0SATB4WxwmM-soQ-5IYWbjkWUFGezQ8oQsbQeZ-gw3JzAi8zeEGbae_e9tFmWiwb604evwPxN_m9Y9bQWocr4Q9SfOK78FjKq1GQipM_Zzb55lUnxerdxcI`
+    }
     else if (link.startsWith('https://docs.google.com/spreadsheets/')) {
       if (link.startsWith('https://docs.google.com/spreadsheets/d/1MtL5PnyWKDR8T8TjKpCScz5xSbqCUCU-9pbCHDbG2_Y/')) {
         return `https://blogger.googleusercontent.com/img/a/AVvXsEjxP610PLQw2AZOXfD-AVw910-3sJxUAbdPu8UbHg18-CiZ_qKx7hgnz_HiHpjPksr4lHUPP6gPEPTfyLdNum9uTU8zTCpeG5jbb_5luBGgDuW7QesuB8wWIhfQttBe02pjmg1CtEt_hNhm0MHz9bXNxLPpZCfX4A6N21qMkOgyKdu3TrS2F8o`
