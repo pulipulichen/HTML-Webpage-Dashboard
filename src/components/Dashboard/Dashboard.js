@@ -153,8 +153,10 @@ let app = {
       if (buttons && buttons.buttons && Array.isArray(buttons.buttons)) {
         buttons = buttons.buttons
       }
+      console.log(buttons)
 
       let titles = Object.keys(buttons)
+      console.log(titles)
       
       if (search && search.trim() !== '') {
         titles = titles.filter(t => {
