@@ -255,7 +255,8 @@ document.head
       return url
 		},
 		getAppID (panelIndex, tab) {
-			return encodeURIComponent(panelIndex + '_' + tab + '_' + this.routingID)
+			// return encodeURIComponent(panelIndex + '_' + tab + '_' + this.routingID)
+      return encodeURIComponent(panelIndex + '_' + tab + '_' + this.config.dashboardConfig.title)
 		},
 		filterNoteURL (url, panelIndex, tab) {
 			return url + '?id=' + this.getAppID(panelIndex, tab) + '&fontSize=2rem'
