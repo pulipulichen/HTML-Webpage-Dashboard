@@ -164,12 +164,13 @@ let app = {
       // }
 
       let titles = Object.keys(buttons)
-      console.log(titles)
+      console.log(titles, buttons)
       if (titles[0] === '0') {
         let keyMap = {}
-        buttons.forEach(row => {
-          keyMap[row[0]] = row[1]
-        })
+        for (let i = 0; i < buttons.length; i++) {
+          keyMap[buttons[i][0]] = buttons[i][1]
+        }
+        
         buttons = keyMap
 
         titles = Object.keys(buttons)
