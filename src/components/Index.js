@@ -181,7 +181,7 @@ let Index = {
 
       if (this.config.dashboardConfig.title) {
         let title = this.config.dashboardConfig.title
-        if (title.indexOf('WDB') === -1) {
+        if (title.toLowerCase().indexOf('WDB') === -1) {
           title = title + ' WDB'
         }
         document.title = title
