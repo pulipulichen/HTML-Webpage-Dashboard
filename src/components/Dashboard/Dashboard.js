@@ -150,6 +150,10 @@ let app = {
         return []
       }
 
+      if (buttons && buttons.buttons && Array.isArray(buttons.buttons)) {
+        buttons = buttons.buttons
+      }
+
       let titles = Object.keys(buttons)
       
       if (search && search.trim() !== '') {
