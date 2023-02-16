@@ -155,6 +155,14 @@ let app = {
       }
       console.log(buttons)
 
+      if (Array.isArray(buttons)) {
+        let keyMap = {}
+        buttons.forEach(row => {
+          keyMap[row[0]] = row[1]
+        })
+        buttons = keyMap
+      }
+
       let titles = Object.keys(buttons)
       console.log(titles)
       
