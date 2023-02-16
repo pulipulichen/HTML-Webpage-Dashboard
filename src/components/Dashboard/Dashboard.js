@@ -149,33 +149,12 @@ let app = {
       if (!buttons) {
         return []
       }
-      console.log(buttons)
-      if (buttons && buttons.buttons && Array.isArray(buttons.buttons)) {
-        buttons = buttons.buttons
-      }
-      console.log(buttons)
 
-      // if (Array.isArray(buttons)) {
-      //   let keyMap = {}
-      //   buttons.forEach(row => {
-      //     keyMap[row[0]] = row[1]
-      //   })
-      //   buttons = keyMap
-      // }
+      if (buttons && buttons.buttons && Array.isArray(buttons.buttons)) {
+        url = url.buttons
+      }
 
       let titles = Object.keys(buttons)
-      console.log(titles, buttons)
-      if (titles[0] === '0') {
-        let keyMap = {}
-        for (let i = 0; i < buttons.length; i++) {
-          let row = buttons[i][0]
-          keyMap[row[0]] = row[1]
-        }
-        buttons = keyMap
-
-        titles = Object.keys(buttons)
-      }
-      console.log(titles)
       
       if (search && search.trim() !== '') {
         titles = titles.filter(t => {
