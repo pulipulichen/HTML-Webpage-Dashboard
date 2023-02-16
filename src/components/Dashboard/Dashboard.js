@@ -168,7 +168,7 @@ let app = {
       if (titles[0] === '0') {
         let keyMap = {}
         for (let i = 0; i < buttons.length; i++) {
-          let row = buttons[i].split(',')
+          let row = buttons[i][0].split(',')
           keyMap[row[0]] = row[1]
         }
         buttons = keyMap
