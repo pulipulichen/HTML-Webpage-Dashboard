@@ -20,7 +20,7 @@ let app = {
       let placeholder = this.$t(`Search...`)
 
       if (this.url && this.url.label) {
-        placeholder = this.$(`Search`) + ' ' + this.url.label + ' ...'
+        placeholder = this.$t(`Search`) + ' ' + this.url.label + ' ...'
       }
 
       return placeholder
