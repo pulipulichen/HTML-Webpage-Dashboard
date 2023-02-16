@@ -16,7 +16,15 @@ let app = {
     },
   },
   computed: {
-    
+    computedSearchPlaceholder () {
+      let placeholder = this.$t(`Search...`)
+
+      if (this.searchButton && this.searchButton.label) {
+        placeholder = $(`Search`) + ' ' + this.searchButton.label + ' ...'
+      }
+
+      return placeholder
+    }
   },
   mounted() {
     

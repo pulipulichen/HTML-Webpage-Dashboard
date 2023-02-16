@@ -177,11 +177,15 @@ let app = {
       })
     },
     filterSearchButton (url, search) {
-      if (!search || search.trim() === '') {
+      if (!search || (search.trim && search.trim() === '')) {
         return url
       }
 
       let output = []
+
+      if (search && search.buttons && Array.isArray(search.buttons)) {
+        search = search.buttons
+      }
 
       url.forEach(row => {
         let outputRow = []

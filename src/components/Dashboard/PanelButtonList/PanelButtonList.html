@@ -10,7 +10,7 @@
     
     <div class="ui input fluid field search-buttons"
       :class="{'icon': (searchButton && searchButton.trim() !== '')}">
-      <input type="text" :placeholder="$t('Search...')"
+      <input type="text" :placeholder="computedSearchPlaceholder"
         v-model="searchButton" />
       <i class="x link icon" v-if="(searchButton && searchButton.trim() !== '')"
         @click="clearSearch(i)" />
