@@ -18,7 +18,7 @@ export default {
       URLObject = new URL(link)
     }
     catch (e) {
-
+      console.error(`Link is not a URL: ${link} (${typeof(link)})`)
     }
 
     if (link.startsWith('https://blog.pulipuli.info')) {

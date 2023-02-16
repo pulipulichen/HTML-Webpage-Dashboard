@@ -151,7 +151,7 @@ let app = {
       }
 
       if (buttons && buttons.buttons && Array.isArray(buttons.buttons)) {
-        url = url.buttons
+        buttons = buttons.buttons
       }
 
       let titles = Object.keys(buttons)
@@ -172,6 +172,8 @@ let app = {
           titles = Object.keys(buttons)
         }
       }
+
+      console.log(titles)
 
       return titles.map(t => {
         return {
@@ -205,6 +207,8 @@ let app = {
           output.push(outputRow)
         }
       })
+
+      console.log(output)
 
       return output
     }
