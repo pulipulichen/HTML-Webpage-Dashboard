@@ -19,8 +19,8 @@ let app = {
     computedSearchPlaceholder () {
       let placeholder = this.$t(`Search...`)
 
-      if (this.searchButton && this.searchButton.label) {
-        placeholder = $(`Search`) + ' ' + this.searchButton.label + ' ...'
+      if (this.url && this.url.label) {
+        placeholder = $(`Search`) + ' ' + this.url.label + ' ...'
       }
 
       return placeholder

@@ -183,8 +183,8 @@ let app = {
 
       let output = []
 
-      if (search && search.buttons && Array.isArray(search.buttons)) {
-        search = search.buttons
+      if (url && url.buttons && Array.isArray(url.buttons)) {
+        url = url.buttons
       }
 
       url.forEach(row => {
