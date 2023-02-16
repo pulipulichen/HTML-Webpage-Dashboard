@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="ui equal width grid"
-       v-if="Array.isArray(url)"
+       v-else-if="Array.isArray(url)"
        v-for="rowButtons in $parent.filterSearchButton(url, searchButton)">
       <div class="column"
         v-for="button in rowButtons">

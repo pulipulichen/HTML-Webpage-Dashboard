@@ -155,6 +155,9 @@ let app = {
       }
 
       let titles = Object.keys(buttons)
+      // if (titles[0] === '0') {
+
+      // }
       
       if (search && search.trim() !== '') {
         titles = titles.filter(t => {
