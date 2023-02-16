@@ -181,8 +181,8 @@ let Index = {
 
       if (this.config.dashboardConfig.title) {
         let title = this.config.dashboardConfig.title
-        if (title.indexOf('WDG') === -1) {
-          title = title + ' WDG'
+        if (title.indexOf('WDB') === -1) {
+          title = title + ' WDB'
         }
         document.title = title
         manifestJSON.name = encodeURIComponent(title)
