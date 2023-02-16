@@ -149,7 +149,7 @@ let app = {
       if (!buttons) {
         return []
       }
-
+      console.log(buttons)
       if (buttons && buttons.buttons && Array.isArray(buttons.buttons)) {
         buttons = buttons.buttons
       }
