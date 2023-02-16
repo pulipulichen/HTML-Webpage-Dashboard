@@ -164,7 +164,7 @@ let app = {
       // }
 
       let titles = Object.keys(buttons)
-
+      console.log(titles)
       if (titles[0] === '0') {
         let keyMap = {}
         buttons.forEach(row => {
