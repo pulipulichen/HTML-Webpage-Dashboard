@@ -180,8 +180,12 @@ let Index = {
       }
 
       if (this.config.dashboardConfig.title) {
-        document.title = this.config.dashboardConfig.title
-        manifestJSON.name = encodeURIComponent(this.config.dashboardConfig.title)
+        let title = this.config.dashboardConfig.title
+        if (title.indexOf('WDG') === -1) {
+          title = title + ' WDG'
+        }
+        document.title = title
+        manifestJSON.name = encodeURIComponent(title)
       }
       if (this.config.dashboardConfig.favicon) {
         document.querySelector('link[rel="icon"]').href = this.config.dashboardConfig.favicon
