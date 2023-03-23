@@ -8,7 +8,8 @@
        :href="config.dashboardConfig.configuration"
        :title="config.dashboardConfig.title"
        @click.prevent.stop="popupWindow(config.dashboardConfig.configuration)">
-      <img :src="config.dashboardConfig.favicon" />
+      <img :src="config.dashboardConfig.favicon"
+        :class="{'white-border': config.dashboardConfig['theme-inverted'] }" />
       {{ config.dashboardConfig.title }}
     </a>
     <div class="item select" v-if="config.dashboardConfig['dashboard-type'] === 'dropdown' && config.dashboardConfig.tabs.length > 1">

@@ -77,3 +77,11 @@ select {
 
   display: flex;
 }
+
+img.white-border {
+  @border: 2px;
+  filter: drop-shadow(@border 0 0 white) 
+        drop-shadow(0 @border 0 white)
+        drop-shadow((@border*-1) 0 0 white) 
+        drop-shadow(0 (@border*-1) 0 white);
+}
