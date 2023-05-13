@@ -42,7 +42,7 @@ let app = {
         return this.url.slice(5)
       }
       return this.title
-    }
+    } 
   },
   mounted() {
     
