@@ -36,8 +36,13 @@ let app = {
         return false
       }
       return this.url
+    },
+    computedTitle () {
+      if (this.url.startsWith('COPY:')) {
+        return this.url.slice(5)
+      }
+      return this.title
     }
-    
   },
   mounted() {
     
