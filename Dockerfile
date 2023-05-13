@@ -1,8 +1,14 @@
 #Specify the version of nodejs.
 FROM node:12.0
 
+#Update stretch repositories
+RUN sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list
+RUN sed -i 's|security.debian.org|archive.debian.org/|g' /etc/apt/sources.list
+RUN sed -i '/stretch-updates/d' /etc/apt/sources.list
+
 #Install required packages in os(It is recommended to write it as a spell)
-RUN apt-get update && apt-get install -y \
+RUN apt-get update
+RUN apt-get install -y \
     #Because non-root users use root privileges
     sudo \
     #Get tools from internet

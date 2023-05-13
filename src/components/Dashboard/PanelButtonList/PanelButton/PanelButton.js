@@ -30,6 +30,12 @@ let app = {
       }
 
       return classes
+    },
+    compustedURL () {
+      if (this.url.startsWith('COPY:')) {
+        return false
+      }
+      return this.url
     }
     
   },
@@ -37,7 +43,17 @@ let app = {
     
   },
   methods: {
-    
+    open () {
+      // utils.PopupUtils.openURLFullscreen(url)
+      if (this.url.startsWith('COPY:')) {
+        let str = this.url.slice(5)
+        this.utils.ClipboardUtils.copyPlainString(str)
+      }
+      else {
+        this.utils.PopupUtils.openURLFullscreen(this.url)
+      }
+      
+    }
   }
 }
 
