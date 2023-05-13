@@ -24,6 +24,9 @@ export default {
     if (link.startsWith('https://blog.pulipuli.info')) {
       return 'https://lh3.googleusercontent.com/-vjf_alp-zjQ/VvtkKVpqCjI/AAAAAAACuMI/HPJXcEemwok/s0/pulipuli144x144.jpg'
     }
+    else if (link.startsWith('COPY:')) {
+      return 'https://i.ibb.co/rH8zVtQ/paste.png'
+    }
     else if (link.startsWith('https://semantic-ui.com/')) {
       return `https://semantic-ui.com/images/logo.png`
     }
