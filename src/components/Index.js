@@ -129,6 +129,11 @@ let Index = {
       // console.log({dashboardConfigURL})
       try {
         this.config.dashboardConfig = await this.utils.AxiosUtils.get(dashboardConfigURL)
+
+        let cleanFields = ['theme-color', 'navigation-position', 'dashboard-type']
+        cleanFields.forEach((field) => {
+          this.config.dashboardConfig[field] = this.config.dashboardConfig[field].toLowerCase().trim()
+        })
       }
       catch (e) {
         // this.$router.push('/' + encodeURIComponent(this.lastRouteID))
