@@ -30,6 +30,9 @@ export default {
     else if (link === 'https://www.blogger.com/blog/post/edit/16607461/8994542276547065') {
       return 'https://lh3.googleusercontent.com/-7Jm-mp8wnRE/YTHkihOJj8I/AAAAAAAFBaQ/Qo6hg2iIXS0XMvLQ7v6hFxUILI_ztg8NgCLcBGAsYHQ/s1600/blogger-image-upload.png'
     }
+    else if (link.startsWith('https://efile.tax.nat.gov.tw/')) {
+      return 'https://i.ibb.co/MsV6ZW2/tax.png'
+    }
     else if (link.startsWith('https://semantic-ui.com/')) {
       return `https://semantic-ui.com/images/logo.png`
     }
