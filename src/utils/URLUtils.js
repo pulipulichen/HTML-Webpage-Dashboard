@@ -33,6 +33,9 @@ export default {
     else if (link.startsWith('https://efile.tax.nat.gov.tw/')) {
       return 'https://i.ibb.co/MsV6ZW2/tax.png'
     }
+    else if (link.startsWith('https://mes.bli.gov.tw/')) {
+      return 'https://i.ibb.co/zmYMSFC/download.png'
+    }
     else if (link.startsWith('https://semantic-ui.com/')) {
       return `https://semantic-ui.com/images/logo.png`
     }
