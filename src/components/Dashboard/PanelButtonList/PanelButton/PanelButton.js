@@ -50,11 +50,14 @@ let app = {
   methods: {
     open () {
       // utils.PopupUtils.openURLFullscreen(url)
+      console.log(this.url)
       if (this.url.startsWith('COPY:')) {
         let str = this.url.slice(5)
         this.utils.ClipboardUtils.copyPlainString(str)
       }
       else if (this.url.startsWith('IFRAME:')) {
+        
+        console.log(this.$parent.$parent.tab.url)
         let str = this.url.slice(7)
         
         let pos = str.indexOf(':http')
