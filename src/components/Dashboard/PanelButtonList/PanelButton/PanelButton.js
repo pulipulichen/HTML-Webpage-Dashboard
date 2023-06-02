@@ -71,7 +71,8 @@ let app = {
         let url = str.slice(pos + 1)
 
         // this.utils.ClipboardUtils.copyPlainString(str)
-        this.$parent.$parent.$refs.PanelIframe[id].src = url
+        // this.$parent.$parent.$refs.PanelIframe[id].src = url
+        console.log(this.$parent.$parent.tab.url)
       }
       else {
         this.utils.PopupUtils.openURLFullscreen(this.url)
