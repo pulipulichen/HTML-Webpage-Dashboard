@@ -82,7 +82,13 @@ let app = {
         // // this.utils.ClipboardUtils.copyPlainString(str)
         // // this.$parent.$parent.$refs.PanelIframe[id].src = url
         // console.log(this.$parent.$parent.tab.url)
-        this.$parent.$parent.tab.url[id] = url
+        // this.$parent.$parent.tab.url[id] = url
+        console.log(this.$parent.$parent.$refs.PanelIframe)
+        console.log(this.$parent.$parent.$refs.PanelIframe.url)
+        this.$parent.$parent.$refs.PanelIframe.url = url
+        console.log(this.$parent.$parent.$refs.PanelIframe.url)
+
+        console.log('20230602-1541 ok')
       }
       else {
         this.utils.PopupUtils.openURLFullscreen(this.url)
