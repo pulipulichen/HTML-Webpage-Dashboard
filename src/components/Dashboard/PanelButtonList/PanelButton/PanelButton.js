@@ -87,7 +87,7 @@ let app = {
         window.IFRAME = this.$parent.$parent.$refs.PanelIframe
         console.log(this.$parent.$parent.$refs.PanelIframe)
         console.log(this.$parent.$parent.$refs.PanelIframe[id].url)
-        // this.$parent.$parent.$refs.PanelIframe[id].url = url
+        this.$parent.$parent.$refs.PanelIframe[id].url = url
         console.log(this.$parent.$parent.$refs.PanelIframe[id].url)
 
         console.log(this.config.dashboardConfig.tabs)
@@ -95,16 +95,16 @@ let app = {
 
         for (let i = 0; i < this.config.dashboardConfig.tabs.length; i++) {
           let {title} = this.config.dashboardConfig.tabs[i]
-
+          console.log(title, this.localConfig.tab)
           if (title !== this.localConfig.tab) {
             continue
           }
-
+          console.log('ok')
           this.config.dashboardConfig.tabs[i].url[id] = url
           break
         }
         // this.config.dashboardConfig.tabs.filter(t => (t.title === this.localConfig.tab))[0].url[id] = url
-        console.log('20230603-0020 okk')
+        console.log('20230603-0028 okk')
       }
       else {
         this.utils.PopupUtils.openURLFullscreen(this.url)
