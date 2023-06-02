@@ -90,6 +90,9 @@ let app = {
         this.$parent.$parent.$refs.PanelIframe[id].url = url
         console.log(this.$parent.$parent.$refs.PanelIframe[id].url)
 
+        console.log(this.config.dashboardConfig.tabs)
+        console.log(this.localConfig.tab)
+
         console.log('20230602-1541 ok')
       }
       else {
