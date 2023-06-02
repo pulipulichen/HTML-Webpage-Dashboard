@@ -64,12 +64,14 @@ let app = {
         let str = this.url.slice(7)
         
         let pos = str.indexOf(':http')
+        console.log(pos)
         if (pos === -1) {
           window.alert('ERROR: ' + this.url)
           return false
         }
 
         let id = Number(str.slice(0, pos))
+        console.log(id)
         id--
         if (id <= 0) {
           id = 1
