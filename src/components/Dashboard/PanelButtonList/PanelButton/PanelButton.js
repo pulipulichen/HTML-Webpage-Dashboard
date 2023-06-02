@@ -59,7 +59,7 @@ let app = {
         this.utils.ClipboardUtils.copyPlainString(str)
       }
       else if (this.url.startsWith('IFRAME:')) {
-        
+        console.log('20230602-0939')
         console.log(this.$parent.$parent.tab.url)
         let str = this.url.slice(7)
         
