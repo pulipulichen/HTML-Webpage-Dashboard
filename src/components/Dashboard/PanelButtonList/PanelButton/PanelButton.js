@@ -53,35 +53,36 @@ let app = {
   methods: {
     open () {
       // utils.PopupUtils.openURLFullscreen(url)
-      console.log(this.url)
+      // console.log(this.url)
       if (this.url.startsWith('COPY:')) {
         let str = this.url.slice(5)
         this.utils.ClipboardUtils.copyPlainString(str)
       }
       else if (this.url.startsWith('IFRAME:')) {
         console.log('20230602-0939')
-        console.log(this.$parent.$parent.tab.url)
+        // console.log(this.$parent.$parent.tab.url)
         let str = this.url.slice(7)
         
         let pos = str.indexOf(':http')
-        console.log(pos)
+        // console.log(pos)
         if (pos === -1) {
           window.alert('ERROR: ' + this.url)
           return false
         }
 
         let id = Number(str.slice(0, pos))
-        console.log(id)
+        // console.log(id)
         id--
-        if (id <= 0) {
-          id = 1
+        if (id < 0) {
+          id = 0
         }
         let url = str.slice(pos + 1)
-        console.log(id, url)
+        // console.log(id, url)
 
         // // this.utils.ClipboardUtils.copyPlainString(str)
         // // this.$parent.$parent.$refs.PanelIframe[id].src = url
         // console.log(this.$parent.$parent.tab.url)
+        this.$parent.$parent.tab.url[id] = url
       }
       else {
         this.utils.PopupUtils.openURLFullscreen(this.url)
