@@ -6,6 +6,7 @@
     <template v-for="(url, i) in urlList">
       <PanelIframe
         v-if="typeof(url) === 'string'"
+        ref="PanelIframe"
         :url="url"
         :tab="tab.title"
         :tabType="tabTypes[i]"
