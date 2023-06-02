@@ -93,7 +93,8 @@ let app = {
         console.log(this.config.dashboardConfig.tabs)
         console.log(this.localConfig.tab)
 
-        console.log('20230602-1613 ok')
+        this.config.dashboardConfig.tabs.filter(t => (t.title === this.localConfig.tab))[0].url[id] = url
+        console.log('20230602-1619 ok')
       }
       else {
         this.utils.PopupUtils.openURLFullscreen(this.url)
