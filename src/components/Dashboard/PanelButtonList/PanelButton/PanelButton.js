@@ -93,7 +93,7 @@ let app = {
         console.log(this.config.dashboardConfig.tabs)
         console.log(this.localConfig.tab)
 
-        console.log('20230602-1541 ok')
+        console.log('20230602-1613 ok')
       }
       else {
         this.utils.PopupUtils.openURLFullscreen(this.url)
