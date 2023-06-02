@@ -58,24 +58,24 @@ let app = {
       else if (this.url.startsWith('IFRAME:')) {
         
         console.log(this.$parent.$parent.tab.url)
-        let str = this.url.slice(7)
+        // let str = this.url.slice(7)
         
-        let pos = str.indexOf(':http')
-        if (pos === -1) {
-          window.alert('ERROR: ' + this.url)
-          return false
-        }
+        // let pos = str.indexOf(':http')
+        // if (pos === -1) {
+        //   window.alert('ERROR: ' + this.url)
+        //   return false
+        // }
 
-        let id = Number(str.slice(0, pos))
-        id--
-        if (id <= 0) {
-          id = 1
-        }
-        let url = str.slice(pos + 1)
+        // let id = Number(str.slice(0, pos))
+        // id--
+        // if (id <= 0) {
+        //   id = 1
+        // }
+        // let url = str.slice(pos + 1)
 
-        // this.utils.ClipboardUtils.copyPlainString(str)
-        // this.$parent.$parent.$refs.PanelIframe[id].src = url
-        console.log(this.$parent.$parent.tab.url)
+        // // this.utils.ClipboardUtils.copyPlainString(str)
+        // // this.$parent.$parent.$refs.PanelIframe[id].src = url
+        // console.log(this.$parent.$parent.tab.url)
       }
       else {
         this.utils.PopupUtils.openURLFullscreen(this.url)
