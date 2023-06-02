@@ -59,7 +59,7 @@ let app = {
         this.utils.ClipboardUtils.copyPlainString(str)
       }
       else if (this.url.startsWith('IFRAME:')) {
-        console.log('20230602-0939')
+        // console.log('20230602-0939')
         // console.log(this.$parent.$parent.tab.url)
         let str = this.url.slice(7)
         
@@ -83,28 +83,28 @@ let app = {
         // // this.$parent.$parent.$refs.PanelIframe[id].src = url
         // console.log(this.$parent.$parent.tab.url)
         // this.$parent.$parent.tab.url[id] = url
-        console.log(id)
+        // console.log(id)
         window.IFRAME = this.$parent.$parent.$refs.PanelIframe
-        console.log(this.$parent.$parent.$refs.PanelIframe)
-        console.log(this.$parent.$parent.$refs.PanelIframe[id].url)
+        // console.log(this.$parent.$parent.$refs.PanelIframe)
+        // console.log(this.$parent.$parent.$refs.PanelIframe[id].url)
         this.$parent.$parent.$refs.PanelIframe[id].url = url
-        console.log(this.$parent.$parent.$refs.PanelIframe[id].url)
+        // console.log(this.$parent.$parent.$refs.PanelIframe[id].url)
 
-        console.log(this.config.dashboardConfig.tabs)
-        console.log(this.localConfig.tab)
+        // console.log(this.config.dashboardConfig.tabs)
+        // console.log(this.localConfig.tab)
 
         for (let i = 0; i < this.config.dashboardConfig.tabs.length; i++) {
           let {title} = this.config.dashboardConfig.tabs[i]
-          console.log(title, this.localConfig.tab)
+          // console.log(title, this.localConfig.tab)
           if (title !== this.localConfig.tab) {
             continue
           }
-          console.log('ok')
+          // console.log('ok')
           this.config.dashboardConfig.tabs[i].url[id] = url
           break
         }
         // this.config.dashboardConfig.tabs.filter(t => (t.title === this.localConfig.tab))[0].url[id] = url
-        console.log('20230603-0028 okk')
+        // console.log('20230603-0028 okk')
       }
       else {
         this.utils.PopupUtils.openURLFullscreen(this.url)
