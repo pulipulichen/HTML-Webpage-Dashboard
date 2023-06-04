@@ -64,7 +64,7 @@ let app = {
         let str = this.url.slice(7)
         
         let pos = str.indexOf(':http')
-        let id = 1
+        let id = 0
         let url = str
         // console.log(pos)
         if (pos === -1) {
