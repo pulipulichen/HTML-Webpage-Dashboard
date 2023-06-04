@@ -36,6 +36,10 @@ let app = {
         return false
       }
       if (this.url.startsWith('IFRAME:')) {
+        let pos = this.url.indexOf(':http')
+        if (pos > -1) {
+          return this.url.slice(pos + 1)
+        }
         return false
       }
       return this.url
