@@ -64,19 +64,25 @@ let app = {
         let str = this.url.slice(7)
         
         let pos = str.indexOf(':http')
+        let id = 1
+        let url = str
         // console.log(pos)
         if (pos === -1) {
-          window.alert('ERROR: ' + this.url)
-          return false
+          if (str.indexOf('http') === -1) {
+            window.alert('ERROR: ' + this.url)
+            return false
+          }
         }
-
-        let id = Number(str.slice(0, pos))
-        // console.log(id)
-        id--
-        if (id < 0) {
-          id = 0
+        else {
+          id = Number(str.slice(0, pos))
+          // console.log(id)
+          id--
+          if (id < 0) {
+            id = 0
+          }
+          url = str.slice(pos + 1)
         }
-        let url = str.slice(pos + 1)
+          
         // console.log(id, url)
 
         // // this.utils.ClipboardUtils.copyPlainString(str)
@@ -84,7 +90,7 @@ let app = {
         // console.log(this.$parent.$parent.tab.url)
         // this.$parent.$parent.tab.url[id] = url
         // console.log(id)
-        window.IFRAME = this.$parent.$parent.$refs.PanelIframe
+        // window.IFRAME = this.$parent.$parent.$refs.PanelIframe
         // console.log(this.$parent.$parent.$refs.PanelIframe)
         // console.log(this.$parent.$parent.$refs.PanelIframe[id].url)
         this.$parent.$parent.$refs.PanelIframe[id].url = url
