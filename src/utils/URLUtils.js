@@ -39,6 +39,12 @@ export default {
     else if (link.startsWith('https://zapier.com/')) {
       return 'https://i.ibb.co/8bd11VS/image.png'
     }
+    else if (link.startsWith('https://script.google.com/')) {
+      return 'https://i.ibb.co/sQKqnsP/image.png'
+    }
+    else if (link.startsWith('https://www.blogger.com/')) {
+      return 'https://i.ibb.co/8sT9PnP/image.png'
+    }
     else if (link.startsWith('https://business.facebook.com/latest/inbox/messenger')) {
       return 'https://blogger.googleusercontent.com/img/a/AVvXsEiM6hcJ0TTNop4EsGmnjX9uMn0dClCiiTQi6kLznSeuM2U8NyBb4kQPrESMB41nGyfZEN-nx06rhi-XvBMAZWf45rUS8ctZY5nf7SoVfL0JAbEt1vO0kQ-cXoelpKxZPd5F1wv9w3rPdVKqeI_oAo8j0PPUaHcsg7liJYE5A1S_LIC6yYS7fbI'
     }
