@@ -70,6 +70,10 @@ export default {
       if (link.endsWith('/export?format=odt')) {
         return `https://i.ibb.co/GnN2fhN/5098043.png`
       }
+      else if (link.endsWith('/pub')) {
+        // https://docs.google.com/document/d/e/2PACX-1vSISWjuhGhXZFw3rixY3u6v7kZkqUp9W99vM1oxytwjzeghT5GtT8FDx6j_io6qvzcir68WH-RkvZeJ/pub
+        return `https://i.ibb.co/7nxt4X4/image.png`
+      }
       // https://docs.google.com/document/d/1vEumiFuKAUqRjLhECeCnUp0fs-unB39peV70zz5q89U/export?format=odt
       return `https://lh3.googleusercontent.com/-3VWx8YodNfU/YcrAMBrI0bI/AAAAAAAFEWA/xw13o-kGx5Mq2eh_XXNZZn85zPmCYcWoACNcBGAsYHQ/s1600/google-drive-docs-blue.png`
     }
