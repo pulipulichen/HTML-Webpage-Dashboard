@@ -33,6 +33,10 @@ let app = {
     },
     compustedURL () {
       if (this.url.startsWith('COPY:')) {
+        let pos = this.url.indexOf(':http')
+        if (pos > -1) {
+          return this.url.slice(pos + 1)
+        }
         return false
       }
       if (this.url.startsWith('IFRAME:')) {
