@@ -60,6 +60,9 @@ export default {
     else if (link.startsWith('https://tasks.google.com/')) {
       return `https://blogger.googleusercontent.com/img/a/AVvXsEg1HSyEe97CpvB0oQqLno4QRocWZWEq2dLQYAMv8vPplEe6NW-kBD2_9VD_C7yI0dvrcINRsFXCaXIm6YgJJSWb1zBlM4Fw6BQg_Fw7CQkRcLMHKmXEEhaoyrjWluodac_-p-dOZwCBtowL9dG9KRCXdD7Vz4ANkHYVIewB-mxvqeQhZibsPpg`
     }
+    else if (link.startsWith('https://pulipulichen.github.io/PWA-Now-Loading/')) {
+      return `https://pulipulichen.github.io/PWA-Now-Loading/assets/favicon/favicon.png`
+    }
     else if (link.startsWith('https://www.youtube.com/')) {
       return `https://i.ibb.co/hKWT2Zz/image.png`
     }
