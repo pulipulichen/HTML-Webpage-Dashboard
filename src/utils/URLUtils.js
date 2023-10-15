@@ -21,7 +21,10 @@ export default {
       console.error(`Link is not a URL: ${link} (${typeof(link)})`)
     }
 
-    if (link.startsWith('https://blog.pulipuli.info')) {
+    if (link === false) {
+      return 'https://blogger.googleusercontent.com/img/a/AVvXsEgFt97UzU3O_mkEdS_qOgH9RXbm0K-Q2NEPTefDDMYP7F7Ejtqd6az4tQ5oA1M7kVF7Rq9vin79CeeP4PvWVUFo6edkVCwzyeBHZN3auCzqcMV4gOewmbk7onhXTV-tZprjRnYtPDyCzwnj733ES3z_15bfhRZMoPp5Cxg4obgOGeuJ3qn8YnGk-A'
+    }
+    else if (link.startsWith('https://blog.pulipuli.info')) {
       return 'https://lh3.googleusercontent.com/-vjf_alp-zjQ/VvtkKVpqCjI/AAAAAAACuMI/HPJXcEemwok/s0/pulipuli144x144.jpg'
     }
     else if (link.startsWith('COPY:')) {
