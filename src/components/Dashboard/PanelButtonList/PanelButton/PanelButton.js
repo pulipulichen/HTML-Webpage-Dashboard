@@ -53,6 +53,9 @@ let app = {
       return this.url
     },
     computedTitle () {
+      if (!this.url) {
+        return this.title
+      }
       if (this.url.startsWith('COPY:')) {
         return this.url.slice(5)
       }
@@ -64,6 +67,9 @@ let app = {
   },
   methods: {
     open () {
+      if (!this.url) {
+        return false
+      }
       // utils.PopupUtils.openURLFullscreen(url)
       // console.log(this.url)
       if (this.url.startsWith('COPY:')) {
