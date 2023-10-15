@@ -32,6 +32,10 @@ let app = {
       return classes
     },
     compustedURL () {
+      if (!this.url) {
+        return '#'
+      }
+
       if (this.url.startsWith('COPY:')) {
         let pos = this.url.indexOf(':http')
         if (pos > -1) {
