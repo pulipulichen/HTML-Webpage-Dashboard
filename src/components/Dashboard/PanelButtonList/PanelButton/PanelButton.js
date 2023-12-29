@@ -92,20 +92,34 @@ let app = {
       if (!this.url) {
         return false
       }
+
+      let url = this.url
+
+      if (this.isSearchURL) {
+        let keyword = this.searchKeywordTrim
+        if (keyword.length > 0) {
+          keyword = encodeURI(keyword)
+        }
+        else {
+          keyword = `研究`
+        }
+        url = url.split(this.searchKeywordPlaceholder).join(keyword)
+      } 
+
       // utils.PopupUtils.openURLFullscreen(url)
       // console.log(this.url)
-      if (this.url.startsWith('COPY:')) {
-        let str = this.url.slice(5)
-        this.utils.ClipboardUtils.copyPlainString(str)
+      if (url.startsWith('COPY:')) {
+        let str = url.slice(5)
+        utils.ClipboardUtils.copyPlainString(str)
       }
-      else if (this.url.startsWith('IFRAME:')) {
+      else if (url.startsWith('IFRAME:')) {
         // console.log('20230602-0939')
         // console.log(this.$parent.$parent.tab.url)
-        let str = this.url.slice(7)
+        let str = url.slice(7)
         
         let pos = str.indexOf(':http')
         let id = 0
-        let url = str
+        // let url = str
         // console.log(pos)
         if (pos === -1) {
           if (str.indexOf('http') === -1) {
@@ -153,7 +167,7 @@ let app = {
         // console.log('20230603-0028 okk')
       }
       else {
-        this.utils.PopupUtils.openURLFullscreen(this.url)
+        this.utils.PopupUtils.openURLFullscreen(this.compustedURL)
       }
       
     }
