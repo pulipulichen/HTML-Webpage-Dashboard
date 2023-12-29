@@ -37,7 +37,7 @@ let app = {
     },
     isSearchURL () {
       return (this.url.indexOf('$$$$keyword$$$$') !== -1)
-      // return true
+      // return true 
     },
     compustedURL () {
       if (!this.url) {
