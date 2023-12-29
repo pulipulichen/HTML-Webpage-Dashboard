@@ -22,10 +22,7 @@ let app = {
     computedClasses () {
       let classes = []
 
-      if (this.isSearchURL && this.searchKeywordTrim === '') {
-        classes.push('disabled')
-      }
-      else if (!this.url) {
+      if (!this.url) {
         classes.push('disabled')
       }
 
