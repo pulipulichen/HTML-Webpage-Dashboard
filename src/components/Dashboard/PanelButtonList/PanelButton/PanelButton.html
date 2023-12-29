@@ -1,17 +1,39 @@
-<a class="ui fluid button"
-  :href="compustedURL"
-  target="_blank"
-  :title="computedTitle"
-  :class="computedClasses"
-  @click.prevent.stop="open">
+<div>
+  <a class="ui fluid button"
+    :href="compustedURL"
+    target="_blank"
+    :title="computedTitle"
+    :class="computedClasses"
+    @click.prevent.stop="open"
+    v-if="isSearchURL === false">
 
-  <template v-if="favicon">
-    <div class="favicon"
-      :style="{'background-image': `url(${favicon})`}"></div>
-    <div class="title">{{ title }}</div>
-  </template>
-  <template v-else>
-    {{ title }}
-  </template>
-    
-</a>
+    <template v-if="favicon">
+      <div class="favicon"
+        :style="{'background-image': `url(${favicon})`}"></div>
+      <div class="title">{{ title }}</div>
+    </template>
+    <template v-else>
+      {{ title }}
+    </template>
+      
+  </a>
+<div class="ui fluid action input" v-if="isSearchURL">
+  <input type="text" placeholder="Search..."
+    v-model="searchKeyword" />
+  <a class="ui fluid button"
+    :href="compustedURL"
+    target="_blank"
+    :title="computedTitle"
+    :class="computedClasses"
+    @click.prevent.stop="open">
+    <template v-if="favicon">
+      <div class="favicon"
+        :style="{'background-image': `url(${favicon})`}"></div>
+      <div class="title">{{ title }}</div>
+    </template>
+    <template v-else>
+      {{ title }}
+    </template>
+  </a>
+</div>
+</div>

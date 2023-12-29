@@ -3,6 +3,8 @@ let app = {
   data () {    
     this.$i18n.locale = this.localConfig.locale
     return {
+      searchKeyword: '',
+      searchKeywordPlaceholder: `$$$$keyword$$$$`
     }
   },
   watch: {
@@ -14,11 +16,16 @@ let app = {
     favicon () {
       return this.utils.URLUtils.parseLinkFavicon(this.url)
     },
+    searchKeywordTrim () {
+      return this.searchKeyword.trim()
+    },
     computedClasses () {
       let classes = []
 
-      // {disabled: !url}
-      if (!this.url) {
+      if (this.isSearchURL && this.searchKeywordTrim === '') {
+        classes.push('disabled')
+      }
+      else if (!this.url) {
         classes.push('disabled')
       }
 
@@ -31,26 +38,40 @@ let app = {
 
       return classes
     },
+    isSearchURL () {
+      return (this.url.indexOf('$$$$keyword$$$$') !== -1)
+    },
     compustedURL () {
       if (!this.url) {
         return '#'
       }
 
-      if (this.url.startsWith('COPY:')) {
-        let pos = this.url.indexOf(':http')
+      let url = this.url
+
+      if (this.isSearchURL) {
+        let keyword = this.searchKeywordTrim
+        if (keyword.length > 0) {
+          keyword = encodeURI(keyword)
+        }
+        url = url.split(this.searchKeywordPlaceholder).join(keyword)
+      }
+
+      if (url.startsWith('COPY:')) {
+        let pos = url.indexOf(':http')
         if (pos > -1) {
-          return this.url.slice(pos + 1)
+          return url.slice(pos + 1)
         }
         return false
       }
-      if (this.url.startsWith('IFRAME:')) {
-        let pos = this.url.indexOf(':http')
+      if (url.startsWith('IFRAME:')) {
+        let pos = url.indexOf(':http')
         if (pos > -1) {
-          return this.url.slice(pos + 1)
+          return url.slice(pos + 1)
         }
         return false
       }
-      return this.url
+
+      return url
     },
     computedTitle () {
       if (!this.url) {
