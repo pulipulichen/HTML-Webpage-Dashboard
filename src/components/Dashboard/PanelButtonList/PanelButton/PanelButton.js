@@ -51,6 +51,9 @@ let app = {
         if (keyword.length > 0) {
           keyword = encodeURI(keyword)
         }
+        else {
+          keyword = `研究`
+        }
         url = url.split(this.searchKeywordPlaceholder).join(keyword)
       } 
 
