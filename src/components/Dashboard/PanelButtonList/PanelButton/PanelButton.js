@@ -167,6 +167,7 @@ let app = {
         // console.log('20230603-0028 okk')
       }
       else {
+        console.log(this.compustedURL)
         this.utils.PopupUtils.openURLFullscreen(this.compustedURL)
       }
       
