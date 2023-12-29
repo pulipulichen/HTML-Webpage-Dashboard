@@ -52,7 +52,7 @@ let app = {
           keyword = encodeURI(keyword)
         }
         else {
-          keyword = `研究`
+          keyword = encodeURI(`研究`)
         }
         url = url.split(this.searchKeywordPlaceholder).join(keyword)
       } 
@@ -84,9 +84,9 @@ let app = {
       return this.title
     } 
   },
-  mounted() {
+  // mounted() {
     
-  },
+  // },
   methods: {
     open () {
       if (!this.url) {
