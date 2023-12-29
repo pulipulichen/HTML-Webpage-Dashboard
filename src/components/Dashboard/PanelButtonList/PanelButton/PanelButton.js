@@ -37,6 +37,7 @@ let app = {
     },
     isSearchURL () {
       return (this.url.indexOf('$$$$keyword$$$$') !== -1)
+      // return true
     },
     compustedURL () {
       if (!this.url) {
@@ -59,7 +60,7 @@ let app = {
           return url.slice(pos + 1)
         }
         return false
-      }
+      } 
       if (url.startsWith('IFRAME:')) {
         let pos = url.indexOf(':http')
         if (pos > -1) {
