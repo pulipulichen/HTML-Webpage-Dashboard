@@ -54,7 +54,7 @@ let app = {
           keyword = encodeURI(keyword)
         }
         url = url.split(this.searchKeywordPlaceholder).join(keyword)
-      }
+      } 
 
       if (url.startsWith('COPY:')) {
         let pos = url.indexOf(':http')
