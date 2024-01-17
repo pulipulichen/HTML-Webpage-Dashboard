@@ -107,7 +107,7 @@ let app = {
       } 
 
       // utils.PopupUtils.openURLFullscreen(url)
-      console.log(this.url, url.toUpperCase().startsWith('IFRAME:'))
+      // console.log(this.url, url.toUpperCase().startsWith('IFRAME:'))
       if (url.toUpperCase().startsWith('COPY:')) {
         let str = url.slice(5)
         utils.ClipboardUtils.copyPlainString(str)
@@ -121,7 +121,7 @@ let app = {
         let pos = str.indexOf(':http')
         let id = 0
         // let url = str
-        console.log(pos)
+        // console.log(pos)
         if (pos === -1) {
           if (str.indexOf('http') === -1) {
             window.alert('ERROR: ' + this.url)
@@ -141,11 +141,11 @@ let app = {
             }
           }
             
-          console.log(id, pos, str, str.slice(pos + 1))
+          // console.log(id, pos, str, str.slice(pos + 1))
           url = str.slice(pos + 1)
         }
           
-        console.log(id, url)
+        // console.log(id, url)
 
         // // this.utils.ClipboardUtils.copyPlainString(str)
         // // this.$parent.$parent.$refs.PanelIframe[id].src = url
@@ -175,7 +175,7 @@ let app = {
         // console.log('20230603-0028 okk')
       }
       else {
-        console.log(this.compustedURL)
+        // console.log(this.compustedURL)
         this.utils.PopupUtils.openURLFullscreen(this.compustedURL)
       }
     }
