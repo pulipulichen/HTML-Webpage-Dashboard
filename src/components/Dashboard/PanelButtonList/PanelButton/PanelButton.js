@@ -131,13 +131,16 @@ let app = {
         else {
           id = Number(str.slice(0, pos))
           if (isNaN(id)) {
-            id = 1
-          }
-          // console.log(id)
-          id--
-          if (id < 0) {
             id = 0
           }
+          else {
+            // console.log(id)
+            id--
+            if (id < 0) {
+              id = 0
+            }
+          }
+            
           console.log(id, pos, str, str.slice(pos + 1))
           url = str.slice(pos + 1)
         }
