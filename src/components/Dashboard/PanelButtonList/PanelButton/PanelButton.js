@@ -107,12 +107,12 @@ let app = {
       } 
 
       // utils.PopupUtils.openURLFullscreen(url)
-      console.log(this.url)
-      if (url.startsWith('COPY:')) {
+      console.log(this.url, url.toUpperCase().startsWith('IFRAME:'))
+      if (url.toUpperCase().startsWith('COPY:')) {
         let str = url.slice(5)
         utils.ClipboardUtils.copyPlainString(str)
       }
-      else if (url.startsWith('IFRAME:')) {
+      else if (url.toUpperCase().startsWith('IFRAME:')) {
         // console.log('20230602-0939')
         // console.log(this.$parent.$parent.tab.url)
         let str = url.slice(7)
@@ -170,7 +170,6 @@ let app = {
         console.log(this.compustedURL)
         this.utils.PopupUtils.openURLFullscreen(this.compustedURL)
       }
-      
     }
   }
 }
