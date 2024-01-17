@@ -130,6 +130,9 @@ let app = {
         }
         else {
           id = Number(str.slice(0, pos))
+          if (isNaN(id)) {
+            id = 1
+          }
           // console.log(id)
           id--
           if (id < 0) {
