@@ -134,6 +134,7 @@ let app = {
           if (id < 0) {
             id = 0
           }
+          console.log(id, pos, str, str.slice(pos + 1))
           url = str.slice(pos + 1)
         }
           
