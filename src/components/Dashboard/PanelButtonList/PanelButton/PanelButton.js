@@ -107,7 +107,7 @@ let app = {
       } 
 
       // utils.PopupUtils.openURLFullscreen(url)
-      // console.log(this.url)
+      console.log(this.url)
       if (url.startsWith('COPY:')) {
         let str = url.slice(5)
         utils.ClipboardUtils.copyPlainString(str)
