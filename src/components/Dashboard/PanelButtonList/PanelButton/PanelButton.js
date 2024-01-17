@@ -115,12 +115,13 @@ let app = {
       else if (url.toUpperCase().startsWith('IFRAME:')) {
         // console.log('20230602-0939')
         // console.log(this.$parent.$parent.tab.url)
-        let str = url.slice(7)
+        // let str = url.slice(7)
+        let str = url
         
         let pos = str.indexOf(':http')
         let id = 0
         // let url = str
-        // console.log(pos)
+        console.log(pos)
         if (pos === -1) {
           if (str.indexOf('http') === -1) {
             window.alert('ERROR: ' + this.url)
