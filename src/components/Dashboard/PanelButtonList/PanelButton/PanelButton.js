@@ -137,7 +137,7 @@ let app = {
           url = str.slice(pos + 1)
         }
           
-        // console.log(id, url)
+        console.log(id, url)
 
         // // this.utils.ClipboardUtils.copyPlainString(str)
         // // this.$parent.$parent.$refs.PanelIframe[id].src = url
