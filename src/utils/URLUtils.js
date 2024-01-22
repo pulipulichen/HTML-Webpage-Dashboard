@@ -27,6 +27,9 @@ export default {
     else if (link.startsWith('https://blog.pulipuli.info')) {
       return 'https://lh3.googleusercontent.com/-vjf_alp-zjQ/VvtkKVpqCjI/AAAAAAACuMI/HPJXcEemwok/s0/pulipuli144x144.jpg'
     }
+    else if (link.startsWith('https://chat.openai.com/')) {
+      return 'https://blogger.googleusercontent.com/img/a/AVvXsEjmQBVqhOhANZs-tOKjqZ04VF_BLvfanhpMuc897f6Evq8rC2WWKyKK91WfEudMzd95Vq4egohnhZqM17swx6BvwqJKJfsB7S3Lnf9qiOz2FK0OW79HzrzTwRpskB89-AVSmH8SZ9vxmrtogty7649u8jqTlPR8JeBRAt6nfrelpY60pN99rrc'
+    }
     else if (link.startsWith('COPY:')) {
       return 'https://i.ibb.co/rH8zVtQ/paste.png'
     }
