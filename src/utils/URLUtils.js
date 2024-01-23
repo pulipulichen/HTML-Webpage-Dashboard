@@ -48,6 +48,21 @@ export default {
     else if (link.startsWith('https://script.google.com/')) {
       return 'https://i.ibb.co/sQKqnsP/image.png'
     }
+    else if (link.startsWith('https://zhconvert.org/')) {
+      return 'https://i.ibb.co/vjSBPB2/download.png'
+    }
+    else if (link.startsWith('https://smartmockups.com/')) {
+      return 'https://smartmockups.com/android-chrome-400x400.jpg'
+    }
+    else if (link.startsWith('https://www.appsheet.com/')) {
+      return 'https://pathfix.com/wp-content/uploads/2021/09/768px-AppSheet_Logo.svg_.png'
+    }
+    else if (link.startsWith('https://codepen.io/')) {
+      return 'https://i.ibb.co/NtWjpDD/image.png'
+    }
+    else if (link.startsWith('https://business.facebook.com/')) {
+      return 'https://lh3.googleusercontent.com/-foroyliODN8/YTMI6QtMYdI/AAAAAAAFBcA/vVOjq4RhOd4Ju5QXqJGEOqdmSArUn5S8gCLcBGAsYHQ/s1600/facebook-pudding.png'
+    }
     else if (link.startsWith('https://www.blogger.com/')) {
       return 'https://i.ibb.co/8sT9PnP/image.png'
     }
