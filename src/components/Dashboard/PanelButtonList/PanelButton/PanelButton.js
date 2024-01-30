@@ -110,7 +110,7 @@ let app = {
       // console.log(this.url, url.toUpperCase().startsWith('IFRAME:'))
       if (url.toUpperCase().startsWith('COPY:')) {
         let str = url.slice(5)
-        utils.ClipboardUtils.copyPlainString(str)
+        this.utils.ClipboardUtils.copyPlainString(str)
       }
       else if (url.toUpperCase().startsWith('IFRAME:')) {
         // console.log('20230602-0939')
