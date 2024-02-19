@@ -42,6 +42,9 @@ export default {
     else if (link.startsWith('http://192.168.0.180:7681/')) {
       return 'https://i.ibb.co/Kh9hx0X/image.png'
     }
+    else if (link.startsWith('https://drive.google.com/uc?export=download&id=')) {
+      return 'https://blogger.googleusercontent.com/img/a/AVvXsEiR_BcHdkkP0JTGAT_mR8Z5jzXhnX9HwnYZ0-gMGbO7ASYz2yOd2AyCWXDUzbk18NVHw1FxCOoINQZ3AQr5cEB0imQAWOW-nyxyLKdS6AkzMZo0SVU7h5GD6ClW-mt7qfbNDsLZTcI67WOMKYciLfpKrftDqdjR7OgFuZaGMql2xa5zt9Njsdg'
+    }
     else if (link.startsWith('https://chat.openai.com/')) {
       return 'https://blogger.googleusercontent.com/img/a/AVvXsEjmQBVqhOhANZs-tOKjqZ04VF_BLvfanhpMuc897f6Evq8rC2WWKyKK91WfEudMzd95Vq4egohnhZqM17swx6BvwqJKJfsB7S3Lnf9qiOz2FK0OW79HzrzTwRpskB89-AVSmH8SZ9vxmrtogty7649u8jqTlPR8JeBRAt6nfrelpY60pN99rrc'
     }
