@@ -42,6 +42,9 @@ export default {
     else if (link.startsWith('http://192.168.0.180:7681/')) {
       return 'https://i.ibb.co/Kh9hx0X/image.png'
     }
+    else if (link.startsWith('https://civitai.com/')) {
+      return 'https://blogger.googleusercontent.com/img/a/AVvXsEjzb7KZy0gE2kZe7Zil7U7TuimLu_oBmmqwzAk4UkZblRecQIGdIJjoVZDxnIb5c0lW7w7ZkukdIRnNwaeCm1YpBto7kltP5biyuCFJbxYiEatRUxUTnenfFHuIEnjHeAp_rWt2j0FBvPF8GuYRkKArtJe4q5XEp8jxLtDDvjHo5W89ywuLYlU'
+    }
     else if (link.startsWith('https://drive.google.com/uc?export=download&id=')) {
       return 'https://blogger.googleusercontent.com/img/a/AVvXsEiR_BcHdkkP0JTGAT_mR8Z5jzXhnX9HwnYZ0-gMGbO7ASYz2yOd2AyCWXDUzbk18NVHw1FxCOoINQZ3AQr5cEB0imQAWOW-nyxyLKdS6AkzMZo0SVU7h5GD6ClW-mt7qfbNDsLZTcI67WOMKYciLfpKrftDqdjR7OgFuZaGMql2xa5zt9Njsdg'
     }
