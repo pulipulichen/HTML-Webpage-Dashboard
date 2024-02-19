@@ -27,6 +27,16 @@ export default {
     else if (link.startsWith('https://blog.pulipuli.info')) {
       return 'https://lh3.googleusercontent.com/-vjf_alp-zjQ/VvtkKVpqCjI/AAAAAAACuMI/HPJXcEemwok/s0/pulipuli144x144.jpg'
     }
+    else if (link.startsWith('https://calendar.google.com/calendar/u/0/r/search?q=%E7%B5%B1%E4%B8%80%E7%99%BC%E7%A5%A8%E5%B0%8D%E7%8D%8E%20(%E9%A0%98%E7%8D%8E%E6%97%A5)')) {
+      return 'https://lh3.googleusercontent.com/-5Mr1ZOraA38/YTbmUDjMciI/AAAAAAAFBfg/60_x-vwc3MwdK8fRCwcZAtWrquBlmIE9ACLcBGAsYHQ/s1600/invoice_icon-calendar.png'
+    }
+    else if (link.startsWith('https://feedly.com/')) {
+      return 'https://lh3.googleusercontent.com/-b4eksS2JlfY/YcGUy16P71I/AAAAAAAFEKs/-SCZKuf03owIWHFPXgcZnC6VhlCKN28UACNcBGAsYHQ/s1600/feedly-2-432512.png'
+    }
+    else if (link.startsWith('https://docs.google.com/spreadsheets/d/1VL7M9rQfIT1yTDx5noSKQFzaEoG2WVUF0k8ODta8Upk/edit#gid=0')) {
+      return 'https://lh3.googleusercontent.com/-NiLMRutgh4M/YfIIgRMFMVI/AAAAAAAFFzw/ryvL43BKOt0urOQxWXwqe7J2CEkIY4VkQCNcBGAsYHQ/s1600/envelope.png'
+    }
+    
     else if (link.startsWith('https://chat.openai.com/')) {
       return 'https://blogger.googleusercontent.com/img/a/AVvXsEjmQBVqhOhANZs-tOKjqZ04VF_BLvfanhpMuc897f6Evq8rC2WWKyKK91WfEudMzd95Vq4egohnhZqM17swx6BvwqJKJfsB7S3Lnf9qiOz2FK0OW79HzrzTwRpskB89-AVSmH8SZ9vxmrtogty7649u8jqTlPR8JeBRAt6nfrelpY60pN99rrc'
     }

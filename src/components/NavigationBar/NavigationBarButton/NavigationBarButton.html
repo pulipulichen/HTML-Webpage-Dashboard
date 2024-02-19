@@ -1,6 +1,6 @@
 <a class="item"
-  @click.prevent.stop="$parent.popupWindow(url)"
-  :href="url"
+  @click.prevent.stop="open"
+  :href="compustedURL"
   :title="title"
   :class="computedClasses"
   target="_blank">
