@@ -36,7 +36,12 @@ export default {
     else if (link.startsWith('https://docs.google.com/spreadsheets/d/1VL7M9rQfIT1yTDx5noSKQFzaEoG2WVUF0k8ODta8Upk/edit#gid=0')) {
       return 'https://lh3.googleusercontent.com/-NiLMRutgh4M/YfIIgRMFMVI/AAAAAAAFFzw/ryvL43BKOt0urOQxWXwqe7J2CEkIY4VkQCNcBGAsYHQ/s1600/envelope.png'
     }
-    
+    else if (link.startsWith('http://192.168.0.180:7860/')) {
+      return 'https://i.ibb.co/SRYnSxj/download-1.png'
+    }
+    else if (link.startsWith('http://192.168.0.180:7681/')) {
+      return 'https://i.ibb.co/Kh9hx0X/image.png'
+    }
     else if (link.startsWith('https://chat.openai.com/')) {
       return 'https://blogger.googleusercontent.com/img/a/AVvXsEjmQBVqhOhANZs-tOKjqZ04VF_BLvfanhpMuc897f6Evq8rC2WWKyKK91WfEudMzd95Vq4egohnhZqM17swx6BvwqJKJfsB7S3Lnf9qiOz2FK0OW79HzrzTwRpskB89-AVSmH8SZ9vxmrtogty7649u8jqTlPR8JeBRAt6nfrelpY60pN99rrc'
     }
