@@ -36,7 +36,7 @@ let app = {
       return classes
     },
     isSearchURL () {
-      return (this.url && this.url.indexOf('$$$$keyword$$$$') !== -1)
+      return (this.url && typeof(this.url) === 'string' && this.url.indexOf('$$$$keyword$$$$') !== -1)
       // return true 
     },
     compustedURL () {
