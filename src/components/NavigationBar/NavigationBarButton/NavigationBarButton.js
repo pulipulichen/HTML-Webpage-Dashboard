@@ -63,7 +63,7 @@ let app = {
       // utils.PopupUtils.openURLFullscreen(url)
       // console.log(this.url, url.toUpperCase().startsWith('IFRAME:'))
       if (url.toUpperCase().startsWith('COPY:')) {
-        let str = this.compustedURL
+        let str = url.slice(5)
         this.utils.ClipboardUtils.copyPlainString(str)
         return true
       }
