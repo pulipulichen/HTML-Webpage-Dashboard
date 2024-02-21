@@ -14,6 +14,8 @@ services:
       - ./webpack:/app/webpack
       - ./dist:/app/dist
       - ./src:/app/src
+      - ./service-worker.js:/app/service-worker.js
+      - ./package.json:/app/package.json
       - ./assets:/app/assets
     #Mount port 1000 on the container side to port 8080 on the host side.
     #ports:

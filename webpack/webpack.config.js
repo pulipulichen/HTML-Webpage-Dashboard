@@ -12,6 +12,8 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 let compileCount = 0
 
+const exec = require('child_process').exec;
+
 module.exports = (env, argv) => {
 
   if (argv.mode === undefined) {
@@ -122,6 +124,19 @@ module.exports = (env, argv) => {
           });
         } // apply: (compiler) => {
       },
+      {
+        apply: (compiler) => {
+          compiler.hooks.afterEmit.tap('AfterEmitPlugin', (compilation) => {
+            exec('npm run update-service-worker.js', (err, stdout, stderr) => {
+              if (!argv.watch) {
+                if (stdout) process.stdout.write(stdout);
+              }
+              
+              if (stderr) process.stderr.write(stderr);
+            });
+          });
+        }
+      }
 //      new BundleAnalyzerPlugin({
 //        analyzerPort: 5001
 //      })

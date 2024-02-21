@@ -13,7 +13,8 @@
     "d1.webpack-build-development": "bash ./docker-compose/d1.webpack-build-development.sh",
     "d2.webpack-watch-development": "bash ./docker-compose/d2.webpack-watch-development.sh",
     "d3.webpack-watch-build-production": "bash ./docker-compose/d3.webpack-watch-build-production.sh",
-    "d4.webpack-build-production": "bash ./docker-compose/d4.webpack-build-production.sh"
+    "d4.webpack-build-production": "bash ./docker-compose/d4.webpack-build-production.sh",
+    "update-service-worker.js": "node ./src/update-service-worker/main.js"
   },
   "repository": {
     "type": "git",
