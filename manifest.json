@@ -1,7 +1,8 @@
 {
   "name": "PWA Plain TextEditor",
   "short_name": "PlainText Editor",
-  "start_url": ".",
+  "start_url": "https://wd.pulipuli.info/",
+  "scope": "https://wd.pulipuli.info/",
   "display": "standalone",
   "background_color": "#E1F7F7",
   "description": "A PWA editor for plain text with search and replace funtions.",
