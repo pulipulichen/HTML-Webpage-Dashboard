@@ -3,7 +3,8 @@
   :data-dashboard-type="config.dashboardConfig['dashboard-type']"
   :class="computedClasses">
   <template v-if="inited">
-    <template v-for="(url, i) in urlList">
+    <template v-for="(url, i) in urlList"
+      v-if="tabTypes[i]">
       <PanelIframe
         v-if="typeof(url) === 'string'"
         ref="PanelIframe"

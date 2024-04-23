@@ -1,4 +1,5 @@
 <iframe
+  v-if="tabType"
   :class="'panel num' + panelIndex + ' panel_' + tabType" 
   :src="computedURL" 
   :data-start="tabType[0]"
