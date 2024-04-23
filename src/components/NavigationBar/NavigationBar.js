@@ -70,6 +70,13 @@ let app = {
   methods: {
     popupWindow (url) {
       this.utils.PopupUtils.openURLFullscreen(url)
+    },
+    parseType (type) {
+      if (!type) {
+        return false
+      }
+
+      return type.toUpperCase()
     }
   }
 }

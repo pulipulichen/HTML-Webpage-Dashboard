@@ -108,11 +108,11 @@ let app = {
 
       // utils.PopupUtils.openURLFullscreen(url)
       // console.log(this.url, url.toUpperCase().startsWith('IFRAME:'))
-      if (url.toUpperCase().startsWith('COPY:')) {
+      if (url && url.length > 5 && url.toUpperCase().startsWith('COPY:')) {
         let str = url.slice(5)
         this.utils.ClipboardUtils.copyPlainString(str)
       }
-      else if (url.toUpperCase().startsWith('IFRAME:')) {
+      else if (url && url.length > 5 && url.toUpperCase().startsWith('IFRAME:')) {
         // console.log('20230602-0939')
         // console.log(this.$parent.$parent.tab.url)
         // let str = url.slice(7)
