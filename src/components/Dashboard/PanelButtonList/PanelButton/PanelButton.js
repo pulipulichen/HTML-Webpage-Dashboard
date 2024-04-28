@@ -22,7 +22,7 @@ let app = {
     computedClasses () {
       let classes = []
 
-      if (!this.url || this.url === 'false') {
+      if (!this.url || this.url.toLowerCase() === 'false') {
         classes.push('disabled')
       }
 
