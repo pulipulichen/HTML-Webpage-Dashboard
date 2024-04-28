@@ -22,7 +22,7 @@ let app = {
     computedClasses () {
       let classes = []
 
-      if (!this.url) {
+      if (!this.url || this.url === 'false') {
         classes.push('disabled')
       }
 
