@@ -42,6 +42,9 @@ export default {
     else if (link.startsWith('http://192.168.0.180:7681/')) {
       return 'https://i.ibb.co/Kh9hx0X/image.png'
     }
+    else if (link.startsWith('http://192.168.0.180:58000/')) {
+      return 'https://i.ibb.co/P6ptBkm/photo-gallery.png'
+    }
     else if (link.startsWith('https://civitai.com/')) {
       return 'https://blogger.googleusercontent.com/img/a/AVvXsEjzb7KZy0gE2kZe7Zil7U7TuimLu_oBmmqwzAk4UkZblRecQIGdIJjoVZDxnIb5c0lW7w7ZkukdIRnNwaeCm1YpBto7kltP5biyuCFJbxYiEatRUxUTnenfFHuIEnjHeAp_rWt2j0FBvPF8GuYRkKArtJe4q5XEp8jxLtDDvjHo5W89ywuLYlU'
     }
