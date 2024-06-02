@@ -42,6 +42,9 @@ export default {
     else if (link.startsWith('https://www.coze.com/')) {
       return 'https://i.ibb.co/wRKMdpX/coze-icon-filled-256.png'
     }
+    else if (link.startsWith('https://www.freepik.com/')) {
+      return 'https://i.ibb.co/mczrZM7/download.png'
+    }
     else if (link.startsWith('http://192.168.0.180:7681/')) {
       return 'https://i.ibb.co/Kh9hx0X/image.png'
     }
