@@ -45,6 +45,9 @@ export default {
     else if (link.startsWith('https://www.freepik.com/')) {
       return 'https://i.ibb.co/mczrZM7/download.png'
     }
+    else if (link.startsWith('https://www.canva.com/')) {
+      return 'https://blogger.googleusercontent.com/img/a/AVvXsEiXNNq_NRPjfvXt4lMOsyUMbn2ZLNsdyHTz0peX3gKsEYaF3O69xKSXLu_vt5WjXLoxKt-dzSjDgVGhfyeeXcgUK3tx908mXZkCVEcvubAOxKpQgkF3rrnDgdKjzjskXBC87TQgS5vyI2lElhTNhiFEaXnE5hplUvmN_lpsXl7SCVaeLG_vw8U'
+    }
     else if (link.startsWith('http://192.168.0.180:7681/')) {
       return 'https://i.ibb.co/Kh9hx0X/image.png'
     }
