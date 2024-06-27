@@ -101,6 +101,17 @@ export default {
     return new Promise(resolve => setTimeout(resolve, ms));
   },
   openURLFullscreen (url) {
+    if (!url) {
+      return false
+    }
+    if (url.preventDefault) {
+      url.preventDefault()
+      url.stopPropagation()
+    }
+    if (url.target && url.target.href) {
+      url = url.target.href
+    }
+    
     // https://stackoverflow.com/a/189931
 
     var popup = window.open(url, '_blank', "width="+screen.availWidth+",height="+screen.availHeight);
