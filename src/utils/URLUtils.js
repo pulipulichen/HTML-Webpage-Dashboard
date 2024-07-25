@@ -51,6 +51,9 @@ export default {
     else if (link.startsWith('http://192.168.0.180:7681/')) {
       return 'https://i.ibb.co/Kh9hx0X/image.png'
     }
+    else if (link.startsWith('http://localhost:61080/')) {
+      return 'https://i.ibb.co/pzHc6cT/download.png'
+    }
     else if (link.startsWith('http://192.168.0.180:58000/')) {
       return 'https://i.ibb.co/P6ptBkm/photo-gallery.png'
     }
