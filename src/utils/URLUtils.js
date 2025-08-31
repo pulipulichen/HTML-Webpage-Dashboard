@@ -36,8 +36,20 @@ export default {
     else if (link.startsWith('https://docs.google.com/spreadsheets/d/1VL7M9rQfIT1yTDx5noSKQFzaEoG2WVUF0k8ODta8Upk/edit#gid=0')) {
       return 'https://lh3.googleusercontent.com/-NiLMRutgh4M/YfIIgRMFMVI/AAAAAAAFFzw/ryvL43BKOt0urOQxWXwqe7J2CEkIY4VkQCNcBGAsYHQ/s1600/envelope.png'
     }
+    else if (link.startsWith('https://www.thsrc.com.tw/')) {
+      return 'https://blogger.googleusercontent.com/img/a/AVvXsEi3XJB70ERxopzJYt4fPLcrOGY-SXhZJIXhCrIk55nxWDMAvd5GTEm_h01oafLCySWKpiQ-KlgX9uSvliz4-jjllCrzr6qgKQCXel6OpKh6x0FRNvYRtchuuV-mslzA00zEXOyzMMv4OzHtdY-un38zB2OhoeoSYIba9eZhCLojdG_4Zhhulmg'
+    }
+    else if (link.startsWith('https://www.railway.gov.tw/')) {
+      return 'https://i.ibb.co/JF59d4T9/unnamed.webp'
+    }
+    else if (link.startsWith('http://100.79.171.3:27180/')) {
+      return 'https://blogger.googleusercontent.com/img/a/AVvXsEh1w5OaqxQNXwTvfwvTtbN_r0XNBgoz5d3Aix9L3vrlnucGZKAync7CLg2q8XR3cvWWY04T7fUPslIGDqkaItOhG707i52BPqpUmic61nPMMLu08tKe9Wgi-QcRBU-EisMqpzwJSZsx9kD85UDNOnzmzUQBB6ceqzgCo-l2aInX_JlR1h6GIgOQAA'
+    }
     else if (link.startsWith('http://192.168.0.180:7860/')) {
       return 'https://i.ibb.co/SRYnSxj/download-1.png'
+    }
+    else if (link.startsWith('https://www.ericstar.tw/')) {
+      return 'https://blogger.googleusercontent.com/img/a/AVvXsEjRpHqZHXc9l8SXmNMR7HC_lArLmYMLj1tQf2ru_aJze9lhlGNTu8lHqo_JN0XC49VNXQGKsohCvSDMZKeRGSZLtdMd8sTvDXZZuib2Vq7wQIhM2u2a7lwVShRuRbNxSTvT5vIZKK-xHZlMvnHpbwoEp4A237nhEN_s0wSKt4pTjrjPrcaGknP8lg'
     }
     else if (link.startsWith('https://www.coze.com/')) {
       return 'https://i.ibb.co/wRKMdpX/coze-icon-filled-256.png'

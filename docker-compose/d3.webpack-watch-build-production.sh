@@ -1,4 +1,7 @@
+#!/bin/bash
+
 BASEDIR=$(dirname "$0")
 cd "$BASEDIR"
-cd ..
-docker-compose run app npm run w3.webpack-watch-build-production
+# cd ..
+
+./run-docker-compose.sh run app npm run w3.webpack-watch-build-production
