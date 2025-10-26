@@ -48,8 +48,14 @@ export default {
     else if (link.startsWith('http://192.168.0.180:7860/')) {
       return 'https://i.ibb.co/SRYnSxj/download-1.png'
     }
-    else if (link.startsWith('https://www.ericstar.tw/')) {
+    else if (link.startsWith('https://www.ericstar.tw/') === true) {
       return 'https://blogger.googleusercontent.com/img/a/AVvXsEjRpHqZHXc9l8SXmNMR7HC_lArLmYMLj1tQf2ru_aJze9lhlGNTu8lHqo_JN0XC49VNXQGKsohCvSDMZKeRGSZLtdMd8sTvDXZZuib2Vq7wQIhM2u2a7lwVShRuRbNxSTvT5vIZKK-xHZlMvnHpbwoEp4A237nhEN_s0wSKt4pTjrjPrcaGknP8lg'
+    }
+    else if (link.startsWith('https://infra.ericstar.tw/')) {
+      return 'https://blogger.googleusercontent.com/img/a/AVvXsEjRpHqZHXc9l8SXmNMR7HC_lArLmYMLj1tQf2ru_aJze9lhlGNTu8lHqo_JN0XC49VNXQGKsohCvSDMZKeRGSZLtdMd8sTvDXZZuib2Vq7wQIhM2u2a7lwVShRuRbNxSTvT5vIZKK-xHZlMvnHpbwoEp4A237nhEN_s0wSKt4pTjrjPrcaGknP8lg'
+    }
+    else if (link.startsWith('https://ericstar-force.monday.com/')) {
+      return 'https://blogger.googleusercontent.com/img/a/AVvXsEi4Hrka0jQejmM7_5nE8hwZHGlwAIDtGReHCpTVcmeMpWBvhQr02XFsWkyEXAoyHXPbCHdh3r2VXLyLPAB-6-G3wh77c6HQmKPsqZQvsnVT7yhD_5X3b6QkB7GZKCR1MYbI1p4ix75LpqjPMtcFW4U0OvoNz3Ya3DBcPsEn-pMiYiIuIQcwAbK8Kg'
     }
     else if (link.startsWith('https://www.coze.com/')) {
       return 'https://i.ibb.co/wRKMdpX/coze-icon-filled-256.png'
